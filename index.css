@@ -1,0 +1,72 @@
+/* REGLAGES GENERAUX ................................................. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Le conteneur principal qui définit la forme et coupe ce qui dépasse */
+.flag-collage-circle {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    
+    /* La règle la plus importante : tout ce qui sort du cercle est caché. */
+    overflow: hidden; 
+    
+    position: relative; /* Indispensable pour positionner les drapeaux à l'intérieur */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Style commun à tous les drapeaux */
+.flag {
+    position: absolute; /* Permet de placer chaque drapeau où on veut */
+    background-size: cover;
+    background-position: center;
+    border: 2px solid white; /* Ajoute une séparation visuelle entre les drapeaux */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Donne de la profondeur au chevauchement */
+}
+
+/* 
+ * --- POSITIONNEMENT MANUEL DE CHAQUE DRAPEAU ---
+ * On les fait plus grands que nécessaire pour qu'ils remplissent bien l'espace
+ * et on les positionne pour créer un collage intéressant.
+ * Le z-index définit l'ordre de superposition : un z-index plus élevé est au-dessus.
+*/
+
+/* Couche du dessous (z-index: 1) */
+.flag-cm { width: 200px; height: 150px; top: -20px; left: -30px; transform: rotate(-15deg); z-index: 1; }
+.flag-nl { width: 220px; height: 160px; top: -20px; right: -50px; transform: rotate(20deg); z-index: 1; }
+.flag-fr { width: 200px; height: 150px; bottom: -30px; left: -40px; transform: rotate(10deg); z-index: 1; }
+.flag-de { width: 210px; height: 160px; bottom: -40px; right: -40px; transform: rotate(-10deg); z-index: 1; }
+
+/* Couche intermédiaire (z-index: 2) */
+.flag-br { width: 180px; height: 130px; top: 80px; left: 60px; transform: rotate(5deg); z-index: 2; }
+.flag-ua { width: 150px; height: 120px; top: 20px; left: 120px; transform: rotate(-25deg); z-index: 2; }
+.flag-ar { width: 160px; height: 120px; bottom: 30px; right: 20px; transform: rotate(30deg); z-index: 2; }
+
+/* Couche du dessus (z-index: 3) */
+.flag-vn { width: 130px; height: 100px; top: 100px; right: 40px; transform: rotate(-5deg); z-index: 3; }
+.flag-ma { width: 140px; height: 110px; bottom: 40px; left: 10px; transform: rotate(25deg); z-index: 3; }
+.flag-it { width: 120px; height: 90px; top: 10px; left: 20px; transform: rotate(15deg); z-index: 3; }
+
+
+/* Les images de fond pour chaque drapeau (inchangé) */
+.flag-cm { background-image: url('https://flagcdn.com/cm.svg' ); }
+.flag-nl { background-image: url('https://flagcdn.com/nl.svg' ); }
+.flag-fr { background-image: url('https://flagcdn.com/fr.svg' ); }
+.flag-de { background-image: url('https://flagcdn.com/de.svg' ); }
+.flag-br { background-image: url('https://flagcdn.com/br.svg' ); }
+.flag-ua { background-image: url('https://flagcdn.com/ua.svg' ); }
+.flag-ar { background-image: url('https://flagcdn.com/ar.svg' ); }
+.flag-vn { background-image: url('https://flagcdn.com/vn.svg' ); }
+.flag-ma { background-image: url('https://flagcdn.com/ma.svg' ); }
+.flag-it { background-image: url('https://flagcdn.com/it.svg' ); }
