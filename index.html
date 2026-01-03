@@ -11,7 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&family=Passion+One:wght@400;700;900&family=Permanent+Marker&family=Rubik+Spray+Paint&display=swap"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -44,8 +43,11 @@
           </li>
         </ul>
 
-        <button class="cta-header" aria-label="Bouton contact barre navigation">
-          Contact us
+        <button
+          class="cta-header"
+          aria-label="Lien Footy App pour les résultats et statistiques"
+        >
+          Check Results and More on The Footy App !
         </button>
       </nav>
     </header>
@@ -70,6 +72,7 @@
             <div class="flag-8"></div>
             <div class="flag-9"></div>
             <div class="flag-10"></div>
+            <div class="flag-11"></div>
           </div>
         </div>
       </section>
@@ -88,57 +91,78 @@
         </p>
       </section>
 
+      <!-- TITLE TEAM MEMBERS........................................................-->
+      <!-- SECTION X-TEAM AVEC 14 JOUEURS -->
+
       <section class="x-team">
         <h2>Team Members</h2>
 
-        <div class="player-line">
-          <!-- IMAGE JOUEUR ........................................................ -->
+        <!-- PLAYER LINE 1.......................................................... -->
 
+        <div class="player-line">
           <div class="img-player">
-            <p class="position-player">DC</p>
+            <p class="position-player">GK</p>
           </div>
 
-          <!-- STATS................................................................ -->
+          <div class="statistiques">
+            <div class="player">
+              <p class="player-title">Name</p>
+              <p class="player-name">Corentin Gros</p>
+              <div class="flag-2"></div>
+            </div>
+            <div class="stats-pp stat-good">
+              <p class="pace-title">ATT</p>
+              <p class="pace-content">87</p>
+            </div>
+            <div class="stats-pp stat-middle">
+              <p class="pace-title">DEF</p>
+              <p class="pace-content">70</p>
+            </div>
+            <div class="stats-pp stat-bad">
+              <p class="pace-title">PAC</p>
+              <p class="pace-content">40</p>
+            </div>
+            <div class="stats-pp stat-good">
+              <p class="pace-title">PAS</p>
+              <p class="pace-content">80</p>
+            </div>
+            <div class="stats-pp stat-good">
+              <p class="pace-title">TEC</p>
+              <p class="pace-content">90</p>
+            </div>
+          </div>
 
-<!-- Dans votre fichier HTML -->
+          <div class="lien-joueur">
+            <div class="stars-rate">
 
-<div class="statistiques">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
 
-    <!-- PLAYER -->
-    <div class="player">
-        <p class="player-title">Name</p>
-        <p class="player-name">Mongo Rodrigue</p>
-    </div>
+            </div>
+            <p class="icon-skills-content-1">Nutmeg</p>
+            <div class="stars-rate">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p class="icon-skills-content-1">Sombrero</p>
+            <div class="stars-rate">
+              <i class="fa-solid fa-star"></i>
 
-    <!-- STATS PLAYER -->
-    <div class="stats-pp stat-1"> <!-- <--- AJOUT ICI -->
-        <p class="pace-title">ATT</p>
-        <p class="pace-content">87</p>
-    </div>
-    <div class="stats-pp stat-2"> <!-- <--- AJOUT ICI -->
-        <p class="pace-title">DEF</p>
-        <p class="pace-content">70</p>
-    </div>
-    <div class="stats-pp stat-3"> <!-- <--- AJOUT ICI -->
-        <p class="pace-title">PAC</p>
-        <p class="pace-content">80</p>
-    </div>
-    <div class="stats-pp stat-4"> <!-- <--- AJOUT ICI -->
-        <p class="pace-title">PAS</p>
-        <p class="pace-content">80</p>
-    </div>
-    <div class="stats-pp stat-5"> <!-- <--- AJOUT ICI -->
-        <p class="pace-title">TEC</p>
-        <p class="pace-content">90</p>
-    </div>
-
-</div>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p class="icon-skills-content-1">Tactical Master</p>
+            <a href="">Click here to see more stats from Corentin</a>
+          </div>
 
 
         </div>
       </section>
-
-
     </main>
 
     <!-- FOOTER.................................................................... -->
@@ -147,6 +171,5 @@
     <footer class="footer-site"></footer>
 
     <script src="./script.js"></script>
-    <!-- Le chemin est-il bon ? Est-ce "j.js" ou "js/j.js" ? -->
   </body>
 </html>
