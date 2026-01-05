@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const playerMiniImages = document.querySelectorAll('.img-player-mini');
+    const playerMiniImages = document.querySelectorAll('.img-player-mini', 'img-player-mini-2');
     const popupOverlay = document.querySelector('.popup-overlay');
     const popupContainer = document.querySelector('.popup-container');
     const closeButton = document.querySelector('.close-popup');

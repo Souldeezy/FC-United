@@ -178,7 +178,7 @@ main {
   background-image: url(.//PICS/abigail-keenan-8-s5QuUBtyM-unsplash.jpg);
   background-attachment: fixed; /* C'est ça la clé ! */
 
-  background-color: rgba(11, 11, 11, 0.741);
+  background-color: rgba(11, 11, 11, 0.416);
   background-blend-mode: darken;
   display: flex;
   align-items: center;
@@ -390,6 +390,9 @@ background-image: url("data:image/svg+xml,%3Csvg width='100px' height='100px' vi
   animation: fadeinleft 1s ease-out 0.5s forwards;
 }
 
+/* XTEAM............................................................ */
+/* ................................................................. */
+
 .x-team {
   display: flex;
   flex-direction: column;
@@ -399,7 +402,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='100px' height='100px' vi
   background-blend-mode: darken;
   background-image: url(.//PICS/timothy-tan-PAe2UhGo-S4-unsplash.jpg);
   background-repeat: no-repeat;
-  padding: 50px;
+  padding: 0px 50px 100px 50px;
   position: relative;
 }
 
@@ -409,6 +412,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='100px' height='100px' vi
   justify-content: center;
   flex-direction: column;
   margin: 50px 0px;
+  text-shadow: 0px 0px 5px rgb(201, 201, 201);
 }
 
 .x-team h2 {
@@ -424,11 +428,14 @@ background-image: url("data:image/svg+xml,%3Csvg width='100px' height='100px' vi
   font-size: 25px;
   font-style: italic;
   font-family: "Lato", sans-serif;
+  text-shadow: 0px 0px 0px rgb(201, 201, 201);
+
 }
 
 .positionSection {
   display: flex;
   width: 100%;
+  align-items: center;
 }
 
 .posTitle {
@@ -438,15 +445,12 @@ background-image: url("data:image/svg+xml,%3Csvg width='100px' height='100px' vi
   text-transform: uppercase;
   letter-spacing: 3px;
   font-style: italic;
-  margin: 10px 0px;
 }
 
 .posTitle::first-letter {
   font-size: 90px;
   color: rgb(0, 222, 0);
 }
-
-
 
 
 
@@ -477,7 +481,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='100px' height='100px' vi
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 0;
+  padding: 10px 0;
 }
 
 .img-player-mini {
@@ -489,9 +493,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='100px' height='100px' vi
   align-items: end;
   justify-content: center;
   overflow: hidden;
-  background-position: center;
-  background: url(.//PICS/CorentinGros1.png) no-repeat;
-  background-size: cover;
+
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -500,6 +502,23 @@ background-image: url("data:image/svg+xml,%3Csvg width='100px' height='100px' vi
   transform: scale(1.1);
   box-shadow: 0px 0px 15px 0px rgb(0, 222, 0);
 }
+
+/* IMAGES JOEURS............................................. */
+/* .......................................................... */
+
+#joueur1 {
+  background: url(.//PICS/CorentinGros1.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#joueur2 {
+  background: url(.//PICS/CyrilJousselin.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
 
 .position-player-mini {
   color: rgba(0, 222, 0, 0.974);
@@ -537,16 +556,16 @@ background-image: url("data:image/svg+xml,%3Csvg width='100px' height='100px' vi
 
 .popup-container {
   position: fixed;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.8);
   z-index: 999;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
-  max-width: 90%;
-  max-height: 90vh;
-  overflow-y: auto;
+  width: 90%;
+  max-height: 100%;
+  padding: 50px 0px;
 }
 
 .popup-container.active {
@@ -586,9 +605,10 @@ background-image: url("data:image/svg+xml,%3Csvg width='100px' height='100px' vi
 .player-line {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  padding: 40px;
-  gap: 50px;
+  padding: 0px;
+  gap: 10px;
   color: white;
   background: transparent;
   background-position: center;
@@ -604,15 +624,15 @@ background-image: url("data:image/svg+xml,%3Csvg width='100px' height='100px' vi
 .player-line.is-revealed {
   border-color: rgb(0, 222, 0);
   background: linear-gradient(76deg, rgba(37, 80, 0, 0.722) 0%, rgba(17, 51, 17, 0.716) 100%), url(.//PICS/football1.jpg);
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
 }
 
 /* IMAGE JOUEUR ET POSITION....................................... */
 
 .img-player {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   border: 3px solid rgb(0, 222, 0);
   border-radius: 50%;
   display: flex;
@@ -654,7 +674,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='100px' height='100px' vi
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  min-width: 150px;
+  margin: 0px 100px;
 }
 
 .player-title {
@@ -679,8 +699,8 @@ background-image: url("data:image/svg+xml,%3Csvg width='100px' height='100px' vi
   align-items: center;
   justify-content: center;
   gap: 10px;
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   background-size: cover;
   background-position: center;
   border-radius: 50%;
@@ -689,26 +709,26 @@ background-image: url("data:image/svg+xml,%3Csvg width='100px' height='100px' vi
 
 .stats-pp.stat-good {
   box-shadow: 0px 0px 25px 0px #00de00df;
-  border: 8px solid rgb(0, 222, 0);
+  border: 4px solid rgb(0, 222, 0);
 }
 
 .stats-pp.stat-middle {
-  border: 8px solid rgba(255, 213, 0, 0.899);
+  border: 4px solid rgba(255, 213, 0, 0.899);
   box-shadow: 0px 0px 20px 0px rgba(255, 213, 0, 0.6);
 }
 
 .stats-pp.stat-bad {
-  border: 8px solid rgba(255, 50, 50, 0.899);
+  border: 4px solid rgba(255, 50, 50, 0.899);
   box-shadow: 0px 0px 15px 0px rgba(255, 50, 50, 0.6);
 }
 
 .pace-title {
   font-family: "Passion One", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .pace-content {
-  font-size: 30px;
+  font-size: 20px;
   font-family: "Passion One", sans-serif;
   letter-spacing: 2px;
 }
@@ -737,18 +757,18 @@ background-image: url("data:image/svg+xml,%3Csvg width='100px' height='100px' vi
 .stars-rate {
   display: flex;
   gap: 5px;
-  font-size: 20px;
+  font-size: 13px;
 }
 
 .stars-rate i {
   color: rgb(255, 213, 0);
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .icon-skills-content-1 {
   color: white;
   font-family: "Permanent Marker", sans-serif;
-  font-size: 20px;
+  font-size: 17px;
   background-color: rgba(0, 222, 0, 0.553);
   padding: 7px 20px;
   border-radius: 10px;
@@ -808,7 +828,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='100px' height='100px' vi
 
 /* A. EFFET TAMPON sur les badges (1.8s) */
 .lien-joueur.is-animated .icon-skills-content-1 {
-  animation: stampEffect 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: stampEffect 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   animation-delay: 1.8s;
 }
 
@@ -923,7 +943,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='100px' height='100px' vi
   }
   80% {
     opacity: 1;
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
   100% {
     opacity: 1;
