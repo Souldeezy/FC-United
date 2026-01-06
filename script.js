@@ -104,4 +104,29 @@ document.addEventListener('DOMContentLoaded', function() {
             closePopup();
         }
     });
+
+    // ========================================
+    // ANIMATION AU SCROLL - OUR STORY + OUR RULES
+    // ========================================
+    
+    const ourStoryParagraphs = document.querySelectorAll('.our-story p');
+    
+    if (ourStoryParagraphs.length > 0) {
+        // Créer l'Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // L'élément est visible, ajouter la classe d'animation
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.2 // Se déclenche quand 20% de l'élément est visible
+        });
+        
+        // Observer TOUS les paragraphes des sections our-story
+        ourStoryParagraphs.forEach(paragraph => {
+            observer.observe(paragraph);
+        });
+    }
 });
