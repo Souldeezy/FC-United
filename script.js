@@ -130,3 +130,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+// APPARITION BARRE NAVIGATION...........................................//
+//.......................................................................//
+
+document.addEventListener('DOMContentLoaded', function() {
+    const navBar = document.querySelector('.barre-nav');
+    
+    // Attendre 2 secondes (2000ms) avant de faire apparaître la barre
+    setTimeout(() => {
+        navBar.classList.add('visible');
+    }, 2000);
+});
