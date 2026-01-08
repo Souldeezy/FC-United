@@ -41,7 +41,9 @@ main {
   border-bottom: 2px solid rgba(0, 222, 0, 0.974);
   z-index: 9999;
   opacity: 0;
-  transform: translateY(-20px); /* Légèrement vers le haut pour l'effet "Down" */
+  transform: translateY(
+    -20px
+  ); /* Légèrement vers le haut pour l'effet "Down" */
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   pointer-events: none; /* Empêche de cliquer tant qu'elle est invisible */
 }
@@ -223,12 +225,13 @@ main {
 
 .scroll-down-instruction {
   color: white;
-  font-family: "Lato",sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 20px;
   font-style: italic;
-   animation: clignoter 4.5s ease-in-out 2s infinite;
+  animation: clignoter 4.5s ease-in-out 2s infinite;
   opacity: 0;
-  animation: fadeInOnly 1s ease-out 1.5s forwards, clignoter 3s ease-in-out 3s infinite;
+  animation: fadeInOnly 1s ease-out 1.5s forwards,
+    clignoter 3s ease-in-out 3s infinite;
 }
 
 /* SECTION OUR STORY............................................. */
@@ -241,8 +244,14 @@ main {
   display: flex;
   border-top: 2px solid #00de00f8;
   border-bottom: 2px solid rgba(0, 222, 0, 0.974);
-  background: #2A6615;
-  background: linear-gradient(351deg, rgba(43, 102, 21, 0.366) 0%, rgba(22, 38, 19, 0.6) 47%, rgba(9, 26, 16, 0.61) 74%, rgba(43, 102, 21, 0.327) 100%);
+  background: #2a6615;
+  background: linear-gradient(
+    351deg,
+    rgba(43, 102, 21, 0.366) 0%,
+    rgba(22, 38, 19, 0.6) 47%,
+    rgba(9, 26, 16, 0.61) 74%,
+    rgba(43, 102, 21, 0.327) 100%
+  );
 }
 
 /* Le reste de vos styles pour h2 et p ne changent pas */
@@ -319,12 +328,11 @@ main {
   font-style: italic;
   font-family: "Lato", sans-serif;
   text-shadow: 0px 0px 0px rgb(201, 201, 201);
-   animation-duration: 3s;
-   animation-name: clignoter;
-   animation-iteration-count: infinite;
-   transition: none;
-   animation-delay: 3s;
-
+  animation-duration: 3s;
+  animation-name: clignoter;
+  animation-iteration-count: infinite;
+  transition: none;
+  animation-delay: 3s;
 }
 
 .positionSection {
@@ -422,7 +430,6 @@ main {
 
 /* MIDFIELDERS................................................ */
 
-
 #joueur7 {
   background: url(.//PICS/CyrilJousselin.jpg) no-repeat;
   background-position: center;
@@ -449,7 +456,6 @@ main {
 
 /* ATTAQUANTS................................................. */
 
-
 #joueur11 {
   background: url(.//PICS/CyrilJousselin.jpg) no-repeat;
   background-position: center;
@@ -473,10 +479,6 @@ main {
   background-position: center;
   background-size: cover;
 }
-
-
-
-
 
 .position-player-mini {
   color: rgba(0, 222, 0, 0.974);
@@ -581,7 +583,12 @@ main {
 /* État activé : cadre et background apparaissent */
 .player-line.is-revealed {
   border-color: rgb(0, 222, 0);
-  background: linear-gradient(76deg, rgba(37, 80, 0, 0.722) 0%, rgba(17, 51, 17, 0.716) 100%), url(.//PICS/football1.jpg);
+  background: linear-gradient(
+      76deg,
+      rgba(37, 80, 0, 0.722) 0%,
+      rgba(17, 51, 17, 0.716) 100%
+    ),
+    url(.//PICS/football1.jpg);
   background-position: bottom;
   background-size: cover;
 }
@@ -707,7 +714,13 @@ main {
 
 /* État activé : background du lien-joueur apparaît */
 .lien-joueur.is-revealed {
-  background: linear-gradient(351deg, rgb(39, 39, 39) 0%, rgb(33, 33, 33) 47%, rgb(0, 0, 0) 74%, rgb(32, 32, 32) 100%);
+  background: linear-gradient(
+    351deg,
+    rgb(39, 39, 39) 0%,
+    rgb(33, 33, 33) 47%,
+    rgb(0, 0, 0) 74%,
+    rgb(32, 32, 32) 100%
+  );
   padding: 20px;
   border-radius: 10px;
 }
@@ -733,10 +746,230 @@ main {
   margin: 0;
 }
 
+/* GALLERY............................................................ */
+/* ................................................................... */
+
+.gallery {
+  min-height: 100vh;
+  padding: 50px;
+  border: 2px solid rgb(0, 222, 0);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.photo-gallery:hover figcaption {
+  opacity: 1;
+}
+
+.background-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(".//PICS/timothy-tan-PAe2UhGo-S4-unsplash.jpg");
+  transform: rotateX(180deg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.766);
+  background-blend-mode: darken;
+  filter: blur(2px);
+}
+
+.photo-gallery {
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  width: 40%;
+  z-index: 1;
+  border: 2px solid rgb(0, 222, 0);
+  border-radius: 10px;
+}
+
+.photo-gallery:hover img {
+  opacity: 1;
+}
+
+.photo-gallery img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  opacity: 0.6; /* Assombri de base */
+  transition: opacity 0.2s ease-in-out;
+}
+
+.photo-gallery figcaption {
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  background: linear-gradient(
+    351deg,
+    rgba(38, 38, 38, 0.897) 0%,
+    rgba(22, 38, 19, 0.996) 47%,
+    rgba(9, 26, 16, 0.87) 74%,
+    rgba(31, 31, 31, 0.87) 100%
+  );
+  overflow: hidden;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(0, 222, 0, 0.399);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out; /* Mets la transition ici */
+}
+
+/* FOOTER............................................................. */
+/* ................................................................... */
+
+.footer-site {
+  width: 100%;
+  background-color: rgb(11, 11, 11);
+  display: flex;
+  padding: 10px 50px;
+}
+
+/* FOOTER LEFT......................................................... */
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  justify-content: space-around;
+}
+.footer-left-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-left-title-1 {
+  font-size: 50px;
+  font-family: "Permanent Marker", sans-serif;
+  color: rgb(0, 222, 0);
+  text-shadow: 0px 0px 5px rgb(0, 222, 0);
+  margin: 0;
+}
+
+.footer-left-title-2 {
+  font-size: 35px;
+  font-family: "Passion One", sans-serif;
+  color: white;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.5px rgb(0, 222, 0);
+  text-shadow: 0px 0px 10px rgb(0, 222, 0);
+  margin: -20px 0px 0px 50px;
+}
+
+/* FOOTER CENTER....................................................... */
+
+.footer-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-footer {
+  background: url(.//PICS/Logo\ X&3K.jpg) no-repeat;
+  background-position: center;
+  background-size: 100%;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  opacity: 0.3;
+  position: absolute;
+}
+
+.footer-center p {
+  text-align: center;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  color: white;
+  letter-spacing: 1.5px;
+  width: 50%;
+  z-index: 999;
+  line-height: 1.6em;
+}
+
+.footer-center p::first-letter {
+  color: rgb(0, 222, 0);
+  font-size: 20px;
+}
+
+/* FOOTER RIGHT........................................................ */
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-right-title {
+  font-family: "Permanent Marker", sans-serif;
+  font-size: 30px;
+  color: white;
+  text-shadow: 0px 0px 5px rgb(0, 222, 0);
+  font-style: italic;
+}
+
+.footer-right-title::first-letter {
+  font-size: 40px;
+  color: rgb(0, 222, 0);
+}
+
+.footer-link-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0px;
+}
+
+.footer-link-list li {
+  list-style-type: none;
+}
+
+.footer-link-list li p {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 9px;
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+.footer-link-list li p em {
+  color: rgb(0, 222, 0);
+}
+
+.footer-link-list li a {
+  color: rgb(190, 190, 190);
+  font-family: "Passion One", sans-serif;
+  font-size: 19px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.footer-link-list li a:hover {
+  color: rgb(0, 222, 0);
+  transition: 0.2s all ease-in-out;
+}
 
 /* ANIMATIONS......................................................... */
 /* ................................................................... */
-
 
 /* ========================================
    ANIMATIONS HERO SECTION
@@ -749,8 +982,6 @@ main {
 .banniere-flags > div {
   opacity: 0;
 }
-
-
 
 /* 2) Planète Terre - Fadein à 0.3s */
 .logo-world {
@@ -845,23 +1076,23 @@ main {
   transform: translateY(0);
 }
 
-.statistiques.is-animated .player { 
-  transition-delay: 0.3s; 
+.statistiques.is-animated .player {
+  transition-delay: 0.3s;
 }
-.statistiques.is-animated .stats-pp:nth-of-type(2) { 
-  transition-delay: 0.54s; 
+.statistiques.is-animated .stats-pp:nth-of-type(2) {
+  transition-delay: 0.54s;
 }
-.statistiques.is-animated .stats-pp:nth-of-type(3) { 
-  transition-delay: 0.78s; 
+.statistiques.is-animated .stats-pp:nth-of-type(3) {
+  transition-delay: 0.78s;
 }
-.statistiques.is-animated .stats-pp:nth-of-type(4) { 
-  transition-delay: 1.02s; 
+.statistiques.is-animated .stats-pp:nth-of-type(4) {
+  transition-delay: 1.02s;
 }
-.statistiques.is-animated .stats-pp:nth-of-type(5) { 
-  transition-delay: 1.26s; 
+.statistiques.is-animated .stats-pp:nth-of-type(5) {
+  transition-delay: 1.26s;
 }
-.statistiques.is-animated .stats-pp:nth-of-type(6) { 
-  transition-delay: 1.5s; 
+.statistiques.is-animated .stats-pp:nth-of-type(6) {
+  transition-delay: 1.5s;
 }
 
 /* Animation heartbeat pour les bonnes stats */
@@ -885,199 +1116,46 @@ main {
 }
 
 /* Groupe 1 : Nutmeg (2.4s à 2.55s) */
-.lien-joueur.is-animated .stars-rate:nth-of-type(1) i:nth-child(1) { 
-  transition-delay: 2.4s; 
+.lien-joueur.is-animated .stars-rate:nth-of-type(1) i:nth-child(1) {
+  transition-delay: 2.4s;
 }
-.lien-joueur.is-animated .stars-rate:nth-of-type(1) i:nth-child(2) { 
-  transition-delay: 2.48s; 
+.lien-joueur.is-animated .stars-rate:nth-of-type(1) i:nth-child(2) {
+  transition-delay: 2.48s;
 }
-.lien-joueur.is-animated .stars-rate:nth-of-type(1) i:nth-child(3) { 
-  transition-delay: 2.55s; 
+.lien-joueur.is-animated .stars-rate:nth-of-type(1) i:nth-child(3) {
+  transition-delay: 2.55s;
 }
 
 /* Groupe 2 : Sombrero (2.62s à 2.84s) */
-.lien-joueur.is-animated .stars-rate:nth-of-type(2) i:nth-child(1) { 
-  transition-delay: 2.62s; 
+.lien-joueur.is-animated .stars-rate:nth-of-type(2) i:nth-child(1) {
+  transition-delay: 2.62s;
 }
-.lien-joueur.is-animated .stars-rate:nth-of-type(2) i:nth-child(2) { 
-  transition-delay: 2.68s; 
+.lien-joueur.is-animated .stars-rate:nth-of-type(2) i:nth-child(2) {
+  transition-delay: 2.68s;
 }
-.lien-joueur.is-animated .stars-rate:nth-of-type(2) i:nth-child(3) { 
-  transition-delay: 2.74s; 
+.lien-joueur.is-animated .stars-rate:nth-of-type(2) i:nth-child(3) {
+  transition-delay: 2.74s;
 }
-.lien-joueur.is-animated .stars-rate:nth-of-type(2) i:nth-child(4) { 
-  transition-delay: 2.8s; 
+.lien-joueur.is-animated .stars-rate:nth-of-type(2) i:nth-child(4) {
+  transition-delay: 2.8s;
 }
-.lien-joueur.is-animated .stars-rate:nth-of-type(2) i:nth-child(5) { 
-  transition-delay: 2.86s; 
+.lien-joueur.is-animated .stars-rate:nth-of-type(2) i:nth-child(5) {
+  transition-delay: 2.86s;
 }
 
 /* Groupe 3 : Tactical Master (2.92s à 3s) */
-.lien-joueur.is-animated .stars-rate:nth-of-type(3) i:nth-child(1) { 
-  transition-delay: 2.92s; 
+.lien-joueur.is-animated .stars-rate:nth-of-type(3) i:nth-child(1) {
+  transition-delay: 2.92s;
 }
-.lien-joueur.is-animated .stars-rate:nth-of-type(3) i:nth-child(2) { 
-  transition-delay: 2.95s; 
+.lien-joueur.is-animated .stars-rate:nth-of-type(3) i:nth-child(2) {
+  transition-delay: 2.95s;
 }
-.lien-joueur.is-animated .stars-rate:nth-of-type(3) i:nth-child(3) { 
-  transition-delay: 2.97s; 
+.lien-joueur.is-animated .stars-rate:nth-of-type(3) i:nth-child(3) {
+  transition-delay: 2.97s;
 }
-.lien-joueur.is-animated .stars-rate:nth-of-type(3) i:nth-child(4) { 
-  transition-delay: 3s; 
+.lien-joueur.is-animated .stars-rate:nth-of-type(3) i:nth-child(4) {
+  transition-delay: 3s;
 }
-
-/* FOOTER............................................................. */
-/* ................................................................... */
-
-.footer-site {
-
-  width: 100%;
-  background-color: rgb(11, 11, 11);
-  display: flex;
-  padding: 10px 50px;
-}
-
-/* FOOTER LEFT......................................................... */
-
-.footer-left {
-  
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 0;
-  justify-content: space-around;
-}
-.footer-left-title {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-left-title-1 {
-  font-size: 50px;
-  font-family: "Permanent Marker", sans-serif;
-  color: rgb(0, 222, 0);
-  text-shadow: 0px 0px 5px rgb(0, 222, 0);
-  margin: 0;
-}
-
-.footer-left-title-2 {
-  font-size: 35px;
-  font-family: "Passion One", sans-serif;
-  color: white;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  -webkit-text-stroke: 0.5px rgb(0, 222, 0);
-  text-shadow: 0px 0px 10px rgb(0, 222, 0);
-  margin: -20px 0px 0px 50px;
-}
-
-
-/* FOOTER CENTER....................................................... */
-
-
-.footer-center {
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.logo-footer {
-  background: url(.//PICS/Logo\ X&3K.jpg) no-repeat;
-  background-position: center;
-  background-size: 100%;
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  opacity: 0.3;
-  position: absolute;
-  
-}
-
-.footer-center p {
-  text-align: center;
-  font-size: 15px;
-  font-family: "Lato", sans-serif;
-  color: white;
-  letter-spacing: 1.5px;
-  width: 50%;
-  z-index: 999;
-    line-height: 1.6em;
-}
-
-.footer-center p::first-letter {
-  color: rgb(0, 222, 0);
-  font-size: 20px;
-
-}
-
-
-/* FOOTER RIGHT........................................................ */
-
-
-.footer-right {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-right-title {
-  font-family: "Permanent Marker", sans-serif;
-  font-size: 30px;
-  color: white;
-  text-shadow: 0px 0px 5px rgb(0, 222, 0);
-  font-style: italic;
-}
-
-.footer-right-title::first-letter {
-  font-size: 40px;
-  color: rgb(0, 222, 0);
-}
-
-.footer-link-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  margin: 20px 0px;
-}
-
-.footer-link-list li {
-  list-style-type: none;
-}
-
-.footer-link-list li p {
-  color: white;
-  font-family: "Lato", sans-serif;
-  font-size: 9px;
-  text-align: center;
-  margin-top: 10px;
-  font-style: italic;
-  letter-spacing: 2px;
-}
-
-.footer-link-list li p em {
-  color: rgb(0, 222, 0);
-}
-
-.footer-link-list li a {
-  color: rgb(190, 190, 190);
-  font-family: "Passion One", sans-serif;
-  font-size: 20px;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-
-}
-
-.footer-link-list li a:hover {
-  color: rgb(0, 222, 0);
-  transition: 0.2s all ease-in-out;
-}
-
 
 /* KEYFRAMES.......................................................... */
 /* ................................................................... */
@@ -1165,377 +1243,359 @@ main {
 /* CLIGNOTER...................................................... */
 
 @keyframes clignoter {
-  0% { 
-    opacity:1; 
+  0% {
+    opacity: 1;
   }
   40% {
-    opacity:0; 
+    opacity: 0;
   }
-  100% { 
-    opacity:1;
-     }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* FADE IN ONLY................................................... */
 
 @keyframes fadeInOnly {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
 
 /* RESPONSIVE.................................................... */
 /* .............................................................. */
 /* .............................................................. */
-
-
 
 /* ==========================================================================
    RESPONSIVE - TABLETTE (MAX-WIDTH: 768PX)
    ========================================================================== */
 
 @media (max-width: 768px) {
-  
   /* HEADER SITE ......................................................... */
-  
+
   .header-site {
   }
-  
+
   .barre-nav {
   }
-  
+
   .logo-header {
   }
-  
+
   .links-header {
   }
-  
+
   .cta-header {
   }
-  
-  
+
   /* HERO SITE ........................................................... */
-  
+
   .hero-site {
   }
-  
+
   .hero-h1 {
   }
-  
+
   .hero-h1-texte {
   }
-  
+
   .scroll-down-instruction {
   }
-  
-  
+
   /* OUR STORY ........................................................... */
-  
+
   .our-story {
   }
-  
+
   .our-story h2 {
   }
-  
+
   .our-story p {
   }
-  
-  
+
   /* X-TEAM / TEAM MEMBERS .............................................. */
-  
+
   .x-team {
   }
-  
+
   .titleSection {
   }
-  
+
   .legende1 {
   }
-  
+
   .positionSection {
   }
-  
+
   .posTitle {
   }
-  
+
   .players-grid {
     grid-template-columns: repeat(5, 1fr);
   }
-  
+
   .img-player-mini {
   }
-  
+
   .position-player-mini {
   }
-  
-  
+
   /* POPUP OVERLAY & CONTAINER .......................................... */
-  
+
   .popup-overlay {
   }
-  
+
   .popup-container {
   }
-  
+
   .close-popup {
   }
-  
-  
+
   /* PLAYER LINE ......................................................... */
-  
+
   .player-line {
   }
-  
+
   .img-player {
   }
-  
+
   .position-player {
   }
-  
-  
+
   /* STATISTIQUES ........................................................ */
-  
+
   .statistiques {
   }
-  
+
   .player {
   }
-  
+
   .player-title {
   }
-  
+
   .player-name {
   }
-  
+
   .stats-pp {
   }
-  
+
   .pace-title {
   }
-  
+
   .pace-content {
   }
-  
-  
+
   /* LIEN JOUEUR ......................................................... */
-  
+
   .lien-joueur {
   }
-  
+
   .icon-skills-content-1 {
   }
-  
+
   .stars-rate {
   }
-  
-  
+
   /* FOOTER .............................................................. */
-  
+
   .footer-site {
   }
-  
+
   .footer-left {
   }
-  
+
   .footer-left-title {
   }
-  
+
   .footer-left-title-1 {
   }
-  
+
   .footer-left-title-2 {
   }
-  
+
   .footer-center {
   }
-  
+
   .logo-footer {
   }
-  
+
   .footer-right {
   }
-  
+
   .footer-right-title {
   }
-  
+
   .footer-link-list {
   }
-
 }
-
 
 /* ==========================================================================
    RESPONSIVE - MOBILE (MAX-WIDTH: 480PX)
    ========================================================================== */
 
 @media (max-width: 480px) {
-  
   /* HEADER SITE ......................................................... */
-  
+
   .header-site {
   }
-  
+
   .barre-nav {
   }
-  
+
   .logo-header {
   }
-  
+
   .links-header {
   }
-  
+
   .cta-header {
   }
-  
-  
+
   /* HERO SITE ........................................................... */
-  
+
   .hero-site {
   }
-  
+
   .hero-h1 {
   }
-  
+
   .hero-h1-texte {
   }
-  
+
   .scroll-down-instruction {
   }
-  
-  
+
   /* OUR STORY ........................................................... */
-  
+
   .our-story {
   }
-  
+
   .our-story h2 {
   }
-  
+
   .our-story p {
   }
-  
-  
+
   /* X-TEAM / TEAM MEMBERS .............................................. */
-  
+
   .x-team {
   }
-  
+
   .titleSection {
   }
-  
+
   .legende1 {
   }
-  
+
   .positionSection {
   }
-  
+
   .posTitle {
   }
-  
+
   .players-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-  
+
   .img-player-mini {
     height: 120px;
     width: 120px;
   }
-  
+
   .position-player-mini {
   }
-  
-  
+
   /* POPUP OVERLAY & CONTAINER .......................................... */
-  
+
   .popup-overlay {
   }
-  
+
   .popup-container {
   }
-  
+
   .close-popup {
   }
-  
-  
+
   /* PLAYER LINE ......................................................... */
-  
+
   .player-line {
   }
-  
+
   .img-player {
   }
-  
+
   .position-player {
   }
-  
-  
+
   /* STATISTIQUES ........................................................ */
-  
+
   .statistiques {
   }
-  
+
   .player {
   }
-  
+
   .player-title {
   }
-  
+
   .player-name {
   }
-  
+
   .stats-pp {
   }
-  
+
   .pace-title {
   }
-  
+
   .pace-content {
   }
-  
-  
+
   /* LIEN JOUEUR ......................................................... */
-  
+
   .lien-joueur {
   }
-  
+
   .icon-skills-content-1 {
   }
-  
+
   .stars-rate {
   }
-  
-  
+
   /* FOOTER .............................................................. */
-  
+
   .footer-site {
   }
-  
+
   .footer-left {
   }
-  
+
   .footer-left-title {
   }
-  
+
   .footer-left-title-1 {
   }
-  
+
   .footer-left-title-2 {
   }
-  
+
   .footer-center {
   }
-  
+
   .logo-footer {
   }
-  
+
   .footer-right {
   }
-  
+
   .footer-right-title {
   }
-  
+
   .footer-link-list {
   }
-
 }
