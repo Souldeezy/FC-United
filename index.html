@@ -27,28 +27,29 @@
         <ul class="links-header">
           <li>
             <div class="logo-story-1"></div>
-            <a href="">Our Story</a>
+            <a href="#ourStory">Our Story</a>
           </li>
           <li>
             <div class="logo-story-2"></div>
-            <a href="">Team Members</a>
+            <a href="#teamMembers">Team Members</a>
           </li>
           <li>
             <div class="logo-story-3"></div>
-            <a href="">Team Rules</a>
+            <a href="#teamRules">Team Rules</a>
           </li>
           <li>
             <div class="logo-story-4"></div>
-            <a href="">Gallery</a>
+            <a href="#teamGallery">Gallery</a>
           </li>
         </ul>
 
-        <button
+        <a
+          href="https://footy.netlify.app/clubhouse"
           class="cta-header"
-          aria-label="Lien Footy App pour les résultats et statistiques"
+          target="_blank"
         >
-          Check Results and Stats on The Footy App !
-        </button>
+          See more results on the Footy App
+        </a>
       </nav>
     </header>
 
@@ -57,9 +58,11 @@
       <!-- .......................................................................... -->
 
       <section class="hero-site">
-          <h1 class="hero-h1">X&3K</h1>
-          <p class="hero-h1-texte">team</p>
-          <p class="scroll-down-instruction">Scroll down to know more about us !</p>
+        <h1 class="hero-h1">X&3K</h1>
+        <p class="hero-h1-texte">team</p>
+        <p class="scroll-down-instruction">
+          Scroll down to know more about us !
+        </p>
       </section>
 
       <section class="our-story">
@@ -79,7 +82,7 @@
       <!-- TITLE TEAM MEMBERS........................................................-->
       <!-- SECTION X-TEAM AVEC 14 JOUEURS -->
 
-      <section class="x-team">
+      <section class="x-team" id="teamMembers">
         <div class="titleSection">
           <h2>Team Members</h2>
           <p class="legende1">Click on player image to see stats !</p>
@@ -94,9 +97,6 @@
           <div class="img-player-mini" data-player="1" id="joueur1">
             <p class="position-player-mini">GK</p>
           </div>
-          <div class="img-player-mini" data-player="2" id="joueur2">
-            <p class="position-player-mini">GK</p>
-          </div>
         </div>
 
         <div class="positionSection">
@@ -105,16 +105,16 @@
 
         <!-- GRILLE D'IMAGES DES JOUEURS -->
         <div class="players-grid">
+          <div class="img-player-mini" data-player="2" id="joueur2">
+            <p class="position-player-mini">LW</p>
+          </div>
           <div class="img-player-mini" data-player="3" id="joueur3">
             <p class="position-player-mini">DC</p>
           </div>
           <div class="img-player-mini" data-player="4" id="joueur4">
-            <p class="position-player-mini">DC</p>
-          </div>
-          <div class="img-player-mini" data-player="5" id="joueur5">
             <p class="position-player-mini">LW</p>
           </div>
-          <div class="img-player-mini" data-player="6" id="joueur6">
+          <div class="img-player-mini" data-player="5" id="joueur5">
             <p class="position-player-mini">RW</p>
           </div>
         </div>
@@ -125,16 +125,16 @@
 
         <!-- GRILLE D'IMAGES DES JOUEURS -->
         <div class="players-grid">
-          <div class="img-player-mini" data-player="7" id="joueur7">
+          <div class="img-player-mini" data-player="6" id="joueur6">
             <p class="position-player-mini">MD</p>
+          </div>
+          <div class="img-player-mini" data-player="7" id="joueur7">
+            <p class="position-player-mini">CM</p>
           </div>
           <div class="img-player-mini" data-player="8" id="joueur8">
             <p class="position-player-mini">MR</p>
           </div>
           <div class="img-player-mini" data-player="9" id="joueur9">
-            <p class="position-player-mini">MR</p>
-          </div>
-          <div class="img-player-mini" data-player="10" id="joueur10">
             <p class="position-player-mini">MO</p>
           </div>
         </div>
@@ -145,17 +145,33 @@
 
         <!-- GRILLE D'IMAGES DES JOUEURS -->
         <div class="players-grid">
-          <div class="img-player-mini" data-player="11" id="joueur11">
+          <div class="img-player-mini" data-player="10" id="joueur10">
             <p class="position-player-mini">ATL</p>
           </div>
-          <div class="img-player-mini" data-player="12" id="joueur12">
+          <div class="img-player-mini" data-player="11" id="joueur11">
             <p class="position-player-mini">ATR</p>
           </div>
-          <div class="img-player-mini" data-player="13" id="joueur13">
+          <div class="img-player-mini" data-player="12" id="joueur12">
             <p class="position-player-mini">SUB</p>
           </div>
-          <div class="img-player-mini" data-player="14" id="joueur14">
+          <div class="img-player-mini" data-player="13" id="joueur13">
             <p class="position-player-mini">STR</p>
+          </div>
+        </div>
+
+<!-- RESERVE....................................................... -->
+
+        <div class="positionSection">
+          <p class="posTitle" id="reserve-team">Reserve</p>
+        </div>
+
+        <!-- GRILLE D'IMAGES DES JOUEURS -->
+        <div class="players-grid">
+          <div class="img-player-mini" data-player="14" id="joueur14">
+            <p class="position-player-mini">ATL</p>
+          </div>
+          <div class="img-player-mini" data-player="15" id="joueur15">
+            <p class="position-player-mini">ATR</p>
           </div>
         </div>
 
@@ -168,7 +184,142 @@
             <i class="fa-solid fa-xmark"></i>
           </button>
 
-          <!-- PLAYER LINE ................................ -->
+          <!-- PLAYER LINE 1 HICHAM SABIR GK................................ -->
+
+          <div class="player-line">
+            <div class="img-player" id="joueur1">
+              <p class="position-player">GK</p>
+            </div>
+
+            <div class="statistiques">
+              <div class="player">
+                <p class="player-title">Name</p>
+                <p class="player-name">SABIR Hicham</p>
+                <div class="nationality1"></div>
+              </div>
+              <div class="stats-pp stat-bad">
+                <p class="pace-title">ATT</p>
+                <p class="pace-content">50</p>
+              </div>
+              <div class="stats-pp stat-good">
+                <p class="pace-title">DEF</p>
+                <p class="pace-content">80</p>
+              </div>
+              <div class="stats-pp stat-good">
+                <p class="pace-title">PAC</p>
+                <p class="pace-content">75</p>
+              </div>
+              <div class="stats-pp stat-middle">
+                <p class="pace-title">PAS</p>
+                <p class="pace-content">65</p>
+              </div>
+              <div class="stats-pp stat-middle">
+                <p class="pace-title">TEC</p>
+                <p class="pace-content">65</p>
+              </div>
+            </div>
+
+            <div class="lien-joueur">
+              <p class="icon-skills-content-1">Nutmeg</p>
+              <div class="stars-rate">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- PLAYER LINE 2 CYRIL JOUSSELIN LEFT WINGER.................... -->
+
+          <div class="player-line">
+            <div class="img-player" id="joueur2">
+              <p class="position-player">LW</p>
+            </div>
+
+            <div class="statistiques">
+              <div class="player">
+                <p class="player-title">Name</p>
+                <p class="player-name">JOUSSELIN Cyril</p>
+                <div class="nationality2"></div>
+              </div>
+              <div class="stats-pp stat-middle">
+                <p class="pace-title">ATT</p>
+                <p class="pace-content">68</p>
+              </div>
+              <div class="stats-pp stat-good">
+                <p class="pace-title">DEF</p>
+                <p class="pace-content">70</p>
+              </div>
+              <div class="stats-pp stat-middle">
+                <p class="pace-title">PAC</p>
+                <p class="pace-content">65</p>
+              </div>
+              <div class="stats-pp stat-good">
+                <p class="pace-title">PAS</p>
+                <p class="pace-content">80</p>
+              </div>
+              <div class="stats-pp stat-good">
+                <p class="pace-title">TEC</p>
+                <p class="pace-content">75</p>
+              </div>
+            </div>
+
+            <div class="lien-joueur">
+              <p class="icon-skills-content-1">Nutmeg</p>
+              <div class="stars-rate">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- PLAYER LINE 3 MONGO ROD CB................................ -->
+
+          <div class="player-line">
+            <div class="img-player" id="joueur3">
+              <p class="position-player">CB</p>
+            </div>
+
+            <div class="statistiques">
+              <div class="player">
+                <p class="player-title">Name</p>
+                <p class="player-name">MONGO Rodrigue</p>
+                <div class="nationality3"></div>
+              </div>
+              <div class="stats-pp stat-good">
+                <p class="pace-title">ATT</p>
+                <p class="pace-content">75</p>
+              </div>
+              <div class="stats-pp stat-good">
+                <p class="pace-title">DEF</p>
+                <p class="pace-content">90</p>
+              </div>
+              <div class="stats-pp stat-good">
+                <p class="pace-title">PAC</p>
+                <p class="pace-content">78</p>
+              </div>
+              <div class="stats-pp stat-good">
+                <p class="pace-title">PAS</p>
+                <p class="pace-content">85</p>
+              </div>
+              <div class="stats-pp stat-middle">
+                <p class="pace-title">TEC</p>
+                <p class="pace-content">68</p>
+              </div>
+            </div>
+
+            <div class="lien-joueur">
+              <p class="icon-skills-content-1">Nutmeg</p>
+              <div class="stars-rate">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- PLAYER LINE 4................................ -->
 
           <div class="player-line">
             <div class="img-player">
@@ -227,66 +378,7 @@
             </div>
           </div>
 
-          <!-- PLAYER LINE ................................ -->
-
-          <div class="player-line">
-            <div class="img-player">
-              <p class="position-player">GK</p>
-            </div>
-
-            <div class="statistiques">
-              <div class="player">
-                <p class="player-title">Name</p>
-                <p class="player-name">Coco</p>
-              </div>
-              <div class="stats-pp stat-good">
-                <p class="pace-title">ATT</p>
-                <p class="pace-content">87</p>
-              </div>
-              <div class="stats-pp stat-middle">
-                <p class="pace-title">DEF</p>
-                <p class="pace-content">70</p>
-              </div>
-              <div class="stats-pp stat-bad">
-                <p class="pace-title">PAC</p>
-                <p class="pace-content">40</p>
-              </div>
-              <div class="stats-pp stat-good">
-                <p class="pace-title">PAS</p>
-                <p class="pace-content">80</p>
-              </div>
-              <div class="stats-pp stat-good">
-                <p class="pace-title">TEC</p>
-                <p class="pace-content">90</p>
-              </div>
-            </div>
-
-            <div class="lien-joueur">
-              <p class="icon-skills-content-1">Nutmeg</p>
-              <div class="stars-rate">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <p class="icon-skills-content-1">Sombrero</p>
-              <div class="stars-rate">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star-half-stroke"></i>
-              </div>
-              <p class="icon-skills-content-1">Tactical Master</p>
-              <div class="stars-rate">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star-half-stroke"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- PLAYER LINE ................................ -->
+          <!-- PLAYER LINE 5................................ -->
 
           <div class="player-line">
             <div class="img-player">
@@ -345,7 +437,7 @@
             </div>
           </div>
 
-          <!-- PLAYER LINE ................................ -->
+          <!-- PLAYER LINE 6............................... -->
 
           <div class="player-line">
             <div class="img-player">
@@ -404,37 +496,38 @@
             </div>
           </div>
 
-          <!-- PLAYER LINE ................................ -->
+          <!-- PLAYER LINE  VASYL MAKAROVSKIY CM1................................ -->
 
           <div class="player-line">
-            <div class="img-player">
-              <p class="position-player">GK</p>
+            <div class="img-player" id="joueur7">
+              <p class="position-player">CM</p>
             </div>
 
             <div class="statistiques">
               <div class="player">
                 <p class="player-title">Name</p>
-                <p class="player-name">Corentin Gros</p>
+                <p class="player-name">MAKAROVSKIY Vasyl</p>
+                <div class="nationality7"></div>
               </div>
               <div class="stats-pp stat-good">
                 <p class="pace-title">ATT</p>
-                <p class="pace-content">87</p>
+                <p class="pace-content">78</p>
               </div>
               <div class="stats-pp stat-middle">
                 <p class="pace-title">DEF</p>
-                <p class="pace-content">70</p>
+                <p class="pace-content">75</p>
               </div>
               <div class="stats-pp stat-bad">
                 <p class="pace-title">PAC</p>
-                <p class="pace-content">40</p>
+                <p class="pace-content">65</p>
               </div>
               <div class="stats-pp stat-good">
                 <p class="pace-title">PAS</p>
-                <p class="pace-content">80</p>
+                <p class="pace-content">75</p>
               </div>
               <div class="stats-pp stat-good">
                 <p class="pace-title">TEC</p>
-                <p class="pace-content">90</p>
+                <p class="pace-content">69</p>
               </div>
             </div>
 
@@ -444,139 +537,6 @@
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
-              </div>
-              <p class="icon-skills-content-1">Sombrero</p>
-              <div class="stars-rate">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star-half-stroke"></i>
-              </div>
-              <p class="icon-skills-content-1">Tactical Master</p>
-              <div class="stars-rate">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star-half-stroke"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- PLAYER LINE ................................ -->
-
-          <div class="player-line">
-            <div class="img-player">
-              <p class="position-player">GK</p>
-            </div>
-
-            <div class="statistiques">
-              <div class="player">
-                <p class="player-title">Name</p>
-                <p class="player-name">Corentin Gros</p>
-              </div>
-              <div class="stats-pp stat-good">
-                <p class="pace-title">ATT</p>
-                <p class="pace-content">87</p>
-              </div>
-              <div class="stats-pp stat-middle">
-                <p class="pace-title">DEF</p>
-                <p class="pace-content">70</p>
-              </div>
-              <div class="stats-pp stat-bad">
-                <p class="pace-title">PAC</p>
-                <p class="pace-content">40</p>
-              </div>
-              <div class="stats-pp stat-good">
-                <p class="pace-title">PAS</p>
-                <p class="pace-content">80</p>
-              </div>
-              <div class="stats-pp stat-good">
-                <p class="pace-title">TEC</p>
-                <p class="pace-content">90</p>
-              </div>
-            </div>
-
-            <div class="lien-joueur">
-              <p class="icon-skills-content-1">Nutmeg</p>
-              <div class="stars-rate">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <p class="icon-skills-content-1">Sombrero</p>
-              <div class="stars-rate">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star-half-stroke"></i>
-              </div>
-              <p class="icon-skills-content-1">Tactical Master</p>
-              <div class="stars-rate">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star-half-stroke"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- PLAYER LINE ................................ -->
-
-          <div class="player-line">
-            <div class="img-player">
-              <p class="position-player">GK</p>
-            </div>
-
-            <div class="statistiques">
-              <div class="player">
-                <p class="player-title">Name</p>
-                <p class="player-name">Corentin Gros</p>
-              </div>
-              <div class="stats-pp stat-good">
-                <p class="pace-title">ATT</p>
-                <p class="pace-content">87</p>
-              </div>
-              <div class="stats-pp stat-middle">
-                <p class="pace-title">DEF</p>
-                <p class="pace-content">70</p>
-              </div>
-              <div class="stats-pp stat-bad">
-                <p class="pace-title">PAC</p>
-                <p class="pace-content">40</p>
-              </div>
-              <div class="stats-pp stat-good">
-                <p class="pace-title">PAS</p>
-                <p class="pace-content">80</p>
-              </div>
-              <div class="stats-pp stat-good">
-                <p class="pace-title">TEC</p>
-                <p class="pace-content">90</p>
-              </div>
-            </div>
-
-            <div class="lien-joueur">
-              <p class="icon-skills-content-1">Nutmeg</p>
-              <div class="stars-rate">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <p class="icon-skills-content-1">Sombrero</p>
-              <div class="stars-rate">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star-half-stroke"></i>
-              </div>
-              <p class="icon-skills-content-1">Tactical Master</p>
-              <div class="stars-rate">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star-half-stroke"></i>
               </div>
             </div>
           </div>
@@ -996,68 +956,56 @@
       <!-- OUR RULES................................................ -->
       <!-- ......................................................... -->
 
-      <section class="our-story">
+      <section class="our-story" id="ourStory">
         <h2>Our Rules</h2>
-        <p>
-          Born six years ago in the heart of North Amsterdam, our team is more
-          than just a club; it's a global family. We bring together 20 talented
-          players from 20 different nations, united by a passion for high-level
-          football and a commitment to human values. On the pitch, we play with
-          skill and determination. Off the pitch, we stand for causes greater
-          than ourselves, using our shared voice to advocate for justice and
-          freedom. We are not just a team; we are a movement, proving that
-          diversity is our greatest strength.
+        <p class="our-story-para" id="teamRules">
+          While we play at an amateur level, our standards are high. Joining
+          X&3K requires solid skills and dedication to the game. Every player
+          commits to putting the team first, fostering unity both on and off the
+          pitch. With members from across the globe, tolerance and
+          open-mindedness aren't just values—they're our foundation. We
+          celebrate diversity, embrace different perspectives, and believe that
+          respect transcends borders. At X&3K, we're eclectic by nature, and
+          that's what makes us stronger together.
         </p>
       </section>
-
 
       <!-- GALLERY ........................................................ -->
       <!-- ................................................................ -->
 
-      <section class="gallery">
-
-
+      <section class="gallery" id="teamGallery">
         <div class="background-blur"></div>
 
-        
         <figure class="photo-gallery">
-          <img src=".//PICS/football-3288547_1920.jpg" alt="">
+          <img src=".//PICS/football-3288547_1920.jpg" alt="" />
           <figcaption>X&3K Team VS Show Me The Mané</figcaption>
         </figure>
 
         <figure class="photo-gallery">
-          <img src=".//PICS/football-3288547_1920.jpg" alt="">
+          <img src=".//PICS/football-3288547_1920.jpg" alt="" />
           <figcaption>X&3K Team VS Show Me The Mané</figcaption>
         </figure>
 
         <figure class="photo-gallery">
-          <img src=".//PICS/football-3288547_1920.jpg" alt="">
+          <img src=".//PICS/football-3288547_1920.jpg" alt="" />
           <figcaption>X&3K Team VS Show Me The Mané</figcaption>
         </figure>
 
         <figure class="photo-gallery">
-          <img src=".//PICS/football-3288547_1920.jpg" alt="">
+          <img src=".//PICS/football-3288547_1920.jpg" alt="" />
           <figcaption>X&3K Team VS Show Me The Mané</figcaption>
         </figure>
 
         <figure class="photo-gallery">
-          <img src=".//PICS/football-3288547_1920.jpg" alt="">
+          <img src=".//PICS/football-3288547_1920.jpg" alt="" />
           <figcaption>X&3K Team VS Show Me The Mané</figcaption>
         </figure>
 
         <figure class="photo-gallery">
-          <img src=".//PICS/football-3288547_1920.jpg" alt="">
+          <img src=".//PICS/football-3288547_1920.jpg" alt="" />
           <figcaption>X&3K Team VS Show Me The Mané</figcaption>
         </figure>
-
-
-
       </section>
-
-
-
-
-
     </main>
 
     <!-- FOOTER.................................................................... -->
@@ -1073,22 +1021,24 @@
 
       <div class="footer-center">
         <div class="logo-footer"></div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quibusdam vitae, eum optio praesentium assumenda omnis vel officiis ipsum sit corrupti quidem error, est et repudiandae cum natus pariatur accusamus.</p>
+        <p class="fc-para">
+          X&3K Amsterdam: Where diverse talents unite. High-level amateur
+          football driven by passion, teamwork, and unwavering commitment to
+          tolerance and human values.
+        </p>
+        <p class="fc-copyright">
+          © 2025 X&3K. This website has been made by Deezy and powered by
+          <em>Netlify</em>. Contact us for details.
+        </p>
       </div>
 
       <div class="footer-right">
         <p class="footer-right-title">About</p>
         <ul class="footer-link-list">
           <li><a href="">Legal Notices</a></li>
-          <li><a href="">Politique de Confidentialité</a></li>
-          <li><a href="">Cookies</a></li>
-          <li><a href="">CGU</a></li>
-          <li>
-            <p>
-              This Website has been made by Deezy and powered by
-              <em>Netlify</em>. Contact us for details
-            </p>
-          </li>
+          <li><a href="">Privacy Policy</a></li>
+          <li><a href="">Cookies Policy</a></li>
+          <li><a href="">Terms and Conditions</a></li>
         </ul>
       </div>
     </footer>

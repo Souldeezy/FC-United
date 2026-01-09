@@ -1,3 +1,4 @@
+
 /*  REGLAGES GENERAUX................................................. */
 
 * {
@@ -162,18 +163,18 @@ main {
 .cta-header {
   background-color: transparent;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 18px;
   border-radius: 10px;
   color: white;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  border-color: transparent;
+  transition: all 0.2s ease-in-out;
+  font-family: "Passion One", sans-serif;
+  text-decoration: none;
 }
 
 .cta-header:hover {
   box-shadow: 0px 0px 10px 0px rgba(0, 222, 0, 0.974);
-  background-color: rgba(0, 222, 0, 0.974);
-  color: black;
+  color: rgb(0, 222, 0);
 }
 
 /* MAIN.......................................................... */
@@ -232,6 +233,7 @@ main {
   opacity: 0;
   animation: fadeInOnly 1s ease-out 1.5s forwards,
     clignoter 3s ease-in-out 3s infinite;
+  text-shadow: 0px 0px 5px rgb(0, 222, 0);
 }
 
 /* SECTION OUR STORY............................................. */
@@ -288,6 +290,26 @@ main {
   transform: translateX(0);
 }
 
+.our-story-para {
+  color: white;
+  margin: 70px 0px 50px 50px;
+  width: 70%;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  line-height: 1.6em;
+  letter-spacing: 1px;
+  text-align: justify;
+  opacity: 0;
+  transform: translateX(100px);
+  animation: fadeInRight 1s ease-out forwards;
+}
+
+/* Classe ajoutée par JS quand visible */
+.our-story-para.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 /* XTEAM............................................................ */
 /* ................................................................. */
 
@@ -324,10 +346,10 @@ main {
 
 .legende1 {
   color: white;
-  font-size: 25px;
+  font-size: 20px;
   font-style: italic;
   font-family: "Lato", sans-serif;
-  text-shadow: 0px 0px 0px rgb(201, 201, 201);
+  text-shadow: 0px 0px 5px rgb(0, 222, 0);
   animation-duration: 3s;
   animation-name: clignoter;
   animation-iteration-count: infinite;
@@ -340,6 +362,16 @@ main {
   width: 100%;
   align-items: center;
 }
+
+#reserve-team {
+  margin: 100px 0px 50px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-transform: lowercase;
+  color: rgb(206, 206, 206);
+}
+
 
 .posTitle {
   font-size: 40px;
@@ -391,10 +423,12 @@ main {
 /* .......................................................... */
 
 #joueur1 {
-  background: url(.//PICS/CorentinGros1.png) no-repeat;
+  background: url(.//PICS/HichamSabir.jpg) no-repeat;
   background-position: center;
   background-size: cover;
 }
+
+/* DEFENDERS.................................................. */
 
 #joueur2 {
   background: url(.//PICS/CyrilJousselin.jpg) no-repeat;
@@ -402,7 +436,6 @@ main {
   background-size: cover;
 }
 
-/* DEFENDERS................................................. */
 
 #joueur3 {
   background: url(.//PICS/MongoRod.webp) no-repeat;
@@ -431,7 +464,7 @@ main {
 /* MIDFIELDERS................................................ */
 
 #joueur7 {
-  background: url(.//PICS/CyrilJousselin.jpg) no-repeat;
+  
   background-position: center;
   background-size: cover;
 }
@@ -583,14 +616,11 @@ main {
 /* État activé : cadre et background apparaissent */
 .player-line.is-revealed {
   border-color: rgb(0, 222, 0);
-  background: linear-gradient(
-      76deg,
-      rgba(37, 80, 0, 0.722) 0%,
-      rgba(17, 51, 17, 0.716) 100%
-    ),
-    url(.//PICS/football1.jpg);
+  background: rgba(0, 0, 0, 0.668);
+  background-image: url(.//PICS/football1.jpg);
   background-position: bottom;
   background-size: cover;
+  background-blend-mode: darken;
 }
 
 /* IMAGE JOUEUR ET POSITION....................................... */
@@ -648,11 +678,60 @@ main {
   font-size: 30px;
 }
 
+.player-title::first-letter {
+  color: rgb(0, 222, 0);
+  font-size: 32px;
+}
+
 .player-name {
   color: white;
   font-family: "Lato", sans-serif;
   font-size: 23px;
   letter-spacing: 2px;
+}
+
+/* NATIONALITE JOUEURS............................................ */
+/* ............................................................... */
+
+/* GK NATIONALITY................................................. */
+
+.nationality1 {
+
+  height: 50px;
+  width: 60px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("data:image/svg+xml,%3Csvg width='100px' height='100px' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' class='iconify iconify--twemoji' preserveAspectRatio='xMidYMid meet' fill='%23000000'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath fill='%23C1272D' d='M32 5H4a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4z'%3E%3C/path%3E%3Cpath fill='%23006233' d='M15.047 22.165l1.128-3.471l-2.953-2.145h3.649L18 13.074l1.129 3.474h3.649l-2.953 2.145l1.128 3.471L18 20.019l-2.953 2.146zm3.583-2.603l.916.665l-.35-1.077l-.566.412zm-1.826-.412l-.35 1.077l.916-.665l-.566-.412zm.241-.74l.955.694l.955-.694l-.365-1.122h-1.182l-.363 1.122zM15.5 17.288l.915.665l.216-.665H15.5zm3.869 0l.216.665l.915-.665h-1.131zm-1.019-.74L18 15.47l-.35 1.079h.7z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* LW NATIONALITY................................................. */
+
+.nationality2 {
+  height: 50px;
+  width: 60px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' class='iconify iconify--twemoji' preserveAspectRatio='xMidYMid meet' fill='%23000000'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath fill='%23ED2939' d='M36 27a4 4 0 0 1-4 4h-8V5h8a4 4 0 0 1 4 4v18z'%3E%3C/path%3E%3Cpath fill='%23002495' d='M4 5a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h8V5H4z'%3E%3C/path%3E%3Cpath fill='%23EEE' d='M12 5h12v26H12z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* CB1 NATIONALITY................................................. */
+
+.nationality3 {
+  height: 50px;
+  width: 60px;
+  background-position: center;
+  background-size: cover;
+background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' class='iconify iconify--twemoji' preserveAspectRatio='xMidYMid meet' fill='%23000000'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath fill='%23CC212D' d='M12 5v26h12V5H12zm7.882 15.59L18 19.223l-1.882 1.367l.719-2.212l-1.882-1.367h2.326L18 14.798l.719 2.212h2.326l-1.882 1.367l.719 2.213z'%3E%3C/path%3E%3Cpath fill='%23288541' d='M4 5a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h8V5H4z'%3E%3C/path%3E%3Cpath fill='%23FEE833' d='M32 5h-8v26h8a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4zM18.719 17.011L18 14.798l-.719 2.213h-2.326l1.882 1.367l-.719 2.212L18 19.223l1.882 1.367l-.719-2.212l1.882-1.367z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* CM NATIONALITY................................................. */
+
+.nationality7 {
+  height: 50px;
+  width: 60px;
+  background-position: center;
+  background-size: cover;
+background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' class='iconify iconify--twemoji' preserveAspectRatio='xMidYMid meet' fill='%23000000'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath fill='%23005BBB' d='M32 5H4a4 4 0 0 0-4 4v9h36V9a4 4 0 0 0-4-4z'%3E%3C/path%3E%3Cpath fill='%23FFD500' d='M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4v-9h36v9z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
 }
 
 /* STATS PP....................................................... */
@@ -835,6 +914,7 @@ main {
   background-color: rgb(11, 11, 11);
   display: flex;
   padding: 10px 50px;
+  position: relative;
 }
 
 /* FOOTER LEFT......................................................... */
@@ -845,6 +925,7 @@ main {
   flex-direction: column;
   margin: 0;
   justify-content: space-around;
+  width: 20%;
 }
 .footer-left-title {
   display: flex;
@@ -875,7 +956,9 @@ main {
 .footer-center {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  width: 60%;
+  flex-direction: column;
 }
 
 .logo-footer {
@@ -889,7 +972,7 @@ main {
   position: absolute;
 }
 
-.footer-center p {
+.fc-para {
   text-align: center;
   font-size: 15px;
   font-family: "Lato", sans-serif;
@@ -900,9 +983,26 @@ main {
   line-height: 1.6em;
 }
 
-.footer-center p::first-letter {
+.fc-para::first-letter {
   color: rgb(0, 222, 0);
   font-size: 20px;
+}
+
+.fc-copyright {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 9px;
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+  letter-spacing: 2px;
+  text-align: justify;
+  position: absolute;
+  bottom: 6%;
+}
+
+.fc-copyright em {
+  color: rgb(0, 222, 0);
 }
 
 /* FOOTER RIGHT........................................................ */
@@ -912,6 +1012,7 @@ main {
   align-items: center;
   flex-direction: column;
   gap: 10px;
+  width: 20%;
 }
 
 .footer-right-title {
@@ -940,20 +1041,6 @@ main {
   list-style-type: none;
 }
 
-.footer-link-list li p {
-  color: white;
-  font-family: "Lato", sans-serif;
-  font-size: 9px;
-  text-align: center;
-  margin-top: 10px;
-  font-style: italic;
-  letter-spacing: 2px;
-}
-
-.footer-link-list li p em {
-  color: rgb(0, 222, 0);
-}
-
 .footer-link-list li a {
   color: rgb(190, 190, 190);
   font-family: "Passion One", sans-serif;
@@ -965,7 +1052,7 @@ main {
 
 .footer-link-list li a:hover {
   color: rgb(0, 222, 0);
-  transition: 0.2s all ease-in-out;
+  transition: 0.1s all ease-in-out;
 }
 
 /* ANIMATIONS......................................................... */
@@ -1095,11 +1182,7 @@ main {
   transition-delay: 1.5s;
 }
 
-/* Animation heartbeat pour les bonnes stats */
-.statistiques.is-animated .stats-pp.stat-good {
-  animation: heartbeat 5s ease-in-out infinite;
-  animation-delay: 2s;
-}
+
 
 /* ÉTAPE 3 : LIEN-JOUEUR (1.8s à 3s) */
 
@@ -1178,6 +1261,19 @@ main {
   from {
     opacity: 0;
     transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* FADE IN RIGHT....................................................... */
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
   }
   to {
     opacity: 1;
