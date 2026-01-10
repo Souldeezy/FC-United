@@ -143,3 +143,5 @@ document.addEventListener('DOMContentLoaded', function() {
         navBar.classList.add('visible');
     }, 2000);
 });
+
+
