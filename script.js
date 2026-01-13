@@ -10,10 +10,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Fonction pour ouvrir le popup avec un joueur spécifique
     function openPopup(playerNumber) {
-        // Cacher toutes les player-lines
+        // Cacher toutes les player-lines et réinitialiser leurs animations
         allPlayerLines.forEach(line => {
             line.style.display = 'none';
-            line.classList.remove('is-revealed', 'is-animated');
+            line.classList.remove('is-revealed', 'is-animated', 'animate');
+            
+            // Réinitialiser les délais des étoiles
+            const allStars = line.querySelectorAll('.sg-right i');
+            allStars.forEach(star => {
+                star.style.animationDelay = '';
+            });
+            
             const stats = line.querySelector('.statistiques');
             const lien = line.querySelector('.lien-joueur');
             if (stats) stats.classList.remove('is-animated');
@@ -21,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Trouver et afficher la player-line correspondante
-        // On utilise l'attribut data-player-id ou on compte
         let selectedLine = allPlayerLines[playerNumber - 1];
         
         if (selectedLine) {
@@ -35,31 +41,61 @@ document.addEventListener('DOMContentLoaded', function() {
             // Bloquer le scroll de la page
             document.body.style.overflow = 'hidden';
             
-            // Récupérer les éléments de cette player-line
-            const statsContainer = selectedLine.querySelector('.statistiques');
-            const lienJoueur = selectedLine.querySelector('.lien-joueur');
-            
-            // Lancer l'animation après un court délai
+            // Lancer les animations après un court délai
             setTimeout(() => {
-                selectedLine.classList.add('is-revealed');
+                selectedLine.classList.add('is-revealed', 'animate');
+                
+                // Animation des étoiles
+                animateStars(selectedLine);
+                
+                const statsContainer = selectedLine.querySelector('.statistiques');
+                const lienJoueur = selectedLine.querySelector('.lien-joueur');
+                
                 if (lienJoueur) {
-                    lienJoueur.classList.add('is-revealed');
+                    lienJoueur.classList.add('is-revealed', 'is-animated');
                 }
                 if (statsContainer) {
                     statsContainer.classList.add('is-animated');
                 }
-                if (lienJoueur) {
-                    lienJoueur.classList.add('is-animated');
-                }
             }, 100);
         }
+    }
+    
+    // Fonction pour animer les étoiles une par une
+    function animateStars(playerLine) {
+        const allSocialGatherings = playerLine.querySelectorAll('.socialGathering');
+        let globalDelay = 4000; // Délai de base en ms (après les autres animations)
+        
+        // Parcourir chaque catégorie (Beer, Food, Fun) dans l'ordre
+        allSocialGatherings.forEach((gathering, gatheringIndex) => {
+            const starContainer = gathering.querySelector('.sg-right');
+            if (starContainer) {
+                const stars = starContainer.querySelectorAll('i');
+                
+                // Animer chaque étoile de cette catégorie
+                stars.forEach((star, starIndex) => {
+                    const delay = globalDelay + (starIndex * 100); // 0.2s entre chaque étoile
+                    star.style.animationDelay = delay + 'ms';
+                });
+                
+                // Ajouter le temps pour toutes les étoiles de cette catégorie + un petit délai
+                globalDelay += (stars.length * 100);
+            }
+        });
     }
     
     // Fonction pour fermer le popup
     function closePopup() {
         if (currentPlayerLine) {
             // Retirer les classes d'animation
-            currentPlayerLine.classList.remove('is-revealed');
+            currentPlayerLine.classList.remove('is-revealed', 'animate');
+            
+            // Réinitialiser les délais des étoiles
+            const allStars = currentPlayerLine.querySelectorAll('.sg-right i');
+            allStars.forEach(star => {
+                star.style.animationDelay = '';
+            });
+            
             const stats = currentPlayerLine.querySelector('.statistiques');
             const lien = currentPlayerLine.querySelector('.lien-joueur');
             if (stats) stats.classList.remove('is-animated');
@@ -131,7 +167,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-
 // APPARITION BARRE NAVIGATION...........................................//
 //.......................................................................//
 
@@ -145,3 +180,74 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// POPUP GALLERY
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryImages = document.querySelectorAll('.photo-gallery');
+    const popupOverlay = document.querySelector('.popup-gallery-overlay');
+    const popupContainer = document.querySelector('.popup-gallery-container');
+    const popupImage = document.querySelector('.popup-gallery-image');
+    const popupCaption = document.querySelector('.popup-gallery-caption');
+    const closeButton = document.querySelector('.close-popup-gallery');
+
+    // Ouvrir le popup au clic sur une photo
+    galleryImages.forEach((photo) => {
+        photo.addEventListener('click', function() {
+            const img = this.querySelector('img');
+            const caption = this.querySelector('figcaption');
+            
+            popupImage.src = img.src;
+            popupCaption.textContent = caption.textContent;
+            
+            popupOverlay.classList.add('active');
+            popupContainer.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Fermer le popup avec le bouton X
+    closeButton.addEventListener('click', function() {
+        popupOverlay.classList.remove('active');
+        popupContainer.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    // Fermer le popup en cliquant sur l'overlay
+    popupOverlay.addEventListener('click', function() {
+        popupOverlay.classList.remove('active');
+        popupContainer.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    // Fermer avec la touche Échap
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && popupContainer.classList.contains('active')) {
+            popupOverlay.classList.remove('active');
+            popupContainer.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+});
+
+// BOUTON BACK TO TOP RETOUR EN HAUT DE PAGE...........................................//
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const backToTopButton = document.querySelector('.back-to-top');
+
+    // Afficher le bouton après avoir scrollé de 300px
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+
+    // Remonter en haut au clic
+    backToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
