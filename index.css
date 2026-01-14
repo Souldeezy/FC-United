@@ -69,7 +69,7 @@ main {
 /* LOGO HEADER GAUCHE............................................................ */
 
 .logo-header {
-  background: url(.//PICS/Logo\ X&3K.jpg) no-repeat;
+  background: url(.//PICS/logoX.webp) no-repeat;
   background-position: center;
   background-size: 100%;
   height: 100px;
@@ -221,7 +221,7 @@ main {
   justify-content: center;
   flex-direction: column;
   padding: 200px 350px 20px 200px;
-  background-image: url(.//PICS/abigail-keenan-8-s5QuUBtyM-unsplash.jpg);
+  background-image: url(.//PICS/terrainNuit.webp);
   background-position: center;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.234);
@@ -336,7 +336,7 @@ main {
   color: #ebc400;
   transition: 0.2s all ease-in-out;
   box-shadow: 0px 0px 10px 0px rgb(111, 93, 0);
-  background-color: #6f5c006e;
+  background-color: #6f5d00;
 }
 
 .heroCtaReseaux-1:hover i {
@@ -397,6 +397,7 @@ main {
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
+
 .story-carousel.visible {
   opacity: 1;
   transform: translateY(0);
@@ -446,7 +447,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
   flex-shrink: 0;
 }
 
@@ -495,7 +497,6 @@ main {
   box-shadow: 0px 0px 10px #ebc400;
 }
 
-
 .story-slide.active strong {
   color: #ebc400;
 }
@@ -510,7 +511,7 @@ main {
   text-decoration: none;
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-underline-offset: 3px;  
+  text-underline-offset: 3px;
 }
 
 .story-slide.active a:hover {
@@ -532,7 +533,7 @@ main {
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.353);
   background-blend-mode: darken;
-  background-image: url(.//PICS/timothy-tan-PAe2UhGo-S4-unsplash.jpg);
+  background-image: url(.//PICS/terrainVuedeHaut.webp);
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 0px 50px 100px 50px;
@@ -648,7 +649,7 @@ main {
 /* GOALKEEPER....................................................................... */
 
 #joueur1 {
-  background: url(.//PICS/HichamSabir.jpg) no-repeat;
+  background: url(.//PICS/MongoRod.webp) no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -838,7 +839,7 @@ main {
 .player-line.is-revealed {
   border-color: rgb(235, 196, 0);
   background: rgba(0, 0, 0, 0.668);
-  background-image: url(.//PICS/football1.jpg);
+  background-image: url(.//PICS/terrainNuitStats.webp);
   background-position: bottom;
   background-size: cover;
   background-blend-mode: darken;
@@ -853,7 +854,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(.//PICS/lucid-origin_can_you_do_a_selfie_picture_like_a_football_player_arms_crossed_face_from_the_to-0.jpg);
+  background-image: url(.//PICS/joueurSelfie.webp);
   background-position: center;
   background-size: cover;
   background-color: transparent;
@@ -866,7 +867,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(.//PICS/lucid-origin_can_you_do_a_selfie_picture_like_a_football_player_arms_crossed_face_from_the_to-0.jpg);
+  background-image: url(.//PICS/joueurSelfie.webp);
   background-position: center;
   background-size: cover;
   background-color: transparent;
@@ -879,7 +880,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(.//PICS/lucid-origin_can_you_do_a_selfie_picture_like_a_football_player_arms_crossed_face_from_the_to-0.jpg);
+  background-image: url(.//PICS/joueurSelfie.webp);
   background-position: center;
   background-size: cover;
   background-color: transparent;
@@ -892,7 +893,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(.//PICS/lucid-origin_can_you_do_a_selfie_picture_like_a_football_player_arms_crossed_face_from_the_to-0.jpg);
+  background-image: url(.//PICS/joueurSelfie.webp);
   background-position: center;
   background-size: cover;
   background-color: transparent;
@@ -905,7 +906,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(.//PICS/lucid-origin_can_you_do_a_selfie_picture_like_a_football_player_arms_crossed_face_from_the_to-0.jpg);
+  background-image: url(.//PICS/joueurSelfie.webp);
   background-position: center;
   background-size: cover;
   background-color: transparent;
@@ -918,7 +919,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(.//PICS/lucid-origin_can_you_do_a_selfie_picture_like_a_football_player_arms_crossed_face_from_the_to-0.jpg);
+  background-image: url(.//PICS/joueurSelfie.webp);
   background-position: center;
   background-size: cover;
   background-color: transparent;
@@ -931,7 +932,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(.//PICS/lucid-origin_can_you_do_a_selfie_picture_like_a_football_player_arms_crossed_face_from_the_to-0.jpg);
+  background-image: url(.//PICS/joueurSelfie.webp);
   background-position: center;
   background-size: cover;
   background-color: transparent;
@@ -944,7 +945,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(.//PICS/lucid-origin_can_you_do_a_selfie_picture_like_a_football_player_arms_crossed_face_from_the_to-0.jpg);
+  background-image: url(.//PICS/joueurSelfie.webp);
   background-position: center;
   background-size: cover;
   background-color: transparent;
@@ -957,7 +958,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(.//PICS/lucid-origin_can_you_do_a_selfie_picture_like_a_football_player_arms_crossed_face_from_the_to-0.jpg);
+  background-image: url(.//PICS/joueurSelfie.webp);
   background-position: center;
   background-size: cover;
   background-color: transparent;
@@ -970,7 +971,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(.//PICS/lucid-origin_can_you_do_a_selfie_picture_like_a_football_player_arms_crossed_face_from_the_to-0.jpg);
+  background-image: url(.//PICS/joueurSelfie.webp);
   background-position: center;
   background-size: cover;
   background-color: transparent;
@@ -983,7 +984,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(.//PICS/lucid-origin_can_you_do_a_selfie_picture_like_a_football_player_arms_crossed_face_from_the_to-0.jpg);
+  background-image: url(.//PICS/joueurSelfie.webp);
   background-position: center;
   background-size: cover;
   background-color: transparent;
@@ -996,7 +997,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(.//PICS/lucid-origin_can_you_do_a_selfie_picture_like_a_football_player_arms_crossed_face_from_the_to-0.jpg);
+  background-image: url(.//PICS/joueurSelfie.webp);
   background-position: center;
   background-size: cover;
   background-color: transparent;
@@ -1009,7 +1010,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(.//PICS/lucid-origin_can_you_do_a_selfie_picture_like_a_football_player_arms_crossed_face_from_the_to-0.jpg);
+  background-image: url(.//PICS/joueurSelfie.webp);
   background-position: center;
   background-size: cover;
   background-color: transparent;
@@ -1022,7 +1023,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(.//PICS/lucid-origin_can_you_do_a_selfie_picture_like_a_football_player_arms_crossed_face_from_the_to-0.jpg);
+  background-image: url(.//PICS/joueurSelfie.webp);
   background-position: center;
   background-size: cover;
   background-color: transparent;
@@ -1035,7 +1036,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(.//PICS/lucid-origin_can_you_do_a_selfie_picture_like_a_football_player_arms_crossed_face_from_the_to-0.jpg);
+  background-image: url(.//PICS/joueurSelfie.webp);
   background-position: center;
   background-size: cover;
   background-color: transparent;
@@ -1090,7 +1091,7 @@ main {
 }
 
 .logo-inside {
-  background: url(.//PICS/Logo\ X&3K.jpg) no-repeat;
+  background: url(.//PICS/logoX.webp) no-repeat;
   background-position: center;
   background-size: 100%;
   height: 30px;
@@ -1347,8 +1348,6 @@ main {
   opacity: 0;
 }
 
-
-
 /* NATIONALITE JOUEURS............................................................................................................................................... */
 
 /* ................................................(MOROCCO) */
@@ -1497,7 +1496,7 @@ main {
   justify-content: center;
   position: relative;
   gap: 20px;
-  background-image: url(".//PICS/abigail-keenan-8-s5QuUBtyM-unsplash.jpg");
+  background-image: url(".//PICS/terrainVuedeHaut.webp");
   background-size: cover;
   background-position: center;
   background-blend-mode: darken;
@@ -1515,6 +1514,7 @@ main {
   width: 20%;
   z-index: 1;
   border-radius: 10px;
+  border: 2px solid #6f5d00;
 }
 
 .photo-gallery:hover img {
@@ -1548,7 +1548,6 @@ main {
   font-size: 12px;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid rgb(111, 93, 0);
   opacity: 0;
   transition: opacity 0.2s ease-in-out; /* Mets la transition ici */
 }
@@ -1680,11 +1679,18 @@ main {
   transform: translateY(0);
 }
 
-.sponsors-links {
+.sponsors-container a {
   display: flex;
-  align-items: start;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 25px;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1px;
+  font-family: "Lato",sans-serif;
+  font-size: 15px;
+  font-style: italic;
 }
 
 .img-pronk {
@@ -1692,8 +1698,10 @@ main {
   width: 210px;
   background-position: center;
   background-size: cover;
-  background: url(.//PICS/Sponsor\ 1.png) no-repeat;
-  box-shadow: 0px 0px 15px 0px white;
+  background: url(.//PICS/Sponsor\ 1.webp) no-repeat;
+  box-shadow: 0px 0px 5px 0px white;
+  border: 2px solid white;
+  border-radius: 10px;
 }
 
 .img-iw {
@@ -1701,11 +1709,22 @@ main {
   width: 287px;
   background-position: center;
   background-size: cover;
-  background: url(.//PICS/Sponsor\ 2.png) no-repeat;
-  box-shadow: 0px 0px 15px 0px white;
+  background: url(.//PICS/Sponsor\ 2.webp) no-repeat;
+  box-shadow: 0px 0px 0px 0px white;
+  border-radius: 10px;
 }
 
+.img-pronk:hover, .img-iw:hover {
+  box-shadow: 0px 0px 5px 0px #ebc400;
+  transition: 0.1s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px white;
+}
 
+.sponsors-container a:hover {
+  color: #ebc400;
+  transition: 0.1s ease-in-out;
+}
 
 /* BOUTON RETOUR EN HAUT ................................................................. */
 
@@ -1782,6 +1801,13 @@ main {
   position: relative;
 }
 
+.footer-left-title-1 strong {
+  font-family: "Rubik Spray", sans-serif;
+  color: rgba(0, 0, 0, 0.838);
+  -webkit-text-stroke: 0.5px #ebc400;
+  font-size: 40px;
+}
+
 .footer-left-title-2 {
   font-size: 35px;
   font-family: "Passion One", sans-serif;
@@ -1805,7 +1831,7 @@ main {
 }
 
 .logo-footer {
-  background: url(.//PICS/Logo\ X&3K.jpg) no-repeat;
+  background: url(.//PICS/logoX.webp) no-repeat;
   background-position: center;
   background-size: 100%;
   height: 200px;
@@ -2077,7 +2103,6 @@ main {
   animation-delay: 5s;
 }
 
-
 /*  KEYFRAMES........................................................................................................................................................ */
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
@@ -2259,19 +2284,19 @@ main {
 }
 
 @keyframes heartbeat {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
-  10%, 30% {
+  10%,
+  30% {
     transform: scale(1.1);
   }
-  20%, 40% {
+  20%,
+  40% {
     transform: scale(1);
   }
 }
-
-
-
 
 /* ANIMATIONS KEYFRAMES */
 @keyframes fadeIn {
@@ -2306,17 +2331,19 @@ main {
 }
 
 @keyframes heartbeat {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
-  10%, 30% {
+  10%,
+  30% {
     transform: scale(1.1);
   }
-  20%, 40% {
+  20%,
+  40% {
     transform: scale(1);
   }
 }
-
 
 /*  RESPONSIVE DESIGN................................................................................................................................................ */
 /* .................................................................................................................................................................. */
