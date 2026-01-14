@@ -221,7 +221,6 @@ main {
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.234);
   background-blend-mode: darken;
-
 }
 
 .hero-ml h1 {
@@ -229,6 +228,11 @@ main {
   font-family: "Permanent Marker", sans-serif;
   color: white;
   text-shadow: 0px 0px 20px black, 0px 0px 5px black;
+  animation: fadeInOnly 1s ease-out forwards;
+  animation-delay: 0s; /* X&3K apparaît après "l'équipe" (3s) */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
 .hero-ml-para {
@@ -239,6 +243,11 @@ main {
   line-height: 1.8em;
   width: 50%;
   text-align: center;
+  animation: fadeInOnly 1s ease-out forwards;
+  animation-delay: 0.5s; /* X&3K apparaît après "l'équipe" (3s) */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
 .links-hero {
@@ -247,22 +256,32 @@ main {
   justify-content: center;
   gap: 40px;
   margin-top: 40px;
+  animation: fadeInOnly 1s ease-out forwards;
+  animation-delay: 1.3s; /* X&3K apparaît après "l'équipe" (3s) */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
-.links-hero-1, .links-hero-2, .links-hero-3, .links-hero-4 {
-    color: white;
-    list-style-type: none;
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: bold;
-    font-family: "Passion One", sans-serif;
+.links-hero-1,
+.links-hero-2,
+.links-hero-3,
+.links-hero-4 {
+  color: white;
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Passion One", sans-serif;
 }
 
-.links-hero-1:hover, .links-hero-2:hover, .links-hero-3:hover, .links-hero-4:hover {
-    color: #ebc400;
-    transition: 0.2s all ease-in-out;
+.links-hero-1:hover,
+.links-hero-2:hover,
+.links-hero-3:hover,
+.links-hero-4:hover {
+  color: #ebc400;
+  transition: 0.2s all ease-in-out;
 }
-
 
 /* HERO INSTRUCTIONS................................................................ */
 
@@ -277,29 +296,34 @@ main {
 }
 
 .hero-ml-instructions i {
-    color: rgb(255, 255, 255);
-    font-size: 14px;
-    margin-top: 5px;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid white;
+  color: white;
+  font-size: 14px;
+  margin-top: 5px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInOnly 1s ease-out forwards;
+  animation-delay: 2s; /* X&3K apparaît après "l'équipe" (3s) */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
 .scroll-down-instruction {
   color: white;
   font-family: "Lato", sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   font-style: italic;
   font-weight: bold;
   text-shadow: 0px 0px 5px black;
+  animation: clignoter 4.5s ease-in-out 2s infinite;
+  opacity: 0;
+  animation: fadeInOnly 1s ease-out 1.5s forwards,
+    clignoter 3s ease-in-out 3s infinite;
 }
-
-
 
 /*  SECTION BANNIERE OUR STORY (TEXTE)............................................................................................................................... */
 /* .................................................................................................................................................................. */
@@ -558,15 +582,37 @@ main {
   transition: 0.1s all ease-in-out;
 }
 
-
-
 /* ANIMATIONS PAGE MENTIONS LEGALES.................................................................................................. */
 /* .................................................................................................................................. */
 /* .................................................................................................................................. */
 
-
-
-
 /* KEYFRAMES PAGE MENTIONS LEGALES................................................................................................... */
 /* .................................................................................................................................. */
 /* .................................................................................................................................. */
+
+/* CLIGNOTER...................................................... */
+
+@keyframes clignoter {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* FADE IN ONLY................................................... */
+
+@keyframes fadeInOnly {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

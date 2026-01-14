@@ -297,7 +297,7 @@ main {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 10px 50px;
+  padding: 20px 50px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -314,7 +314,7 @@ main {
   bottom: 0;
   right: 0;
   margin: 10px;
-  padding: 10px 50px;
+  padding: 20px 50px;
   border-radius: 10px;
   opacity: 0;
   animation: fadeInRight 1s ease-out forwards;
@@ -327,12 +327,16 @@ main {
   color: rgb(234, 234, 234);
   font-family: "Passion One", sans-serif;
   font-size: 25px;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
 .heroCtaReseaux-1 a:hover,
 .heroCtaReseaux-2 a:hover {
   color: #ebc400;
   transition: 0.2s all ease-in-out;
+  box-shadow: 0px 0px 10px 0px rgb(111, 93, 0);
+  background-color: #6f5c006e;
 }
 
 .heroCtaReseaux-1:hover i {
@@ -350,9 +354,10 @@ main {
 /* .................................................................................................................................................................. */
 
 .our-story {
-  /* Vos styles de base */
   padding: 50px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   border-top: 2px solid rgb(111, 93, 0);
   border-bottom: 2px solid rgb(111, 93, 0);
   background: #6f5d00;
@@ -363,9 +368,7 @@ main {
     rgba(38, 36, 12, 0.61) 74%,
     rgba(102, 99, 21, 0.327) 100%
   );
-  flex-wrap: wrap;
 }
-
 
 .our-story h2 {
   font-size: 50px;
@@ -378,45 +381,144 @@ main {
   text-underline-offset: 7px;
   text-decoration-color: #6f5d00;
   display: inline-block;
+  margin-bottom: 50px;
 }
 
-.our-story p {
-  color: white;
-  margin: 70px 0px 50px 50px;
-  width: 70%;
-  font-size: 20px;
-  font-family: "Lato", sans-serif;
-  line-height: 1.6em;
-  letter-spacing: 1px;
-  text-align: justify;
+/* CAROUSEL CONTAINER */
+.story-carousel {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
   opacity: 0;
-  transform: translateX(-100px);
+  transform: translateY(50px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.our-story p.visible {
+.story-carousel.visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
-.our-story-para {
-  color: white;
-  margin: 70px 0px 50px 50px;
+.carousel-content {
+  position: relative;
   width: 70%;
+  min-height: 300px;
+}
+
+.story-slide {
+  color: white;
   font-size: 20px;
   font-family: "Lato", sans-serif;
-  line-height: 1.6em;
+  line-height: 1.8em;
   letter-spacing: 1px;
   text-align: justify;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   opacity: 0;
   transform: translateX(100px);
-  animation: fadeInRight 1s ease-out forwards;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
 }
 
-/* Classe ajoutée par JS quand visible */
-.our-story-para.visible {
+.story-slide.active {
   opacity: 1;
   transform: translateX(0);
+  pointer-events: auto;
+  position: relative;
+  padding: 0px 80px;
+}
+
+/* FLÈCHES DU CAROUSEL */
+.carousel-arrow {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border: 2px solid #ebc400;
+  border-radius: 50%;
+  color: #ebc400;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.carousel-arrow:hover {
+  transform: scale(1.1);
+  background-color: #ebc400;
+  color: black;
+  box-shadow: 0px 0px 15px #ebc400;
+}
+
+.carousel-arrow:active {
+  transform: scale(0.95);
+}
+
+/* INDICATEURS */
+.carousel-indicators {
+  display: flex;
+  gap: 15px;
+  margin-top: 40px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
+}
+
+.carousel-indicators.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(235, 196, 0, 0.3);
+  border: 2px solid #ebc400;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.indicator:hover {
+  transform: scale(1.2);
+}
+
+.indicator.active {
+  background-color: #ebc400;
+  box-shadow: 0px 0px 10px #ebc400;
+}
+
+
+.story-slide.active strong {
+  color: #ebc400;
+}
+
+.story-slide.active .strongName {
+  color: #ebc400;
+  font-style: italic;
+}
+
+.story-slide.active a {
+  color: #ebc400;
+  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;  
+}
+
+.story-slide.active a:hover {
+  color: rgb(0, 106, 255);
+  transition: 0.1s all ease-out;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 /*  SECTION X TEAM (EQUIPE ET STATS)................................................................................................................................. */
@@ -1540,13 +1642,42 @@ main {
 /* SPONSORS LINE..................................................................................................................................................... */
 /* SPONSORS LINE..................................................................................................................................................... */
 
+/* PARAGRAPHE SPONSORS (sans carousel) */
+.sponsors-paragraph {
+  color: white;
+  width: 70%;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  line-height: 1.6em;
+  letter-spacing: 1px;
+  text-align: justify;
+  margin: 0 0 40px 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.sponsors-paragraph.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SPONSORS */
 .sponsors-container {
   display: flex;
   align-items: center;
   padding: 20px 0px;
-  margin: 0px 50px;
   justify-content: space-around;
   width: 100%;
+  gap: 30px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
+}
+
+.sponsors-container.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .sponsors-links {
@@ -1554,7 +1685,6 @@ main {
   align-items: start;
   flex-direction: column;
   gap: 10px;
-
 }
 
 .img-pronk {
@@ -1566,7 +1696,6 @@ main {
   box-shadow: 0px 0px 15px 0px white;
 }
 
-
 .img-iw {
   height: 106px;
   width: 287px;
@@ -1576,19 +1705,7 @@ main {
   box-shadow: 0px 0px 15px 0px white;
 }
 
-.lienSponsor {
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
-  font-family: "Lato", sans-serif;
-  font-style: italic;
-  letter-spacing: 2px;
-}
 
-.lienSponsor:hover {
-  color: #ebc400;
-  transition: 0.2s all ease-in-out;
-}
 
 /* BOUTON RETOUR EN HAUT ................................................................. */
 

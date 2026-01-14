@@ -5,17 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeButton = document.querySelector('.close-popup');
     const allPlayerLines = document.querySelectorAll('.player-line');
     
-    // Variable pour stocker la player-line actuellement active
     let currentPlayerLine = null;
     
-    // Fonction pour ouvrir le popup avec un joueur spécifique
     function openPopup(playerNumber) {
-        // Cacher toutes les player-lines et réinitialiser leurs animations
         allPlayerLines.forEach(line => {
             line.style.display = 'none';
             line.classList.remove('is-revealed', 'is-animated', 'animate');
             
-            // Réinitialiser les délais des étoiles
             const allStars = line.querySelectorAll('.sg-right i');
             allStars.forEach(star => {
                 star.style.animationDelay = '';
@@ -27,25 +23,20 @@ document.addEventListener('DOMContentLoaded', function() {
             if (lien) lien.classList.remove('is-revealed', 'is-animated');
         });
         
-        // Trouver et afficher la player-line correspondante
         let selectedLine = allPlayerLines[playerNumber - 1];
         
         if (selectedLine) {
             currentPlayerLine = selectedLine;
             selectedLine.style.display = 'flex';
             
-            // Activer l'overlay et le popup
             popupOverlay.classList.add('active');
             popupContainer.classList.add('active');
             
-            // Bloquer le scroll de la page
             document.body.style.overflow = 'hidden';
             
-            // Lancer les animations après un court délai
             setTimeout(() => {
                 selectedLine.classList.add('is-revealed', 'animate');
                 
-                // Animation des étoiles
                 animateStars(selectedLine);
                 
                 const statsContainer = selectedLine.querySelector('.statistiques');
@@ -61,36 +52,29 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Fonction pour animer les étoiles une par une
     function animateStars(playerLine) {
         const allSocialGatherings = playerLine.querySelectorAll('.socialGathering');
-        let globalDelay = 4000; // Délai de base en ms (après les autres animations)
+        let globalDelay = 4000;
         
-        // Parcourir chaque catégorie (Beer, Food, Fun) dans l'ordre
         allSocialGatherings.forEach((gathering, gatheringIndex) => {
             const starContainer = gathering.querySelector('.sg-right');
             if (starContainer) {
                 const stars = starContainer.querySelectorAll('i');
                 
-                // Animer chaque étoile de cette catégorie
                 stars.forEach((star, starIndex) => {
-                    const delay = globalDelay + (starIndex * 100); // 0.2s entre chaque étoile
+                    const delay = globalDelay + (starIndex * 100);
                     star.style.animationDelay = delay + 'ms';
                 });
                 
-                // Ajouter le temps pour toutes les étoiles de cette catégorie + un petit délai
                 globalDelay += (stars.length * 100);
             }
         });
     }
     
-    // Fonction pour fermer le popup
     function closePopup() {
         if (currentPlayerLine) {
-            // Retirer les classes d'animation
             currentPlayerLine.classList.remove('is-revealed', 'animate');
             
-            // Réinitialiser les délais des étoiles
             const allStars = currentPlayerLine.querySelectorAll('.sg-right i');
             allStars.forEach(star => {
                 star.style.animationDelay = '';
@@ -101,21 +85,17 @@ document.addEventListener('DOMContentLoaded', function() {
             if (stats) stats.classList.remove('is-animated');
             if (lien) lien.classList.remove('is-revealed', 'is-animated');
             
-            // Cacher la player-line
             currentPlayerLine.style.display = 'none';
         }
         
-        // Désactiver l'overlay et le popup
         popupOverlay.classList.remove('active');
         popupContainer.classList.remove('active');
         
-        // Réactiver le scroll
         document.body.style.overflow = '';
         
         currentPlayerLine = null;
     }
     
-    // Ajouter événement de clic sur chaque image miniature
     playerMiniImages.forEach((miniImage) => {
         miniImage.addEventListener('click', function() {
             const playerNumber = this.getAttribute('data-player');
@@ -124,61 +104,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Fermer le popup avec le bouton X
     if (closeButton) {
         closeButton.addEventListener('click', closePopup);
     }
     
-    // Fermer le popup en cliquant sur l'overlay
     if (popupOverlay) {
         popupOverlay.addEventListener('click', closePopup);
     }
     
-    // Fermer le popup avec la touche Échap
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && popupContainer.classList.contains('active')) {
             closePopup();
         }
     });
-
-    // ========================================
-    // ANIMATION AU SCROLL - OUR STORY + OUR RULES
-    // ========================================
-    
-    const ourStoryParagraphs = document.querySelectorAll('.our-story p');
-    
-    if (ourStoryParagraphs.length > 0) {
-        // Créer l'Intersection Observer
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // L'élément est visible, ajouter la classe d'animation
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.2 // Se déclenche quand 20% de l'élément est visible
-        });
-        
-        // Observer TOUS les paragraphes des sections our-story
-        ourStoryParagraphs.forEach(paragraph => {
-            observer.observe(paragraph);
-        });
-    }
 });
 
-// APPARITION BARRE NAVIGATION...........................................//
-//.......................................................................//
-
+// APPARITION BARRE NAVIGATION
 document.addEventListener('DOMContentLoaded', function() {
     const navBar = document.querySelector('.barre-nav');
     
-    // Attendre 2 secondes (2000ms) avant de faire apparaître la barre
     setTimeout(() => {
         navBar.classList.add('visible');
     }, 2000);
 });
-
 
 // POPUP GALLERY
 document.addEventListener('DOMContentLoaded', function() {
@@ -189,7 +137,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const popupCaption = document.querySelector('.popup-gallery-caption');
     const closeButton = document.querySelector('.close-popup-gallery');
 
-    // Ouvrir le popup au clic sur une photo
     galleryImages.forEach((photo) => {
         photo.addEventListener('click', function() {
             const img = this.querySelector('img');
@@ -204,21 +151,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Fermer le popup avec le bouton X
     closeButton.addEventListener('click', function() {
         popupOverlay.classList.remove('active');
         popupContainer.classList.remove('active');
         document.body.style.overflow = '';
     });
 
-    // Fermer le popup en cliquant sur l'overlay
     popupOverlay.addEventListener('click', function() {
         popupOverlay.classList.remove('active');
         popupContainer.classList.remove('active');
         document.body.style.overflow = '';
     });
 
-    // Fermer avec la touche Échap
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && popupContainer.classList.contains('active')) {
             popupOverlay.classList.remove('active');
@@ -228,13 +172,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// BOUTON BACK TO TOP RETOUR EN HAUT DE PAGE...........................................//
-
-
+// BOUTON BACK TO TOP
 document.addEventListener('DOMContentLoaded', function() {
     const backToTopButton = document.querySelector('.back-to-top');
 
-    // Afficher le bouton après avoir scrollé de 300px
     window.addEventListener('scroll', function() {
         if (window.scrollY > 300) {
             backToTopButton.classList.add('visible');
@@ -243,11 +184,74 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Remonter en haut au clic
     backToTopButton.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
     });
+});
+
+// CAROUSEL OUR STORY (uniquement la première section)
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('#ourStory .story-slide');
+    const arrowLeft = document.querySelector('.carousel-arrow-left[data-carousel="story"]');
+    const arrowRight = document.querySelector('.carousel-arrow-right[data-carousel="story"]');
+    const indicators = document.querySelectorAll('.carousel-indicators[data-carousel="story"] .indicator');
+    
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    
+    if (slides.length > 0) {
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+        
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+        
+        if (arrowRight) arrowRight.addEventListener('click', nextSlide);
+        if (arrowLeft) arrowLeft.addEventListener('click', prevSlide);
+        
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', function() {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
+    }
+});
+
+// ANIMATION AU SCROLL - STORY CAROUSEL + SPONSORS
+document.addEventListener('DOMContentLoaded', function() {
+    const storyCarousel = document.querySelector('#ourStory .story-carousel');
+    const carouselIndicators = document.querySelector('.carousel-indicators[data-carousel="story"]');
+    const sponsorsParagraph = document.querySelector('.sponsors-paragraph');
+    const sponsorsContainer = document.querySelector('.sponsors-container');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+    
+    if (storyCarousel) observer.observe(storyCarousel);
+    if (carouselIndicators) observer.observe(carouselIndicators);
+    if (sponsorsParagraph) observer.observe(sponsorsParagraph);
+    if (sponsorsContainer) observer.observe(sponsorsContainer);
 });
