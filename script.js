@@ -174,13 +174,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // BOUTON BACK TO TOP
 document.addEventListener('DOMContentLoaded', function() {
+    const backToTopContainer = document.querySelector('.back-to-top-container');
     const backToTopButton = document.querySelector('.back-to-top');
 
     window.addEventListener('scroll', function() {
         if (window.scrollY > 300) {
-            backToTopButton.classList.add('visible');
+            backToTopContainer.classList.add('visible');
         } else {
-            backToTopButton.classList.remove('visible');
+            backToTopContainer.classList.remove('visible');
         }
     });
 
