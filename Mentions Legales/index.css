@@ -211,7 +211,7 @@ main {
 .hero-ml {
   padding: 120px 0px 0px 0px;
   min-height: 100vh;
-  gap: 20px;
+  gap: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -316,11 +316,10 @@ main {
 /*  SECTION BANNIERE OUR STORY (TEXTE)............................................................................................................................... */
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
-
 .our-story {
-  /* Vos styles de base */
   padding: 50px;
   display: flex;
+  flex-direction: column;
   border-top: 2px solid rgb(111, 93, 0);
   border-bottom: 2px solid rgb(111, 93, 0);
   background: #6f5d00;
@@ -331,10 +330,10 @@ main {
     rgba(38, 36, 12, 0.61) 74%,
     rgba(102, 99, 21, 0.327) 100%
   );
-  flex-wrap: wrap;
 }
 
 .our-story h2 {
+  width: 100%;
   font-size: 50px;
   color: rgb(235, 196, 0);
   font-family: "Passion One", sans-serif;
@@ -344,12 +343,29 @@ main {
   text-decoration-thickness: 1px;
   text-underline-offset: 7px;
   text-decoration-color: #6f5d00;
-  display: inline-block;
   padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.our-story h3 {
+  width: 100%;
+  font-size: 28px;
+  color: #ebc400;
+  font-family: "Passion One", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  border-left: 4px solid #ebc400;
 }
 
 .our-story a {
   color: rgb(0, 68, 255);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
 }
 
 .our-story a:hover {
@@ -357,63 +373,113 @@ main {
 }
 
 .our-story p {
+  width: 100%;
   color: white;
-  margin: 20px;
-  font-size: 20px;
+  margin: 10px 0;
+  padding: 0 20px;
+  font-size: 18px;
   font-family: "Lato", sans-serif;
-  line-height: 1.6em;
-  letter-spacing: 1px;
+  line-height: 1.8em;
+  letter-spacing: 0.5px;
   text-align: justify;
-  opacity: 0;
-  transform: translateX(-100px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.our-story p.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.note {
-  color: white;
-  margin: 20px;
-  font-size: 20px;
-  font-family: "Lato", sans-serif;
-  line-height: 1.6em;
-  letter-spacing: 1px;
-  text-align: justify;
-  opacity: 0;
-  transform: translateX(-100px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.note.visible {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 .our-story p strong {
   color: #ebc400;
+  font-weight: bold;
 }
 
+.our-story p em {
+  color: #ebc400;
+  font-style: italic;
+}
+
+.our-story p br {
+  line-height: 2em;
+}
+
+/* CLASSE NOTE - Pour les encadrés importants */
+.our-story .note {
+  width: calc(100% - 40px);
+  background-color: rgba(235, 196, 0, 0.1);
+  border-left: 4px solid #ebc400;
+  padding: 20px 25px;
+  margin: 30px 20px;
+  color: white;
+  font-size: 17px;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  line-height: 1.8em;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  border-radius: 5px;
+}
+
+.our-story .note strong {
+  color: #ebc400;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* LISTES */
 .our-story ul {
+  width: calc(100% - 40px);
   display: flex;
-  width: 100%;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  animation: fadeInOnly 1s ease-out forwards;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  flex-direction: column;
+  gap: 12px;
+  padding: 15px 20px 15px 60px;
+  margin: 15px 0;
+  list-style: none;
 }
 
 .our-story ul li {
   color: white;
   font-family: "Lato", sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
+  font-size: 17px;
+  line-height: 1.7em;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.our-story ul li::before {
+  content: "⚽";
+  position: absolute;
+  left: 0;
   color: #ebc400;
   font-size: 16px;
+}
+
+.our-story ul li strong {
+  color: #ebc400;
+  font-weight: bold;
+}
+
+.our-story ul li a {
+  color: rgb(0, 68, 255);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.our-story ul li a:hover {
+  color: orangered;
+}
+
+/* ANIMATIONS (si vous voulez les garder) */
+.our-story p.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.our-story .note.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.our-story ul.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* BOUTON RETOUR EN HAUT ................................................................. */
@@ -659,4 +725,173 @@ main {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/*  RESPONSIVE DESIGN................................................................................................................................................ */
+/* .................................................................................................................................................................. */
+/* .................................................................................................................................................................. */
+
+/*  RESPONSIVE TABLETTE (768 PX)..................................................................................................................................... */
+/* .................................................................................................................................................................. */
+/* .................................................................................................................................................................. */
+
+@media (max-width: 768px) {
+
+/* REGLAGES GLOBAUX.................................................................................................................................................. */
+/* .................................................................................................................................................................. */
+/* .................................................................................................................................................................. */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden; /* Empêche le scroll horizontal */
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    width: 100%;
+    flex: 1;
+  }
+
+
+/* HEADER............................................................................................................................................................ */
+/* .................................................................................................................................................................. */
+/* .................................................................................................................................................................. */
+
+.header-site {}
+
+/* .............................................................BARRE NAV */
+
+.barre-nav{}
+
+/* ..................................................................LOGO */
+
+.logo-header {}
+
+/* ..........................................................LIENS HEADER */
+
+.links-header {}
+
+.links-header li {}
+
+.links-header li a {}
+
+/* ............................................................SVG HEADER */
+
+.logo-story-1 {}
+
+.logo-story-2 {}
+
+.logo-story-3 {}
+
+.logo-story-4 {}
+
+/* .....................................................CTA BOUTON HEADER */
+
+.cta-header {}
+
+
+/* FOOTER............................................................................................................................................................ */
+/* .................................................................................................................................................................. */
+/* .................................................................................................................................................................. */
+
+.footer-site {}
+
+/* FOOTER LEFT CONTAINER......................................................... */
+/* .............................................................................. */
+
+.footer-left {}
+
+/* ..............................................................FOOTER LEFT LOGO */
+
+.footer-left-title {}
+
+/* ..........................................................................X&3K */
+
+.footer-left-title-1 {}
+
+.footer-left-title-1 strong {}
+
+/* .......................................................................LEQUIPE */
+
+.footer-left-title-2 {}
+
+/* FOOTER CENTER CONTAINER....................................................... */
+/* .............................................................................. */
+
+.footer-center {
+
+}
+
+/* ............................................................FOOTER CENTER LOGO */
+
+.logo-footer {}
+
+/* ............................................................FOOTER CENTER PARA */
+
+.fc-para {}
+
+.fc-para strong {}
+
+/* .......................................................FOOTER CENTER COPYRIGHT */
+
+.fc-copyright {}
+
+.fc-copyright em {}
+
+/* FOOTER CENTER CONTAINER....................................................... */
+/* .............................................................................. */
+
+.footer-right {}
+
+/* ............................................................FOOTER RIGHT TITLE */
+
+.footer-right-title {}
+
+.footer-right-title::first-letter {}
+
+/* ............................................................FOOTER RIGHT LINKS */
+
+.footer-link-list {}
+
+.footer-link-list li {}
+
+.footer-link-list li a {}
+
+.footer-link-list li a:hover {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
