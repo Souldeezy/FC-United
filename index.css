@@ -56,7 +56,9 @@ main {
   transform: translateY(
     -20px
   ); /* Légèrement vers le haut pour l'effet "Down" */
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
   pointer-events: none; /* Empêche de cliquer tant qu'elle est invisible */
 }
 
@@ -221,10 +223,10 @@ main {
   justify-content: center;
   flex-direction: column;
   padding: 200px 350px 20px 200px;
-  background-image: url(.//PICS/teamgroup2.webp);
-  background-position: top;
+  background-image: url(.//PICS/teamgroup4.webp);
+  background-position: center;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.384);
+  background-color: rgba(0, 0, 0, 0.367);
   background-blend-mode: darken;
   position: relative;
 }
@@ -240,7 +242,9 @@ main {
   animation-delay: 1s, 3s; /* X&3K apparaît après "l'équipe" (3s) */
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  transition:
+    opacity 0.8s ease-in-out,
+    transform 0.8s ease-in-out;
   line-height: 0; /* Supprime l'espace vertical */
   margin: 70px 0px 70px 250px;
   position: relative;
@@ -255,10 +259,12 @@ main {
   left: 22%;
   -webkit-text-stroke: 0.5px #ebc400;
   animation: rotateSign 0.8s ease-in-out forwards;
-  animation-delay: 3s; /* fadeIn à 1s, rotation à 6s (après tout) */
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  animation-delay: 3s;
+  transition:
+    opacity 0.8s ease-in-out,
+    transform 0.8s ease-in-out;
   transform-origin: center;
-  transform: rotate(0deg); /* Position initiale */
+  transform: rotate(0deg);
 }
 
 .hero-h1-texte {
@@ -268,9 +274,9 @@ main {
   letter-spacing: 3px;
   text-shadow: 0px 0px 10px black;
   animation: stampEffect 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  line-height: 0.8; /* Supprime l'espace vertical */
+  line-height: 0.8;
   margin-top: -70px;
-  animation-delay: 0s; /* "l'équipe" apparaît en premier */
+  animation-delay: 0s;
 }
 
 /* HERO INSTRUCTIONS................................................................ */
@@ -282,7 +288,8 @@ main {
   font-style: italic;
   animation: clignoter 4.5s ease-in-out 2s infinite;
   opacity: 0;
-  animation: fadeInOnly 1s ease-out 1.5s forwards,
+  animation:
+    fadeInOnly 1s ease-out 1.5s forwards,
     clignoter 3s ease-in-out 3s infinite;
   text-shadow: 0px 0px 5px #ebc400;
   position: absolute;
@@ -305,7 +312,7 @@ main {
   margin: 10px;
   opacity: 0;
   animation: fadeInRight 1s ease-out forwards;
-  animation-delay: 3s; /* Apparaît après X&3K */
+  animation-delay: 3s;
 }
 
 .heroCtaReseaux-2 {
@@ -318,7 +325,7 @@ main {
   border-radius: 10px;
   opacity: 0;
   animation: fadeInRight 1s ease-out forwards;
-  animation-delay: 3s; /* Apparaît en même temps que heroCtaReseaux-1 */
+  animation-delay: 3s;
 }
 
 .heroCtaReseaux-1 a,
@@ -335,8 +342,6 @@ main {
 .heroCtaReseaux-2 a:hover {
   color: #ebc400;
   transition: 0.2s all ease-in-out;
-  box-shadow: 0px 0px 10px 0px rgb(111, 93, 0);
-  background-color: #6f5d00;
 }
 
 .heroCtaReseaux-1:hover i {
@@ -394,7 +399,9 @@ main {
   gap: 30px;
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition:
+    opacity 1s ease-out,
+    transform 1s ease-out;
 }
 
 .story-carousel.visible {
@@ -441,7 +448,10 @@ main {
   opacity: 0;
   visibility: hidden;
   transform: translateX(100px);
-  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0s 0.4s;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    visibility 0s 0.4s;
   pointer-events: none;
 }
 
@@ -452,7 +462,10 @@ main {
   pointer-events: auto;
   position: relative;
   padding: 0px 80px;
-  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0s;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    visibility 0s;
 }
 
 /* STYLES POUR TOUS LES SLIDES (pas seulement .active) */
@@ -494,7 +507,9 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, background-color 0.3s ease,
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
     box-shadow 0.3s ease;
   flex-shrink: 0;
 }
@@ -517,7 +532,9 @@ main {
   margin-top: 40px;
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
+  transition:
+    opacity 1s ease-out 0.3s,
+    transform 1s ease-out 0.3s;
 }
 
 .carousel-indicators.visible {
@@ -532,7 +549,9 @@ main {
   border: 2px solid #ebc400;
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .indicator:hover {
@@ -646,7 +665,9 @@ main {
   justify-content: center;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+  transform 0.3s ease,
+  box-shadow 0.3s ease;
 }
 
 .img-player-mini:hover {
@@ -855,7 +876,9 @@ main {
   z-index: 998;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
 }
 
 .popup-overlay.active {
@@ -873,7 +896,10 @@ main {
   z-index: 999;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    transform 0.4s ease;
   width: 90%;
   max-height: 80%;
   padding: 0px 0px;
@@ -903,7 +929,9 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .close-popup:hover {
@@ -927,7 +955,9 @@ main {
   border: 4px solid transparent;
   border-radius: 10px;
   flex-wrap: wrap;
-  transition: border-color 0.8s ease-in-out, background 0.8s ease-in-out;
+  transition:
+    border-color 0.8s ease-in-out,
+    background 0.8s ease-in-out;
   overflow: hidden;
 }
 
@@ -1650,7 +1680,6 @@ main {
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
 
-
 .sponsors-paragraph {
   color: white;
   width: 70%;
@@ -1662,7 +1691,9 @@ main {
   margin: 0 0 40px 0;
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition:
+    opacity 1s ease-out,
+    transform 1s ease-out;
 }
 
 .sponsors-paragraph.visible {
@@ -1679,7 +1710,9 @@ main {
   gap: 30px;
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
+  transition:
+    opacity 1s ease-out 0.3s,
+    transform 1s ease-out 0.3s;
 }
 
 .sponsors-container.visible {
@@ -1735,46 +1768,94 @@ main {
   transition: 0.1s ease-in-out;
 }
 
+.sponsors-paragraph a {
+  color: #ebc400;
+  text-decoration: none;
+}
+
+.sponsors-paragraph a:hover {
+  color: rgb(0, 106, 255);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
 
 /* GALLERIE PHOTOS................................................................................................................................................... */
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
 
 .gallery {
-  padding: 100px 20px;
+  padding: 100px 20px 50px 20px;
+  background: #000000;
+  position: relative;
+}
+
+.gallery-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-carousel-content {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  flex: 1;
+}
+
+.gallery-slide {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  position: relative;
   gap: 20px;
-  background: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100px);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    visibility 0s 0.4s;
+  pointer-events: none;
 }
 
-.photo-gallery:hover figcaption {
+.gallery-slide.active {
   opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  pointer-events: auto;
+  position: relative;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    visibility 0s;
 }
 
 .photo-gallery {
   display: flex;
   flex-direction: column;
-  width: 300px; /* Largeur fixe */
-  height: 250px; /* Hauteur fixe pour le container */
+  width: 300px;
+  height: 250px;
   z-index: 1;
   border-radius: 10px;
   border: 2px solid #6f5d00;
-  overflow: hidden; /* IMPORTANT : empêche le débordement */
-}
-
-.photo-gallery strong {
-  color: #ebc400;
-  padding: 0px 5px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .photo-gallery img {
   width: 100%;
-  height: 200px; /* Hauteur fixe pour l'image */
-  object-fit: cover; /* IMPORTANT : recadre l'image sans déformation */
+  height: 200px;
+  object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   opacity: 0.55;
@@ -1784,7 +1865,6 @@ main {
 .photo-gallery figcaption {
   height: 50px;
   width: 100%;
-  background-color: black;
   background: linear-gradient(
     351deg,
     rgba(38, 38, 38, 0.897) 0%,
@@ -1795,13 +1875,14 @@ main {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   color: white;
-  font-family: "Lato", sans-serif;
-  display: flex;
   font-size: 12px;
+  display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
 }
 
 .photo-gallery:hover figcaption {
@@ -1812,8 +1893,53 @@ main {
   opacity: 1;
 }
 
-.gallery p {
-  color: white;
+/* CAROUSEL ARROWS */
+.carousel-arrow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  margin: 0px 20px;
+}
+
+.carousel-arrow {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border: 2px solid #ebc400;
+  border-radius: 50%;
+  color: #ebc400;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  transform: scale(1.1);
+  background-color: #ebc400;
+  color: black;
+  box-shadow: 0px 0px 15px #ebc400;
+}
+
+.carousel-arrow:active {
+  transform: scale(0.95);
+}
+
+.carousel-arrow-text {
+  color: #ebc400;
+  font-family: "Permanent Marker", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 20px;
 }
 
 /* POPUP GALLERY */
@@ -1827,7 +1953,9 @@ main {
   z-index: 9998;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .popup-gallery-overlay.active {
@@ -1843,7 +1971,10 @@ main {
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
   width: calc(100% - 200px);
   height: calc(100% - 200px);
   display: flex;
@@ -1867,10 +1998,10 @@ main {
 
 .popup-gallery-caption {
   color: white;
-  font-family: "Lato", sans-serif;
   font-size: 18px;
   margin-top: 20px;
   text-align: center;
+  font-family: "Lato", sans-serif;
 }
 
 .close-popup-gallery {
@@ -1889,15 +2020,15 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .close-popup-gallery:hover {
   transform: scale(1.15) rotate(90deg);
   background-color: rgb(255, 50, 50);
 }
-
-
 
 /* BOUTON RETOUR EN HAUT ............................................................................................................................................ */
 /* .................................................................................................................................................................. */
@@ -1914,7 +2045,9 @@ main {
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .back-to-top-container.visible {
@@ -1935,7 +2068,9 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, background-color 0.3s ease,
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
     box-shadow 0.3s ease;
 }
 
@@ -2244,7 +2379,9 @@ main {
 }
 
 .player-line.animate .playerTitleSpecial {
-  animation: fadeIn 0.8s ease-out forwards, heartbeat3 3s ease-in-out infinite;
+  animation:
+    fadeIn 0.8s ease-out forwards,
+    heartbeat3 3s ease-in-out infinite;
   animation-delay: 2s, 4.3s;
 }
 
@@ -2557,709 +2694,11 @@ main {
 /*  RESPONSIVE DESIGN................................................................................................................................................ */
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
-
-/*  RESPONSIVE TABLETTE (768 PX)..................................................................................................................................... */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-@media (max-width: 768px) {
-
-/* REGLAGES GLOBAUX.................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@media (min-width: 481px) {
+  .gallery-instructions {
+    display: none;
   }
-
-  html,
-  body {
-    width: 100%;
-    overflow-x: hidden; /* Empêche le scroll horizontal */
-  }
-
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-
-  main {
-    width: 100%;
-    flex: 1;
-  }
-
-
-/* HEADER............................................................................................................................................................ */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.header-site {}
-
-/* .............................................................BARRE NAV */
-
-.barre-nav{}
-
-/* ..................................................................LOGO */
-
-.logo-header {}
-
-/* ..........................................................LIENS HEADER */
-
-.links-header {}
-
-.links-header li {}
-
-.links-header li a {}
-
-/* ............................................................SVG HEADER */
-
-.logo-story-1 {}
-
-.logo-story-2 {}
-
-.logo-story-3 {}
-
-.logo-story-4 {}
-
-/* .....................................................CTA BOUTON HEADER */
-
-.cta-header {}
-
-
-/* HERO SITE......................................................................................................................................................... */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.hero-site {}
-
-/* HERO H1.................................................................X&3K */
-
-.hero-h1 {}
-
-.hero-h1 strong {}
-
-/* HERO H1..............................................................LEQUIPE */
-
-.hero-h1-texte {}
-
-/* ...............................................HERO SCROLL DOWN INSTRUCTIONS */
-
-.scroll-down-instruction {}
-
-/* ................................................................HERO RESEAUX */
-
-.heroCtaReseaux-1 {}
-
-.heroCtaReseaux-2 {}
-
-.heroCtaReseaux-1 a,
-.heroCtaReseaux-2 a {}
-
-.heroCtaReseaux-1 a:hover,
-.heroCtaReseaux-2 a:hover {}
-
-.heroCtaReseaux-1:hover i {}
-
-.heroCtaReseaux-1 i {}
-
-
-/*  SECTION BANNIERE OUR STORY (TEXTE)............................................................................................................................... */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.our-story {}
-
-/* ................................................................OUR STORY TITLE */
-
-.our-story h2 {}
-
-/* .............................................................OUR STORY CAROUSEL */
-
-.story-carousel {}
-
-.story-carousel.visible {}
-
-/* ......................................................FLECHES CAROUSEL CONTAINER */
-
-.carousel-arrow-container {}
-
-.carousel-arrow-text {}
-
-/* .................................................................TEXTE CAROUSEL */
-
-.carousel-content {}
-
-/* .................................................................SLIDE CAROUSEL */
-
-.story-slide {}
-
-.story-slide.active {}
-
-/* ....................................................SLIDE CAROUSEL STYLES TEXTES*/
-
-.story-slide strong {}
-
-.story-slide .strongName {}
-
-.story-slide em {}
-
-.story-slide a {}
-
-.story-slide a:hover {}
-
-/* .........................................................FLECHES SLIDE CAROUSEL */
-
-.carousel-arrow {}
-
-.carousel-arrow:hover {}
-
-.carousel-arrow:active {}
-
-/* .....................................................SLIDE CAROUSEL INDICATEURS */
-
-.carousel-indicators {}
-
-.carousel-indicators.visible {}
-
-.indicator {}
-
-.indicator:hover {}
-
-.indicator.active {}
-
-
-/*  SECTION X TEAM (EQUIPE ET STATS)................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.x-team {}
-
-/* ........................................................TITRE X TEAM */
-
-.titleSection {}
-
-.x-team h2 {}
-
-/* ..................................................TITRE X TEAM LEGENDE*/
-
-.legende1 {}
-
-/* ..................................................POSITION VUE DE HAUT*/
-
-.positionSection {}
-
-#reserve-team {}
-
-/* ..............................................NOM POSITION VUE DE HAUT*/
-
-.posTitle {}
-
-.posTitle::first-letter {}
-
-/* PLAYER GRID (VIGNETTES JOUEURS)................................................................................................................................... */
-/* .................................................................................................................................................................. */
-
-.players-grid {}
-
-/* ......................................................VIGNETTE JOUEUR*/
-
-.img-player-mini {}
-
-.img-player-mini:hover {}
-
-/* ................................................TITRE VIGNETTE JOUEUR*/
-
-.position-player-mini {}
-
-/* PLAYER GRID (IMAGES JOUEURS).......................................................................................................................................*/
-
-/* GOALKEEPER..................................................................... */
-
-/* ..........................................................HICHAM SABIR (NO PIC) */
-
-#joueur1 {}
-
-/* DEFENDERS...................................................................... */
-
-/* .......................................................CYRIL JOUSSELIN (NO PIC) */
-
-#joueur2 {}
-
-/* .................................................................RODRIGUE MONGO */
-
-#joueur3 {}
-
-/* .................................................................THIBAULT DUPUIS */
-
-#joueur4 {}
-
-/* ...................................................................MARTIN VALERA */
-
-#joueur5 {}
-
-/* .................................................................RODRIGO BOUABIDA */
-
-#joueur6 {}
-
-/* .....................................................................JORY WIELAARD */
-
-#joueur7 {}
-
-/* ................................................................AJEL BILAL (NO PIC) */
-
-#joueur8 {}
-
-/* MIDFIELDERS....................................................................... */
-
-/* .................................................................VASYL MAKAROVSKIY */
-
-#joueur9 {}
-
-/* ..................................................................BALTHAZAR NICOLAS */
-
-#joueur10 {}
-
-/* ......................................................................PASTANT JONAS */
-
-#joueur11 {}
-
-/* ATTAQUANTS......................................................................... */
-
-/* .........................................................PAPAKONKANSTINOU APOSTOLIS */
-
-#joueur12 {}
-
-/* .....................................................................FILIP RENOVCIV */
-
-#joueur13 {}
-
-/* RESERVE............................................................................ */
-
-/* ............................................................FRANCO PATROSSO (NO PIC)*/
-
-#joueur14 {}
-
-/* ............................................................VINCENT NGUYEN (NO PIC) */
-
-#joueur15 {}
-
-/* POP UP ........................................................................................................................................................... */
-/* .................................................................................................................................................................. */
-
-/* .....................................................................POP UP OVERLAY */
-
-.popup-overlay {}
-
-.popup-overlay.active {}
-
-/* ...................................................................POP UP CONTAINER */
-
-.popup-container {}
-
-.popup-container.active {}
-
-/* ................................................................POP UP CLOSE BUTTON */
-
-.close-popup {}
-
-.close-popup:hover {}
-
-/* CONTAINER PLAYER LINE............................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.player-line {}
-
-.player-line.is-revealed {}
-
-/* PLAYER LINE LEFT (IMAGES JOUEUR).................................................................................................................................. */
-
-/* .......................................................................HICHAM SABIR */
-
-.pl-left-1 {}
-
-/* ....................................................................CYRIL JOUSSELIN */
-
-.pl-left-2 {}
-
-/* .....................................................................RODRIGUE MONGO */
-
-.pl-left-3 {}
-
-/* ....................................................................THIBAULT DUPUIS */
-
-.pl-left-4 {}
-
-/* ......................................................................MARTIN VALERA */
-
-.pl-left-5 {}
-
-/* ...................................................................RODRIGO BOUABIDA */
-
-.pl-left-6 {}
-
-/* ......................................................................WIELAARD JORY */
-
-.pl-left-7 {}
-
-/* .........................................................................AJEL BILEL */
-
-.pl-left-8 {}
-
-/* ..................................................................VASYL MAKAROVSKIY */
-
-.pl-left-9 {}
-
-/* ..................................................................BALTHAZAR NICLOAS */
-
-.pl-left-10 {}
-
-/* ......................................................................PASTANT JONAS */
-
-.pl-left-11 {}
-
-/* ..........................................................................APOSTOLIS */
-
-.pl-left-12 {}
-
-/* ....................................................................FILIP REVOCECIV */
-
-.pl-left-13 {}
-
-/* ............................................................................RESERVE */
-/* ................................................................................... */
-
-/* ....................................................................FRANCO PATROSSO */
-
-.pl-left-14 {}
-
-/* .....................................................................VINCENT NGUYEN */
-
-.pl-left-15 {}
-
-/* PLAYER LINE RIGHT (STATS JOUEUR).................................................................................................................................. */
-
-.pl-right {}
-
-/* .................................................................STATS CONTAINER TOP */
-/* .................................................................................... */
-
-.plr-top {}
-
-/* ............................................................STATS MAILLOT SVG NUMERO */
-
-.playerNumero {}
-
-.PlayerNumeroContent {}
-
-.logo-inside {}
-
-/* ...............................................................STATS PLAYER POSITION */
-
-.player-position {}
-
-.playerTitleSpecial {}
-
-.playerTitle {}
-
-/* ....................................................................STATS NOM JOUEUR */
-
-.playerName {}
-
-.ply-surname {}
-
-.ply-name {}
-
-/* ..............................................................STATS NOM LONGS JOUEUR */
-
-.ply-surname-1 {}
-
-.ply-name-1 {}
-
-/* ..................................................................STATS CAPTAIN LOGO */
-
-.logo-captain {}
-
-/* ..............................................................STATS CONTAINER BOTTOM */
-/* .................................................................................... */
-
-.plr-bottom {}
-
-/* ..................................................................STATS INFOS JOUEUR */
-
-.plrb-left {}
-
-.plbr-infos {}
-
-
-
-/* ...................................................................STATS TITLE INFOS */
-
-
-.playerTitle-2 {}
-
-
-/* .................................................................STATS CONTENT INFOS */
-
-.playerTitle-3 {}
-
-/* .............................................................SOCIAL GATHERING TITLES */
-
-
-.playerTitle-4 {}
-
-/* SOCIAL GATHERING.................................................................................................................................................. */
-
-/* ..................................................... MAIN SOCIAL GATHERING CONTAINER */
-
-.plrb-right {}
-
-.plrb-right-title {}
-
-/* ...........................................................SOCIAL GATHERING CONTAINER */
-
-.socialGathering {}
-
-.sg-left {}
-
-/* ...........................................................SOCIAL GATHERING LOGOS SVG */
-
-.logo-beer {}
-
-.logo-food {}
-
-.logo-fun {}
-
-/* ...............................................................SOCIAL GATHERING STARS */
-
-.sg-right {}
-
-.sg-right i {}
-
-
-/* NATIONALITE JOUEURS............................................................................................................................................... */
-
-/* ................................................(MOROCCO) */
-
-.nat-morocco {}
-
-/* .................................................(FRANCE) */
-
-.nat-france {}
-
-/* ..............................................(CAMEROON) */
-
-.nat-cameroon {}
-
-/* ................................................(UKRAINE) */
-
-.nat-ukraine {}
-
-/* ...................................................(PERU) */
-
-.nat-peru {}
-
-/* .................................................(BRAZIL) */
-
-.nat-brazil {}
-
-/* ............................................(NETHERLANDS) */
-
-.nat-netherlands {}
-
-/* ................................................(TUNISIA) */
-
-.nat-tunisia {}
-
-/* ................................................(GREECE) */
-
-.nat-greece {}
-
-/* ................................................(SERBIA) */
-
-.nat-serbia {}
-
-/* ..............................................(GERMANY) */
-
-.nat-germany {}
-
-/* .............................................(ARGENTINA) */
-
-.nat-argentina {}
-
-/* ...............................................(VIETNAM) */
-
-.nat-vietnam {}
-
-
-
-/* SECTION SPONSORS.................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-
-.sponsors-paragraph {}
-
-.sponsors-paragraph.visible {}
-
-.sponsors-container {}
-
-.sponsors-container.visible {}
-
-.sponsors-container a {}
-
-.img-pronk {}
-
-.img-iw {}
-
-.img-pronk:hover,
-.img-iw:hover {}
-
-.sponsors-container a:hover {}
-
-/* GALLERIE PHOTOS................................................................................................................................................... */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.gallery {}
-
-.photo-gallery:hover figcaption {}
-
-/* ......................................................................PHOTO GALLERY */
-
-.photo-gallery {}
-
-
-.photo-gallery img {}
-
-.photo-gallery figcaption {}
-
-.photo-gallery:hover figcaption {}
-
-.photo-gallery:hover img {}
-
-/* ................................................................TEXTE PHOTO GALLERY */
-
-.gallery p {}
-
-/* GALLERIE POP UP................................................................................................................................................... */
-
-.popup-gallery-overlay {}
-
-.popup-gallery-overlay.active {}
-
-.popup-gallery-container {
 }
-
-.popup-gallery-container.active {}
-
-.popup-gallery-image {}
-
-.popup-gallery-caption {}
-
-.close-popup-gallery {}
-
-.close-popup-gallery:hover {}
-
-
-/* BOUTON RETOUR EN HAUT............................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.back-to-top-container {}
-
-.back-to-top-container.visible {}
-
-.back-to-top {}
-
-.back-to-top:hover {}
-
-.back-to-top-text {}
-
-/* FOOTER............................................................................................................................................................ */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.footer-site {}
-
-/* FOOTER LEFT CONTAINER......................................................... */
-/* .............................................................................. */
-
-.footer-left {}
-
-/* ..............................................................FOOTER LEFT LOGO */
-
-.footer-left-title {}
-
-/* ..........................................................................X&3K */
-
-.footer-left-title-1 {}
-
-.footer-left-title-1 strong {}
-
-/* .......................................................................LEQUIPE */
-
-.footer-left-title-2 {}
-
-/* FOOTER CENTER CONTAINER....................................................... */
-/* .............................................................................. */
-
-.footer-center {
-
-}
-
-/* ............................................................FOOTER CENTER LOGO */
-
-.logo-footer {}
-
-/* ............................................................FOOTER CENTER PARA */
-
-.fc-para {}
-
-.fc-para strong {}
-
-/* .......................................................FOOTER CENTER COPYRIGHT */
-
-.fc-copyright {}
-
-.fc-copyright em {}
-
-/* FOOTER CENTER CONTAINER....................................................... */
-/* .............................................................................. */
-
-.footer-right {}
-
-/* ............................................................FOOTER RIGHT TITLE */
-
-.footer-right-title {}
-
-.footer-right-title::first-letter {}
-
-/* ............................................................FOOTER RIGHT LINKS */
-
-.footer-link-list {}
-
-.footer-link-list li {}
-
-.footer-link-list li a {}
-
-.footer-link-list li a:hover {}
-
-
-
-}
-
-
-
 /*  RESPONSIVE MOBILE (480 PX)....................................................................................................................................... */
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
@@ -3273,11 +2712,9 @@ main {
 /* .................................................................................................................................................................. */
 
 @media (max-width: 480px) {
-
-
-/* REGLAGES GLOBAUX.................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
+  /* REGLAGES GLOBAUX.................................................................................................................................................. */
+  /* .................................................................................................................................................................. */
+  /* .................................................................................................................................................................. */
 
   * {
     margin: 0;
@@ -3301,690 +2738,778 @@ main {
     flex: 1;
   }
 
-
-/* HEADER............................................................................................................................................................ */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.header-site {}
-
-/* .............................................................BARRE NAV */
-
-.barre-nav{}
-
-/* ..................................................................LOGO */
-
-.logo-header {}
-
-/* ..........................................................LIENS HEADER */
-
-.links-header {}
-
-.links-header li {}
-
-.links-header li a {}
-
-/* ............................................................SVG HEADER */
-
-.logo-story-1 {}
-
-.logo-story-2 {}
-
-.logo-story-3 {}
-
-.logo-story-4 {}
-
-/* .....................................................CTA BOUTON HEADER */
-
-.cta-header {}
-
-
-/* HERO SITE......................................................................................................................................................... */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.hero-site {}
-
-/* HERO H1.................................................................X&3K */
-
-.hero-h1 {}
-
-.hero-h1 strong {}
-
-/* HERO H1..............................................................LEQUIPE */
-
-.hero-h1-texte {}
-
-/* ...............................................HERO SCROLL DOWN INSTRUCTIONS */
-
-.scroll-down-instruction {}
-
-/* ................................................................HERO RESEAUX */
-
-.heroCtaReseaux-1 {}
-
-.heroCtaReseaux-2 {}
-
-.heroCtaReseaux-1 a,
-.heroCtaReseaux-2 a {}
-
-.heroCtaReseaux-1 a:hover,
-.heroCtaReseaux-2 a:hover {}
-
-.heroCtaReseaux-1:hover i {}
-
-.heroCtaReseaux-1 i {}
-
-
-/*  SECTION BANNIERE OUR STORY (TEXTE)............................................................................................................................... */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.our-story {}
-
-/* ................................................................OUR STORY TITLE */
-
-.our-story h2 {}
-
-/* .............................................................OUR STORY CAROUSEL */
-
-.story-carousel {}
-
-.story-carousel.visible {}
-
-/* ......................................................FLECHES CAROUSEL CONTAINER */
-
-.carousel-arrow-container {}
-
-.carousel-arrow-text {}
-
-/* .................................................................TEXTE CAROUSEL */
-
-.carousel-content {}
-
-/* .................................................................SLIDE CAROUSEL */
-
-.story-slide {}
-
-.story-slide.active {}
-
-/* ....................................................SLIDE CAROUSEL STYLES TEXTES*/
-
-.story-slide strong {}
-
-.story-slide .strongName {}
-
-.story-slide em {}
-
-.story-slide a {}
-
-.story-slide a:hover {}
-
-/* .........................................................FLECHES SLIDE CAROUSEL */
-
-.carousel-arrow {}
-
-.carousel-arrow:hover {}
-
-.carousel-arrow:active {}
-
-/* .....................................................SLIDE CAROUSEL INDICATEURS */
-
-.carousel-indicators {}
-
-.carousel-indicators.visible {}
-
-.indicator {}
-
-.indicator:hover {}
-
-.indicator.active {}
-
-
-/*  SECTION X TEAM (EQUIPE ET STATS)................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.x-team {}
-
-/* ........................................................TITRE X TEAM */
-
-.titleSection {}
-
-.x-team h2 {}
-
-/* ..................................................TITRE X TEAM LEGENDE*/
-
-.legende1 {}
-
-/* ..................................................POSITION VUE DE HAUT*/
-
-.positionSection {}
-
-#reserve-team {}
-
-/* ..............................................NOM POSITION VUE DE HAUT*/
-
-.posTitle {}
-
-.posTitle::first-letter {}
-
-/* PLAYER GRID (VIGNETTES JOUEURS)................................................................................................................................... */
-/* .................................................................................................................................................................. */
-
-.players-grid {}
-
-/* ......................................................VIGNETTE JOUEUR*/
-
-.img-player-mini {}
-
-.img-player-mini:hover {}
-
-/* ................................................TITRE VIGNETTE JOUEUR*/
-
-.position-player-mini {}
-
-/* PLAYER GRID (IMAGES JOUEURS).......................................................................................................................................*/
-
-/* GOALKEEPER..................................................................... */
-
-/* ..........................................................HICHAM SABIR (NO PIC) */
-
-#joueur1 {}
-
-/* DEFENDERS...................................................................... */
-
-/* .......................................................CYRIL JOUSSELIN (NO PIC) */
-
-#joueur2 {}
-
-/* .................................................................RODRIGUE MONGO */
-
-#joueur3 {}
-
-/* .................................................................THIBAULT DUPUIS */
-
-#joueur4 {}
-
-/* ...................................................................MARTIN VALERA */
-
-#joueur5 {}
-
-/* .................................................................RODRIGO BOUABIDA */
-
-#joueur6 {}
-
-/* .....................................................................JORY WIELAARD */
-
-#joueur7 {}
-
-/* ................................................................AJEL BILAL (NO PIC) */
-
-#joueur8 {}
-
-/* MIDFIELDERS....................................................................... */
-
-/* .................................................................VASYL MAKAROVSKIY */
-
-#joueur9 {}
-
-/* ..................................................................BALTHAZAR NICOLAS */
-
-#joueur10 {}
-
-/* ......................................................................PASTANT JONAS */
-
-#joueur11 {}
-
-/* ATTAQUANTS......................................................................... */
-
-/* .........................................................PAPAKONKANSTINOU APOSTOLIS */
-
-#joueur12 {}
-
-/* .....................................................................FILIP RENOVCIV */
-
-#joueur13 {}
-
-/* RESERVE............................................................................ */
-
-/* ............................................................FRANCO PATROSSO (NO PIC)*/
-
-#joueur14 {}
-
-/* ............................................................VINCENT NGUYEN (NO PIC) */
-
-#joueur15 {}
-
-/* POP UP ........................................................................................................................................................... */
-/* .................................................................................................................................................................. */
-
-/* .....................................................................POP UP OVERLAY */
-
-.popup-overlay {}
-
-.popup-overlay.active {}
-
-/* ...................................................................POP UP CONTAINER */
-
-.popup-container {}
-
-.popup-container.active {}
-
-/* ................................................................POP UP CLOSE BUTTON */
-
-.close-popup {}
-
-.close-popup:hover {}
-
-/* CONTAINER PLAYER LINE............................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.player-line {}
-
-.player-line.is-revealed {}
-
-/* PLAYER LINE LEFT (IMAGES JOUEUR).................................................................................................................................. */
-
-/* .......................................................................HICHAM SABIR */
-
-.pl-left-1 {}
-
-/* ....................................................................CYRIL JOUSSELIN */
-
-.pl-left-2 {}
-
-/* .....................................................................RODRIGUE MONGO */
-
-.pl-left-3 {}
-
-/* ....................................................................THIBAULT DUPUIS */
-
-.pl-left-4 {}
-
-/* ......................................................................MARTIN VALERA */
-
-.pl-left-5 {}
-
-/* ...................................................................RODRIGO BOUABIDA */
-
-.pl-left-6 {}
-
-/* ......................................................................WIELAARD JORY */
-
-.pl-left-7 {}
-
-/* .........................................................................AJEL BILEL */
-
-.pl-left-8 {}
-
-/* ..................................................................VASYL MAKAROVSKIY */
-
-.pl-left-9 {}
-
-/* ..................................................................BALTHAZAR NICLOAS */
-
-.pl-left-10 {}
-
-/* ......................................................................PASTANT JONAS */
-
-.pl-left-11 {}
-
-/* ..........................................................................APOSTOLIS */
-
-.pl-left-12 {}
-
-/* ....................................................................FILIP REVOCECIV */
-
-.pl-left-13 {}
-
-/* ............................................................................RESERVE */
-/* ................................................................................... */
-
-/* ....................................................................FRANCO PATROSSO */
-
-.pl-left-14 {}
-
-/* .....................................................................VINCENT NGUYEN */
-
-.pl-left-15 {}
-
-/* PLAYER LINE RIGHT (STATS JOUEUR).................................................................................................................................. */
-
-.pl-right {}
-
-/* .................................................................STATS CONTAINER TOP */
-/* .................................................................................... */
-
-.plr-top {}
-
-/* ............................................................STATS MAILLOT SVG NUMERO */
-
-.playerNumero {}
-
-.PlayerNumeroContent {}
-
-.logo-inside {}
-
-/* ...............................................................STATS PLAYER POSITION */
-
-.player-position {}
-
-.playerTitleSpecial {}
-
-.playerTitle {}
-
-/* ....................................................................STATS NOM JOUEUR */
-
-.playerName {}
-
-.ply-surname {}
-
-.ply-name {}
-
-/* ..............................................................STATS NOM LONGS JOUEUR */
-
-.ply-surname-1 {}
-
-.ply-name-1 {}
-
-/* ..................................................................STATS CAPTAIN LOGO */
-
-.logo-captain {}
-
-/* ..............................................................STATS CONTAINER BOTTOM */
-/* .................................................................................... */
-
-.plr-bottom {}
-
-/* ..................................................................STATS INFOS JOUEUR */
-
-.plrb-left {}
-
-.plbr-infos {}
-
-
-
-/* ...................................................................STATS TITLE INFOS */
-
-
-.playerTitle-2 {}
-
-
-/* .................................................................STATS CONTENT INFOS */
-
-.playerTitle-3 {}
-
-/* .............................................................SOCIAL GATHERING TITLES */
-
-
-.playerTitle-4 {}
-
-/* SOCIAL GATHERING.................................................................................................................................................. */
-
-/* ..................................................... MAIN SOCIAL GATHERING CONTAINER */
-
-.plrb-right {}
-
-.plrb-right-title {}
-
-/* ...........................................................SOCIAL GATHERING CONTAINER */
-
-.socialGathering {}
-
-.sg-left {}
-
-/* ...........................................................SOCIAL GATHERING LOGOS SVG */
-
-.logo-beer {}
-
-.logo-food {}
-
-.logo-fun {}
-
-/* ...............................................................SOCIAL GATHERING STARS */
-
-.sg-right {}
-
-.sg-right i {}
-
-
-/* NATIONALITE JOUEURS............................................................................................................................................... */
-
-/* ................................................(MOROCCO) */
-
-.nat-morocco {}
-
-/* .................................................(FRANCE) */
-
-.nat-france {}
-
-/* ..............................................(CAMEROON) */
-
-.nat-cameroon {}
-
-/* ................................................(UKRAINE) */
-
-.nat-ukraine {}
-
-/* ...................................................(PERU) */
-
-.nat-peru {}
-
-/* .................................................(BRAZIL) */
-
-.nat-brazil {}
-
-/* ............................................(NETHERLANDS) */
-
-.nat-netherlands {}
-
-/* ................................................(TUNISIA) */
-
-.nat-tunisia {}
-
-/* ................................................(GREECE) */
-
-.nat-greece {}
-
-/* ................................................(SERBIA) */
-
-.nat-serbia {}
-
-/* ..............................................(GERMANY) */
-
-.nat-germany {}
-
-/* .............................................(ARGENTINA) */
-
-.nat-argentina {}
-
-/* ...............................................(VIETNAM) */
-
-.nat-vietnam {}
-
-
-
-/* SECTION SPONSORS.................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-
-.sponsors-paragraph {}
-
-.sponsors-paragraph.visible {}
-
-.sponsors-container {}
-
-.sponsors-container.visible {}
-
-.sponsors-container a {}
-
-.img-pronk {}
-
-.img-iw {}
-
-.img-pronk:hover,
-.img-iw:hover {}
-
-.sponsors-container a:hover {}
-
-/* GALLERIE PHOTOS................................................................................................................................................... */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.gallery {}
-
-.photo-gallery:hover figcaption {}
-
-/* ......................................................................PHOTO GALLERY */
-
-.photo-gallery {}
-
-
-.photo-gallery img {}
-
-.photo-gallery figcaption {}
-
-.photo-gallery:hover figcaption {}
-
-.photo-gallery:hover img {}
-
-/* ................................................................TEXTE PHOTO GALLERY */
-
-.gallery p {}
-
-/* GALLERIE POP UP................................................................................................................................................... */
-
-.popup-gallery-overlay {}
-
-.popup-gallery-overlay.active {}
-
+  /* HEADER............................................................................................................................................................ */
+  /* .................................................................................................................................................................. */
+  /* .................................................................................................................................................................. */
+
+  /* .............................................................BARRE NAV */
+
+  .barre-nav {
+    height: auto; /* Plus de 200px ! */
+    min-height: 50px;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .logo-header {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+  }
+
+  .links-header {
+    gap: 5px;
+    position: relative;
+  }
+
+  .links-header li a {
+    padding: 5px;
+    font-size: 14px; /* Pour 480px, 14-15px est parfait */
+    z-index: 2;
+  }
+
+  .cta-header {
+    font-size: 12px;
+    padding: 8px 15px;
+    text-align: center;
+    z-index: 2;
+    padding: 0px;
+  }
+
+  .cta-header:hover {
+    background-color: transparent;
+    box-shadow: none;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+
+  /* Logos des icônes dans les liens */
+  .logo-story-1,
+  .logo-story-2,
+  .logo-story-3,
+  .logo-story-4 {
+    height: 30px;
+    width: 30px;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+  }
+
+  /* HERO SITE......................................................................................................................................................... */
+  /* .................................................................................................................................................................. */
+  /* .................................................................................................................................................................. */
+
+  .hero-site {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, 0.563);
+    background-position-x: 39%;
+    background-size: cover;
+  }
+
+  /* HERO H1.................................................................X&3K */
+
+  .hero-h1 {
+    font-size: 100px;
+    margin: 0px;
+  }
+
+  .hero-h1 strong {
+    font-size: 70px;
+  }
+
+  /* HERO H1..............................................................LEQUIPE */
+
+  .hero-h1-texte {
+    font-size: 80px;
+    letter-spacing: 1px;
+    margin: 30px 0px 0px 0px;
+  }
+
+  /* ...............................................HERO SCROLL DOWN INSTRUCTIONS */
+
+  .scroll-down-instruction {
+    font-size: 12px;
+    position: absolute;
+    bottom: 2%;
+    left: 33.2%;
+  }
+
+  /* ................................................................HERO RESEAUX */
+
+  .heroCtaReseaux-1 {
+    position: inherit;
+    margin: 0px;
+    line-height: 0;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    position: absolute;
+    bottom: 9%;
+    left: 35%;
+    width: 90%;
+  }
+
+  .heroCtaReseaux-2 {
+    position: inherit;
+    margin: 0px;
+    line-height: 0;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    position: absolute;
+    bottom: 10%;
+    right: 29%;
+    width: 90%;
+  }
+
+  .heroCtaReseaux-1 a,
+  .heroCtaReseaux-2 a {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+
+  .heroCtaReseaux-1 i {
+    color: rgb(234, 234, 234);
+    font-size: 15px;
+  }
+
+  /*  SECTION BANNIERE OUR STORY (TEXTE)............................................................................................................................... */
+  /* .................................................................................................................................................................. */
+  /* .................................................................................................................................................................. */
+
+  .our-story {
+    padding: 50px 10px;
+    min-height: 90vh;
+    position: relative;
+  }
+
+  .our-story h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+
+  /* CAROUSEL STORY */
+  .story-carousel {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .carousel-arrow-container {
+    display: none;
+  }
+
+  .carousel-content {
+    width: 100%;
+    min-height: auto;
+    order: 1;
+  }
+
+  .story-slide {
+    font-size: 16px;
+    line-height: 1.8em;
+    text-align: justify;
+  }
+
+  .story-slide.active {
+    padding: 0px 20px;
+  }
+
+  .carousel-indicators {
+    position: absolute;
+    gap: 10px;
+    order: 3;
+    bottom: 4%;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+
+  /*  SECTION X TEAM (EQUIPE ET STATS)................................................................................................................................. */
+
+  .x-team {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .titleSection {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .x-team h2 {
+    font-size: 40px;
+    margin: 0px;
+  }
+
+  .legende1 {
+    font-size: 14px;
+  }
+
+  .positionSection {
+    margin: 0px 0px;
+  }
+
+  .posTitle {
+    width: 100%;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+
+  }
+
+
+
+   #reserve-team {
+    margin: 0px;
+    color: white;
+
+  }
+
+  #joueur3 {
+  background-position-x: 6px;
+  background-position-y: 1px;
+  background-size: 90%;
+  background-color: white;  
+}
+
+  #joueur4 {
+  background-position-x: 6px;
+  background-position-y: -1px;
+  background-size: 90%;
+  background-color: white;  
+}
+
+  #joueur6 {
+  background-position-x: 6px;
+  background-position-y: -1px;
+  background-size: 90%;
+  background-color: white;  
+}
+
+  #joueur7 {
+  background-position-x: 1px;
+  background-position-y: 2px;
+  background-size: 99%;
+  background-color: white;  
+}
+
+  #joueur9 {
+  background-position-x: 1px;
+  background-position-y: -2px;
+  background-size: 99%;
+  background-color: white;  
+}
+
+  #joueur10 {
+  background-position-x: 1px;
+  background-position-y: -2px;
+  background-size: 99%;
+  background-color: white;  
+}
+
+  #joueur11 {
+  background-position-x: -1px;
+  background-position-y: 2px;
+  background-size: 100%;
+  background-color: white;  
+}
+
+  #joueur12 {
+  background-position-x: 15px;
+  background-position-y: 2px;
+  background-size: 68%;
+  background-color: white;  
+}
+
+  #joueur13 {
+  background-position-x: 7px;
+  background-position-y: -2px;
+  background-size: 88%;
+  background-color: white;  
+}
+
+  /* PLAYER GRID (VIGNETTES JOUEURS) */
+
+  .players-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .img-player-mini {
+    width: 100px;
+    height: 100px;
+    border-width: 2px;
+  }
+
+  .position-player-mini {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  /* POP UP */
+  .popup-overlay {
+    background-color: rgba(0, 0, 0, 0.95);
+  }
+
+  .popup-container {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    top: 50%;
+  }
+
+  .close-popup {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  /* PLAYER LINE */
+  .player-line {
+    flex-direction: column;
+    gap: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  /* PLAYER LINE LEFT (IMAGES) */
+  .pl-left-1,
+  .pl-left-2,
+  .pl-left-3,
+  .pl-left-4,
+  .pl-left-5,
+  .pl-left-6,
+  .pl-left-7,
+  .pl-left-8,
+  .pl-left-9,
+  .pl-left-10,
+  .pl-left-11,
+  .pl-left-12,
+  .pl-left-13,
+  .pl-left-14,
+  .pl-left-15 {
+    width: 100%;
+    min-height: 300px;
+    max-height: 350px;
+    border-radius: 15px;
+  }
+
+  /* PLAYER LINE RIGHT */
+  .pl-right {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .plr-top {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .playerNumero {
+    width: 60px;
+    height: 60px;
+  }
+
+  .PlayerNumeroContent {
+    font-size: 28px;
+  }
+
+  .logo-inside {
+    width: 30px;
+    height: 30px;
+  }
+
+  .player-position {
+    width: 100%;
+    order: 4;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .playerTitleSpecial {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .playerTitle {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .playerName {
+    gap: 5px;
+  }
+
+  .ply-surname {
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+
+  .ply-name {
+    font-size: 24px;
+  }
+
+  .ply-surname-1 {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  .ply-name-1 {
+    font-size: 20px;
+  }
+
+  .logo-captain {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  /* PLAYER LINE BOTTOM */
+  .plr-bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .plrb-left {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .plbr-infos {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .playerTitle-2 {
+    font-size: 14px;
+  }
+
+  .playerTitle-3 {
+    font-size: 14px;
+  }
+
+  /* SOCIAL GATHERING */
+  .plrb-right {
+    width: 100%;
+    gap: 15px;
+  }
+
+  .plrb-right-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .socialGathering {
+    gap: 15px;
+  }
+
+  .sg-left {
+    gap: 10px;
+  }
+
+  .playerTitle-4 {
+    font-size: 14px;
+  }
+
+  .logo-beer,
+  .logo-food,
+  .logo-fun {
+    width: 30px;
+    height: 30px;
+  }
+
+  .sg-right {
+    gap: 5px;
+  }
+
+  .sg-right i {
+    font-size: 16px;
+  }
+
+  /* SECTION SPONSORS */
+
+  .sponsors-paragraph {
+    font-size: 16px;
+    line-height: 1.8em;
+    padding: 0px 20px;
+    width: 100%;
+  }
+
+  .sponsors-container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 0px;
+  }
+
+  .sponsors-container a {
+    font-size: 16px;
+  }
+
+  .img-pronk,
+  .img-iw {
+    transform: scale(0.7);
+  }
+
+  
+/* GALLERIE PHOTOS */
+.gallery {
+  padding: 40px 20px 40px 20px;
+}
+
+.gallery-carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.gallery-carousel-content {
+  width: 100%;
+  order: 1;
+}
+
+.gallery-instructions {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  text-shadow: 0px 0px 5px rgba(235, 196, 0, 0.562);
+  animation-duration: 5s;
+  animation-name: clignoter;
+  animation-iteration-count: infinite;
+  transition: none;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 30px;  
+  }
+
+
+
+/* Les deux flèches côte à côte */
+.gallery .carousel-arrow-container:nth-child(1) {
+  display: none;
+}
+
+.gallery .carousel-arrow-container:nth-child(3) {
+    display: none;
+}
+
+
+
+.gallery-slide {
+  gap: 15px;
+}
+
+.photo-gallery {
+  width: 100%;
+  max-width: 350px;
+  height: 220px;
+}
+
+.photo-gallery img {
+  height: 170px;
+}
+
+.photo-gallery figcaption {
+  height: 50px;
+  font-size: 11px;
+  opacity: 1;
+}
+
+/* INDICATORS GALLERY */
+.carousel-indicators-gallery {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  order: 3;
+  margin-top: 20px;
+}
+
+.indicator-gallery {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(235, 196, 0, 0.3);
+  border: 2px solid #ebc400;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.indicator-gallery:hover {
+  transform: scale(1.2);
+}
+
+.indicator-gallery.active {
+  background-color: #ebc400;
+  box-shadow: 0px 0px 10px #ebc400;
+}
+
+.gallery .carousel-indicators-gallery:nth-child(1) {
+  margin-top: -15px;
+  padding: 20px 0px;
+  margin-bottom: 25px;
+}
+
+/* POPUP GALLERY */
 .popup-gallery-container {
+  width: calc(100% - 40px);
+  height: calc(100% - 100px);
 }
 
-.popup-gallery-container.active {}
-
-.popup-gallery-image {}
-
-.popup-gallery-caption {}
-
-.close-popup-gallery {}
-
-.close-popup-gallery:hover {}
-
-
-/* BOUTON RETOUR EN HAUT............................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.back-to-top-container {}
-
-.back-to-top-container.visible {}
-
-.back-to-top {}
-
-.back-to-top:hover {}
-
-.back-to-top-text {}
-
-/* FOOTER............................................................................................................................................................ */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.footer-site {}
-
-/* FOOTER LEFT CONTAINER......................................................... */
-/* .............................................................................. */
-
-.footer-left {}
-
-/* ..............................................................FOOTER LEFT LOGO */
-
-.footer-left-title {}
-
-/* ..........................................................................X&3K */
-
-.footer-left-title-1 {}
-
-.footer-left-title-1 strong {}
-
-/* .......................................................................LEQUIPE */
-
-.footer-left-title-2 {}
-
-/* FOOTER CENTER CONTAINER....................................................... */
-/* .............................................................................. */
-
-.footer-center {
-
+.popup-gallery-image {
+  max-height: calc(100% - 100px);
 }
 
-/* ............................................................FOOTER CENTER LOGO */
+.popup-gallery-caption {
+  font-size: 14px;
+  margin-top: 15px;
+}
 
-.logo-footer {}
+.close-popup-gallery {
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+}
 
-/* ............................................................FOOTER CENTER PARA */
+  /* BOUTON RETOUR EN HAUT */
+  .back-to-top-container {
+    bottom: 20px;
+    right: 20px;
+  }
 
-.fc-para {}
+  .back-to-top {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
 
-.fc-para strong {}
+  .back-to-top-text {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
 
-/* .......................................................FOOTER CENTER COPYRIGHT */
+  /* FOOTER ..........................................................................................................................*/
 
-.fc-copyright {}
+  .footer-site {
+    flex-direction: column;
+    padding: 50px 20px 20px 20px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
 
-.fc-copyright em {}
+  .footer-left {
+    align-items: center;
+    width: 100%;
+  }
 
-/* FOOTER CENTER CONTAINER....................................................... */
-/* .............................................................................. */
+  .footer-left-title-1 {
+    font-size: 50px;
+  }
 
-.footer-right {}
+  .footer-left-title-1 strong {
+    font-size: 35px;
+  }
 
-/* ............................................................FOOTER RIGHT TITLE */
+  .footer-left-title-2 {
+    font-size: 40px;
+    position: absolute;
+    top: 4%;
+    left: 34%;
+  }
 
-.footer-right-title {}
+  .footer-center {
+    gap: 20px;
+    width: 100%;
+  }
 
-.footer-right-title::first-letter {}
+  .logo-footer {
+    height: 400px;
+    width: 400px;
+    top: 15%;
+    opacity: 0.1;
+  }
 
-/* ............................................................FOOTER RIGHT LINKS */
+  .fc-para {
+    font-size: 14px;
+    line-height: 1.8em;
+    width: 90%;
+    text-align: center;
+  }
 
-.footer-link-list {}
+  .fc-copyright {
+    font-size: 9px;
+    padding: 0px 30px;
+    text-align: center;
+    font-style: italic;
+    position: inherit;
+    margin-bottom: 10px;
+  }
 
-.footer-link-list li {}
+  .footer-right {
+    gap: 5px;
+    width: 100%;
 
-.footer-link-list li a {}
+  }
 
-.footer-link-list li a:hover {}
+  .footer-right-title {
+    font-size: 25px;
+  }
 
+  .footer-link-list {
+    gap: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
 
+.footer-link-list li {
+  padding: 10px 0px;
+  width: 100%;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+.footer-link-list li a {
+    font-size: 17px;
+    letter-spacing: 2px;
+    width: 100%;
+      display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 }
