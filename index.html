@@ -31,9 +31,19 @@
   <!-- ........................................................................................................................................................... -->
   <!-- ........................................................................................................................................................... -->
 
-  <header class="header-site">
-    <nav class="barre-nav">
-      <div class="logo-header"></div>
+<header class="header-site">
+  <nav class="barre-nav">
+    <a href="#"> <div class="logo-header"></div></a>
+    
+    <!-- BOUTON HAMBURGER (visible uniquement sur mobile) -->
+    <button class="hamburger-btn" aria-label="Toggle menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <!-- MENU (caché sur mobile, visible sur desktop) -->
+    <div class="nav-menu">
       <ul class="links-header">
         <li>
           <div class="logo-story-1"></div>
@@ -55,8 +65,12 @@
       <a href="https://footy.netlify.app/clubhouse" class="cta-header" target="_blank" rel="noopener">
         More stats on Footy App
       </a>
-    </nav>
-  </header>
+    </div>
+
+    <!-- OVERLAY (fond sombre quand menu ouvert) -->
+    <div class="nav-overlay"></div>
+  </nav>
+</header>
 
   <!-- MAIN SITE.................................................................................................................................................. -->
   <!-- ........................................................................................................................................................... -->
@@ -592,8 +606,10 @@
 
               <!-- PLAYER LINE RIGHT CONTAINER (NATIONALITY)................................ -->
 
-              <div class="nat-cameroon"></div>
+              <div class="origins">
+                <div class="nat-cameroon"></div>
               <div class="nat-france"></div>
+              </div>
 
               <!-- PLAYER LINE RIGHT CONTAINER (POSITIONS).................................. -->
 
@@ -930,8 +946,10 @@
 
               <!-- PLAYER LINE RIGHT CONTAINER (NATIONALITY)................................ -->
 
-              <div class="nat-france"></div>
+              <div class="origins">
+                <div class="nat-france"></div>
               <div class="nat-brazil"></div>
+              </div>
 
               <!-- PLAYER LINE RIGHT CONTAINER (POSITIONS).................................. -->
 
@@ -1804,8 +1822,10 @@
 
               <!-- PLAYER LINE RIGHT CONTAINER (NATIONALITY)................................ -->
 
-              <div class="nat-germany"></div>
+              <div class="origins">
+                <div class="nat-germany"></div>
               <div class="nat-argentina"></div>
+              </div>
 
               <!-- PLAYER LINE RIGHT CONTAINER (POSITIONS).................................. -->
 
@@ -1918,8 +1938,10 @@
 
               <!-- PLAYER LINE RIGHT CONTAINER (NATIONALITY)................................ -->
 
-              <div class="nat-france"></div>
+              <div class="origins">
+                <div class="nat-france"></div>
               <div class="nat-vietnam"></div>
+              </div>
 
               <!-- PLAYER LINE RIGHT CONTAINER (POSITIONS).................................. -->
 

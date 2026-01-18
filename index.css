@@ -32,7 +32,7 @@ main {
 #ourStory,
 #teamMembers,
 #teamGallery {
-  scroll-margin-top: 250px;
+  scroll-margin-top: 100px;
 }
 
 /*  HEADER / BARRE NAVIGATION........................................................................................................................................ */
@@ -47,7 +47,8 @@ main {
   left: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 200px;
   padding: 0px 50px;
   background-color: #0b0b0b;
   border-bottom: 2px solid rgb(111, 93, 0);
@@ -88,8 +89,9 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 70px;
+  gap: 100px;
   list-style: none;
+  padding: 0px 50px;
 }
 
 .links-header li {
@@ -1548,6 +1550,11 @@ main {
 
 /* ................................................(MOROCCO) */
 
+.origins {
+  display: flex;
+  gap: 10px;
+}
+
 .nat-morocco {
   height: 40px;
   width: 40px;
@@ -2698,6 +2705,31 @@ main {
   .gallery-instructions {
     display: none;
   }
+
+    .hamburger-btn {
+    display: none;
+  }
+
+  .nav-overlay {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .links-header {
+    flex-direction: row;
+  }
 }
 /*  RESPONSIVE MOBILE (480 PX)....................................................................................................................................... */
 /* .................................................................................................................................................................. */
@@ -2738,6 +2770,13 @@ main {
     flex: 1;
   }
 
+  #teamSponsors,
+#ourStory,
+#teamMembers,
+#teamGallery {
+  scroll-margin-top: 80px;
+}
+
   /* HEADER............................................................................................................................................................ */
   /* .................................................................................................................................................................. */
   /* .................................................................................................................................................................. */
@@ -2745,57 +2784,127 @@ main {
   /* .............................................................BARRE NAV */
 
   .barre-nav {
-    height: auto; /* Plus de 200px ! */
-    min-height: 50px;
-    padding: 10px;
-    gap: 10px;
+    height: 80px;
+    padding: 15px;
+    justify-content: space-between;
   }
 
   .logo-header {
-    width: 40px;
-    height: 40px;
-    z-index: 1;
+    width: 45px;
+    height: 45px;
+    z-index: 10001;
   }
 
+  /* BOUTON HAMBURGER */
+  .hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 23px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10001;
+  }
+
+  .hamburger-line {
+    width: 100%;
+    height: 2px;
+    background-color: #ebc400;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+
+  /* ANIMATION HAMBURGER → X */
+  .hamburger-btn.active .hamburger-line:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+  }
+
+  .hamburger-btn.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-btn.active .hamburger-line:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+  }
+
+  /* MENU MOBILE (caché par défaut) */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 80vh;
+    background-color: #0b0b0b;
+    border-bottom: 2px solid #6f5d00;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 10px;
+    z-index: 10000;
+    transition: right 0.4s ease;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  /* LIENS MENU MOBILE */
   .links-header {
-    gap: 5px;
-    position: relative;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .links-header li {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 
   .links-header li a {
-    padding: 5px;
-    font-size: 14px; /* Pour 480px, 14-15px est parfait */
-    z-index: 2;
+    font-size: 22px;
+    display: block;
+    padding: 12px 0;
   }
 
-  .cta-header {
-    font-size: 12px;
-    padding: 8px 15px;
-    text-align: center;
-    z-index: 2;
-    padding: 0px;
-  }
-
-  .cta-header:hover {
-    background-color: transparent;
-    box-shadow: none;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-thickness: 1px;
-  }
-
-  /* Logos des icônes dans les liens */
+  /* CACHE LES ICÔNES SUR MOBILE */
   .logo-story-1,
   .logo-story-2,
   .logo-story-3,
   .logo-story-4 {
-    height: 30px;
-    width: 30px;
-    z-index: 1;
-    position: absolute;
-    left: 0;
+    display: none;
   }
 
+  /* BOUTON CTA MOBILE */
+  .cta-header {
+    font-size: 14px;
+    padding: 10px 20px;
+    text-align: center;
+    border: 2px solid #6f5d00;
+  }
+
+  /* OVERLAY (fond sombre) */
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+  }
+
+  .nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
   /* HERO SITE......................................................................................................................................................... */
   /* .................................................................................................................................................................. */
   /* .................................................................................................................................................................. */
@@ -3293,6 +3402,8 @@ main {
 .gallery-carousel-content {
   width: 100%;
   order: 1;
+  position: relative; /* AJOUT */
+  min-height: 500px; /* AJOUT - fixe la hauteur minimum */
 }
 
 .gallery-instructions {
@@ -3310,9 +3421,7 @@ main {
   justify-content: center;
   font-weight: bold;
   margin-bottom: 30px;  
-  }
-
-
+}
 
 /* Les deux flèches côte à côte */
 .gallery .carousel-arrow-container:nth-child(1) {
@@ -3320,27 +3429,42 @@ main {
 }
 
 .gallery .carousel-arrow-container:nth-child(3) {
-    display: none;
+  display: none;
 }
-
-
 
 .gallery-slide {
   gap: 15px;
+  display: none; /* AJOUT - cache par défaut */
+  flex-wrap: wrap; /* AJOUT */
+  justify-content: center; /* AJOUT */
+  position: absolute; /* AJOUT - position absolue pour superposer */
+  top: 0; /* AJOUT */
+  left: 0; /* AJOUT */
+  width: 100%; /* AJOUT */
+  opacity: 0; /* AJOUT - invisible par défaut */
+  transition: opacity 0.4s ease; /* AJOUT - transition douce */
+}
+
+.gallery-slide.active {
+  display: flex; /* AJOUT - affiche seulement la slide active */
+  position: relative; /* AJOUT - la slide active est en position normale */
+  opacity: 1; /* AJOUT - visible */
 }
 
 .photo-gallery {
   width: 100%;
   max-width: 350px;
-  height: 220px;
+  height: 220px; /* HAUTEUR FIXE - c'est bon */
+  flex-shrink: 0; /* AJOUT - empêche le rétrécissement */
 }
 
 .photo-gallery img {
-  height: 170px;
+  height: 170px; /* HAUTEUR FIXE - c'est bon */
+  object-fit: cover; /* AJOUT - assure que l'image remplit bien l'espace */
 }
 
 .photo-gallery figcaption {
-  height: 50px;
+  height: 50px; /* HAUTEUR FIXE - c'est bon */
   font-size: 11px;
   opacity: 1;
 }
@@ -3402,6 +3526,7 @@ main {
   font-size: 24px;
 }
 
+
   /* BOUTON RETOUR EN HAUT */
   .back-to-top-container {
     bottom: 20px;
@@ -3421,92 +3546,107 @@ main {
 
   /* FOOTER ..........................................................................................................................*/
 
-  .footer-site {
-    flex-direction: column;
-    padding: 50px 20px 20px 20px;
-    gap: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
+.footer-site {
+  flex-direction: column;
+  padding: 30px 20px 20px 20px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative; /* AJOUT - pour le positionnement du logo */
+}
 
-  .footer-left {
-    align-items: center;
-    width: 100%;
-  }
+.footer-left {
+  align-items: center;
+  width: 100%;
+  z-index: 2; /* AJOUT - au-dessus du logo */
+  position: relative; /* AJOUT */
+}
 
-  .footer-left-title-1 {
-    font-size: 50px;
-  }
+.footer-left-title-1 {
+  font-size: 50px;
+    margin-top: 20px;
 
-  .footer-left-title-1 strong {
-    font-size: 35px;
-  }
+}
 
-  .footer-left-title-2 {
-    font-size: 40px;
-    position: absolute;
-    top: 4%;
-    left: 34%;
-  }
+.footer-left-title-1 strong {
+  font-size: 35px;
+}
 
-  .footer-center {
-    gap: 20px;
-    width: 100%;
-  }
+.footer-left-title-2 {
+  font-size: 40px;
+  position: absolute;
+  top: 4%;
+  left: 34%;
+}
 
-  .logo-footer {
-    height: 400px;
-    width: 400px;
-    top: 15%;
-    opacity: 0.1;
-  }
+.footer-center {
+  gap: 20px;
+  width: 100%;
+  z-index: 2; /* AJOUT - au-dessus du logo */
+  position: relative; /* AJOUT */
+}
 
-  .fc-para {
-    font-size: 14px;
-    line-height: 1.8em;
-    width: 90%;
-    text-align: center;
-  }
+.logo-footer {
+  height: 400px;
+  width: 400px;
+  position: absolute; /* AJOUT - précisez bien */
+  top: 15%;
+  left: 50%; /* AJOUT - centre horizontalement */
+  transform: translateX(-50%); /* AJOUT - centre horizontalement */
+  opacity: 0.1;
+  z-index: 1; /* AJOUT - EN ARRIÈRE-PLAN */
+  pointer-events: none; /* AJOUT CRITIQUE - rend le logo non-cliquable */
+}
 
-  .fc-copyright {
-    font-size: 9px;
-    padding: 0px 30px;
-    text-align: center;
-    font-style: italic;
-    position: inherit;
-    margin-bottom: 10px;
-  }
+.fc-para {
+  font-size: 14px;
+  line-height: 1.8em;
+  width: 90%;
+  text-align: center;
+}
 
-  .footer-right {
-    gap: 5px;
-    width: 100%;
+.fc-copyright {
+  font-size: 9px;
+  padding: 0px 30px;
+  text-align: center;
+  font-style: italic;
+  position: inherit;
+  margin-bottom: 10px;
+  line-height: 1.8em;
+}
 
-  }
+.footer-right {
+  gap: 5px;
+  width: 100%;
+  z-index: 2; /* AJOUT - au-dessus du logo */
+  position: relative; /* AJOUT */
+}
 
-  .footer-right-title {
-    font-size: 25px;
-  }
+.footer-right-title {
+  font-size: 25px;
+}
 
-  .footer-link-list {
-    gap: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-  }
+.footer-link-list {
+  gap: 0px;
+  display: flex;
+  flex-direction: column; /* AJOUT - empile verticalement */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
 .footer-link-list li {
   padding: 10px 0px;
   width: 100%;
-
 }
+
 .footer-link-list li a {
-    font-size: 17px;
-    letter-spacing: 2px;
-    width: 100%;
-      display: flex;
+  font-size: 17px;
+  letter-spacing: 2px;
+  width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
