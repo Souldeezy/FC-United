@@ -11,17 +11,25 @@
   <meta name="robots" content="index, follow" />
   <meta http-equiv="content-language" content="en" />
 
+<!-- TITLE.............................................................................. -->
+
   <title>L'Équipe X&3K - Amsterdam Amateur Football Team</title>
+
+<!-- FAVICON............................................................................. -->
 
   <link rel="icon" type="image/png" href="./PICS/logoX.webp" />
 
-  <link rel="stylesheet" href="./index.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&family=Passion+One:wght@400;700;900&family=Permanent+Marker&family=Rubik+Spray+Paint&display=swap"
-    rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/5274ecb80f.js" crossorigin="anonymous" async></script>
+<!-- CSS................................................................................. -->
+
+ <link rel="stylesheet" href="./index.css">
+
+<!-- FONT AWESOME........................................................................ -->
+
+ <link rel="stylesheet" href="./webfonts/all.min.css">
+
+<!-- LOADING IMAGE HERO.................................................................. -->
+
+ <link rel="preload" as="image" href="./PICS/teamgroup4.webp" fetchpriority="high">
 
 
 </head>
@@ -33,7 +41,7 @@
 
 <header class="header-site">
   <nav class="barre-nav">
-    <a href="#"> <div class="logo-header"></div></a>
+    <div class="logo-header"></div>
     
     <!-- BOUTON HAMBURGER (visible uniquement sur mobile) -->
     <button class="hamburger-btn" aria-label="Toggle menu">
@@ -51,7 +59,7 @@
         </li>
         <li>
           <div class="logo-story-2"></div>
-          <a href="#teamMembers">Members</a>
+          <a href="#teamMembers">Team Members</a>
         </li>
         <li>
           <div class="logo-story-3"></div>
@@ -2205,7 +2213,13 @@
       <p class="popup-gallery-caption"></p>
     </div>
 
-
+    <!-- BOUTON RETOUR EN HAUT -->
+    <div class="back-to-top-container">
+      <button class="back-to-top" aria-label="button back top top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+      <span class="back-to-top-text">Back to top</span>
+    </div>
 
 
   </main>

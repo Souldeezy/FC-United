@@ -35,6 +35,51 @@ main {
   scroll-margin-top: 100px;
 }
 
+
+/* FONT AWESOME...................................................................................................................... */
+
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  src: url('../webfonts/fa-solid-900.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+}
+
+/* GOOGLE FONTS...................................................................................................................... */
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../webfonts/lato-v25-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Passion One';
+  src: url('../webfonts/passion-one-v20-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Permanent Marker';
+  src: url('../webfonts/permanent-marker-v16-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik Spray Paint';
+  src: url('../webfonts/rubik-spray-paint-v1-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*  HEADER / BARRE NAVIGATION........................................................................................................................................ */
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
@@ -2770,7 +2815,7 @@ main {
     flex: 1;
   }
 
-  #teamSponsors,
+#teamSponsors,
 #ourStory,
 #teamMembers,
 #teamGallery {
@@ -3648,13 +3693,13 @@ main {
   /* BOUTON RETOUR EN HAUT */
   .back-to-top-container {
     bottom: 20px;
-    right: 20px;
+    right: 15px;
   }
 
   .back-to-top {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
   }
 
   .back-to-top-text {
@@ -3662,7 +3707,7 @@ main {
     padding: 5px 10px;
   }
 
-  /* FOOTER ..........................................................................................................................*/
+/* FOOTER ..........................................................................................................................*/
 
 .footer-site {
   flex-direction: column;

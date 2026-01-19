@@ -20,20 +20,20 @@
   <title>L'Équipe X&3K - Legal Notices</title>
 
   <!-- FAVICON (décommentez quand vous l'aurez créé) -->
-  <link rel="icon" type="image/png" href="./PICS/logoX.webp" />
+  <link rel="icon" type="image/png" href="../PICS/logoX.webp" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="./index.css" />
+<!-- CSS .................................................................................-->
 
-  <!-- GOOGLE FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&family=Passion+One:wght@400;700;900&family=Permanent+Marker&family=Rubik+Spray+Paint&display=swap"
-    rel="stylesheet" />
+<link rel="stylesheet" href="./index.css">
 
-  <!-- FONT AWESOME -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<!-- FONT AWESOME ........................................................................-->
+
+<link rel="stylesheet" href="../webfonts/all.min.css">
+
+<!-- LOADING IMAGE HERO.................................................................. -->
+
+<link rel="preload" as="image" href="../PICS/terrainNuitStats.webp" fetchpriority="high">
+
 </head>
 
 <body>
@@ -41,12 +41,23 @@
   <!-- ........................................................................................................................................................... -->
   <!-- ........................................................................................................................................................... -->
 
-  <header class="header-site">
-    <nav class="barre-nav">
-      <div class="logo-header"></div>
+<header class="header-site">
+  <nav class="barre-nav">
+    <div class="logo-header"></div>
+    
+    <!-- BOUTON HAMBURGER (visible uniquement sur mobile) -->
+    <button class="hamburger-btn" aria-label="Toggle menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <!-- MENU (caché sur mobile, visible sur desktop) -->
+    <div class="nav-menu">
       <ul class="links-header">
         <li>
-          <a href="../index.html">Main Page</a>
+          <div class="logo-story-1"></div>
+          <a href="../index.html#ourStory">Story</a>
         </li>
         <li>
           <div class="logo-story-2"></div>
@@ -54,7 +65,7 @@
         </li>
         <li>
           <div class="logo-story-3"></div>
-          <a href="../index.html#teamSponsors">Our Sponsors</a>
+          <a href="../index.html#teamSponsors">Sponsors</a>
         </li>
         <li>
           <div class="logo-story-4"></div>
@@ -62,10 +73,14 @@
         </li>
       </ul>
       <a href="https://footy.netlify.app/clubhouse" class="cta-header" target="_blank" rel="noopener">
-        See more results on the Footy App
+        More stats on Footy App
       </a>
-    </nav>
-  </header>
+    </div>
+
+    <!-- OVERLAY (fond sombre quand menu ouvert) -->
+    <div class="nav-overlay"></div>
+  </nav>
+</header>
 
   <!-- MAIN SITE.................................................................................................................................................. -->
   <!-- ........................................................................................................................................................... -->
@@ -76,7 +91,7 @@
     <!-- ......................................................................................................................................................... -->
 
     <section class="hero-ml">
-      <h1>Legal Notices</h1>
+      <h1>Legal Content</h1>
       <p class="hero-ml-para">
       <p class="hero-ml-para">
         This page contains all legal information regarding the X&3K website.
@@ -480,7 +495,7 @@
     <div class="footer-left">
       <div class="footer-left-title">
         <p class="footer-left-title-2">l'equipe</p>
-        <p class="footer-left-title-1">X&3K</p>
+        <p class="footer-left-title-1">X<strong>&</strong>3K</p>
       </div>
     </div>
 
@@ -504,10 +519,21 @@
     <div class="footer-right">
       <p class="footer-right-title">About</p>
       <ul class="footer-link-list">
-        <li><a href="#">Legal Notices</a></li>
-        <li><a href="#privacyPolicy">Privacy Policy</a></li>
-        <li><a href="#cookiesPolicy">Cookies Policy</a></li>
-        <li><a href="#termsAndConditions">Terms and Conditions</a></li>
+
+
+        <!-- PKOI LES LIENS NE MARHCENT PAS FINIR RESPONPON!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!.. -->
+        <li>
+          <a href="../index.html#ourStory">Story</a>
+        </li>
+        <li>
+          <a href="../index.html#teamMembers">Team Members</a>
+        </li>
+        <li>
+          <a href="../index.html#teamSponsors">Sponsors</a>
+        </li>
+        <li>
+          <a href="../index.html#teamGallery">Gallery</a>
+        </li>
       </ul>
     </div>
   </footer>

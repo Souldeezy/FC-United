@@ -33,6 +33,51 @@ main {
   scroll-margin-top: 250px;
 }
 
+/* FONT AWESOME...................................................................................................................... */
+
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  src: url('../webfonts/fa-solid-900.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+}
+
+/* GOOGLE FONTS...................................................................................................................... */
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../webfonts/lato-v25-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Passion One';
+  src: url('../webfonts/passion-one-v20-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Permanent Marker';
+  src: url('../webfonts/permanent-marker-v16-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik Spray Paint';
+  src: url('../webfonts/rubik-spray-paint-v1-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 /*  HEADER / BARRE NAVIGATION........................................................................................................................................ */
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
@@ -45,7 +90,8 @@ main {
   left: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 200px;
   padding: 0px 50px;
   background-color: #0b0b0b;
   border-bottom: 2px solid rgb(111, 93, 0);
@@ -54,7 +100,9 @@ main {
   transform: translateY(
     -20px
   ); /* Légèrement vers le haut pour l'effet "Down" */
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
   pointer-events: none; /* Empêche de cliquer tant qu'elle est invisible */
 }
 
@@ -67,7 +115,7 @@ main {
 /* LOGO HEADER GAUCHE............................................................ */
 
 .logo-header {
-  background: url(.//PICS/logoX.webp) no-repeat;
+  background: url(../PICS/logoX.webp) no-repeat;
   background-position: center;
   background-size: 100%;
   height: 80px;
@@ -84,8 +132,9 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 70px;
+  gap: 100px;
   list-style: none;
+  padding: 0px 50px;
 }
 
 .links-header li {
@@ -122,7 +171,7 @@ main {
   width: 50px;
   background-position: center;
   background-size: cover;
-  background-image: url(./SVG/football\ ball.svg);
+  background-image: url(../SVG/football\ ball.svg);
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
@@ -138,7 +187,7 @@ main {
   background-size: cover;
   opacity: 0;
   transition: all 0.5s ease-in-out;
-  background-image: url(./SVG/team.svg);
+  background-image: url(../SVG/team.svg);
 }
 
 .logo-story-3 {
@@ -150,7 +199,7 @@ main {
   width: 50px;
   background-position: center;
   background-size: cover;
-  background-image: url(./SVG/shirt.svg);
+  background-image: url(../SVG/shirt.svg);
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
@@ -164,7 +213,7 @@ main {
   width: 50px;
   background-position: center;
   background-size: cover;
-  background-image: url(./SVG/galleryLogo.svg);
+  background-image: url(../SVG/galleryLogo.svg);
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
@@ -209,14 +258,14 @@ main {
 /* .................................................................................................................................................................. */
 
 .hero-ml {
-  padding: 120px 0px 0px 0px;
+  padding: 150px 0px 0px 0px;
   min-height: 100vh;
   gap: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(.//PICS/terrainNuitStats.webp);
+  background-image: url(../PICS/terrainNuitStats.webp);
   background-position: center;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.603);
@@ -544,6 +593,8 @@ main {
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
 
+
+
 .footer-site {
   width: 100%;
   background-color: rgb(11, 11, 11);
@@ -578,6 +629,13 @@ main {
   position: relative;
 }
 
+.footer-left-title-1 strong {
+  font-family: "Rubik Spray", sans-serif;
+  color: rgba(0, 0, 0, 0.838);
+  -webkit-text-stroke: 0.5px #ebc400;
+  font-size: 40px;
+}
+
 .footer-left-title-2 {
   font-size: 35px;
   font-family: "Passion One", sans-serif;
@@ -601,7 +659,7 @@ main {
 }
 
 .logo-footer {
-  background: url(.//PICS/logoX.webp) no-repeat;
+  background: url(../PICS/logoX.webp) no-repeat;
   background-position: center;
   background-size: 100%;
   height: 200px;
@@ -732,252 +790,45 @@ main {
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
 
-/*  RESPONSIVE TABLETTE (768 PX)..................................................................................................................................... */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
+/*  RESPONSIVE DESIGN................................................................................................................................................ */
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
 
-
-
-
-@media (max-width: 768px) {
-
-/* REGLAGES GLOBAUX.................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@media (min-width: 481px) {
+  .gallery-instructions {
+    display: none;
   }
 
-  html,
-  body {
-    width: 100%;
-    overflow-x: hidden; /* Empêche le scroll horizontal */
+    .hamburger-btn {
+    display: none;
   }
 
-  body {
+  .nav-overlay {
+    display: none;
+  }
+
+  .nav-menu {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+    padding: 0;
   }
 
-  main {
-    width: 100%;
-    flex: 1;
+  .links-header {
+    flex-direction: row;
   }
-
-
-/* HEADER............................................................................................................................................................ */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.header-site {}
-
-/* .............................................................BARRE NAV */
-
-.barre-nav{}
-
-/* ..................................................................LOGO */
-
-.logo-header {}
-
-/* ..........................................................LIENS HEADER */
-
-.links-header {}
-
-.links-header li {}
-
-.links-header li a {}
-
-/* ............................................................SVG HEADER */
-
-.logo-story-1 {}
-
-.logo-story-2 {}
-
-.logo-story-3 {}
-
-.logo-story-4 {}
-
-/* .....................................................CTA BOUTON HEADER */
-
-.cta-header {}
-
-
-/* SECTION HERO...................................................................................................................................................... */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.hero-ml {}
-
-/* ..........................................................................HERO H1 */
-
-.hero-ml h1 {}
-
-/* ........................................................................HERO PARA */
-
-.hero-ml-para {}
-
-/* .......................................................................HERO LIENS */
-
-.links-hero {}
-
-.links-hero-1,
-.links-hero-2,
-.links-hero-3,
-.links-hero-4 {}
-
-.links-hero-1:hover,
-.links-hero-2:hover,
-.links-hero-3:hover,
-.links-hero-4:hover {}
-
-/* .....................................................HERO SCROLL DOWN INSTRUCTIONS */
-
-.hero-ml-instructions {}
-
-.scroll-down-instruction {}
-
-
-/* SECTION LEGAL NOTICES............................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.our-story {}
-
-.our-story h2 {}
-
-.our-story h3 {}
-
-.our-story a {}
-
-.our-story a:hover {}
-
-.our-story p {}
-
-.our-story p strong {}
-
-.our-story p em {}
-
-.our-story p br {}
-
-.our-story .note {}
-
-.our-story .note strong {}
-
-.our-story ul {}
-
-.our-story ul li {}
-
-.our-story ul li::before {}
-
-.our-story ul li strong {}
-
-.our-story ul li a {}
-
-.our-story ul li a:hover {}
-
-/* ANIMATIONS........................................................................................................................................................ */
-
-.our-story p.visible {}
-
-.our-story .note.visible {}
-
-.our-story ul.visible {}
-
-
-/* BOUTON RETOUR EN HAUT............................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.back-to-top-container {}
-
-.back-to-top-container.visible {}
-
-.back-to-top {}
-
-.back-to-top:hover {}
-
-.back-to-top-text {}
-
-/* FOOTER............................................................................................................................................................ */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.footer-site {}
-
-/* FOOTER LEFT CONTAINER......................................................... */
-/* .............................................................................. */
-
-.footer-left {}
-
-/* ..............................................................FOOTER LEFT LOGO */
-
-.footer-left-title {}
-
-/* ..........................................................................X&3K */
-
-.footer-left-title-1 {}
-
-.footer-left-title-1 strong {}
-
-/* .......................................................................LEQUIPE */
-
-.footer-left-title-2 {}
-
-/* FOOTER CENTER CONTAINER....................................................... */
-/* .............................................................................. */
-
-.footer-center {
-
 }
 
-/* ............................................................FOOTER CENTER LOGO */
-
-.logo-footer {}
-
-/* ............................................................FOOTER CENTER PARA */
-
-.fc-para {}
-
-.fc-para strong {}
-
-/* .......................................................FOOTER CENTER COPYRIGHT */
-
-.fc-copyright {}
-
-.fc-copyright em {}
-
-/* FOOTER CENTER CONTAINER....................................................... */
-/* .............................................................................. */
-
-.footer-right {}
-
-/* ............................................................FOOTER RIGHT TITLE */
-
-.footer-right-title {}
-
-.footer-right-title::first-letter {}
-
-/* ............................................................FOOTER RIGHT LINKS */
-
-.footer-link-list {}
-
-.footer-link-list li {}
-
-.footer-link-list li a {}
-
-.footer-link-list li a:hover {}
 
 
 
-}
+
 /*  RESPONSIVE MOBILE (480 PX)....................................................................................................................................... */
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
@@ -1018,108 +869,253 @@ main {
     flex: 1;
   }
 
+  #teamSponsors,
+#ourStory,
+#teamMembers,
+#teamGallery {
+  scroll-margin-top: 80px;
+}
 
-/* HEADER............................................................................................................................................................ */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
 
-.header-site {}
+  /* HEADER............................................................................................................................................................ */
+  /* .................................................................................................................................................................. */
+  /* .................................................................................................................................................................. */
 
-/* .............................................................BARRE NAV */
+  /* .............................................................BARRE NAV */
 
-.barre-nav{}
+  .barre-nav {
+    height: 80px;
+    padding: 15px;
+    justify-content: space-between;
+  }
 
-/* ..................................................................LOGO */
+  .logo-header {
+    width: 45px;
+    height: 45px;
+    z-index: 10001;
+  }
 
-.logo-header {}
+  /* BOUTON HAMBURGER */
+  .hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 23px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10001;
+  }
 
-/* ..........................................................LIENS HEADER */
+  .hamburger-line {
+    width: 100%;
+    height: 2px;
+    background-color: #ebc400;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
 
-.links-header {}
+  /* ANIMATION HAMBURGER → X */
+  .hamburger-btn.active .hamburger-line:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+  }
 
-.links-header li {}
+  .hamburger-btn.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
 
-.links-header li a {}
+  .hamburger-btn.active .hamburger-line:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+  }
 
-/* ............................................................SVG HEADER */
+  /* MENU MOBILE (caché par défaut) */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 80vh;
+    background-color: #0b0b0b;
+    border-bottom: 2px solid #6f5d00;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 10px;
+    z-index: 10000;
+    transition: right 0.4s ease;
+  }
 
-.logo-story-1 {}
+  .nav-menu.active {
+    right: 0;
+  }
 
-.logo-story-2 {}
+  /* LIENS MENU MOBILE */
+  .links-header {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
 
-.logo-story-3 {}
+  .links-header li {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
 
-.logo-story-4 {}
+  .links-header li a {
+    font-size: 22px;
+    display: block;
+    padding: 12px 0;
+  }
 
-/* .....................................................CTA BOUTON HEADER */
+  /* CACHE LES ICÔNES SUR MOBILE */
+  .logo-story-1,
+  .logo-story-2,
+  .logo-story-3,
+  .logo-story-4 {
+    display: none;
+  }
 
-.cta-header {}
+  /* BOUTON CTA MOBILE */
+  .cta-header {
+    font-size: 14px;
+    padding: 10px 20px;
+    text-align: center;
+    border: 2px solid #6f5d00;
+  }
+
+  /* OVERLAY (fond sombre) */
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+  }
+
+  .nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
 
 
 /* SECTION HERO...................................................................................................................................................... */
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
 
-.hero-ml {}
+.hero-ml {
+  padding-top: 100px;
+  height: 80vh;
+}
 
 /* ..........................................................................HERO H1 */
 
-.hero-ml h1 {}
+.hero-ml h1 {
+  font-size: 50px;
+  text-shadow: 0px 0px 5px #ebc400;
+}
 
 /* ........................................................................HERO PARA */
 
-.hero-ml-para {}
+.hero-ml-para {
+  width: 90%;
+  font-size: 14px;
+}
 
 /* .......................................................................HERO LIENS */
 
-.links-hero {}
+.links-hero {
+  gap: 10px;
+  flex-direction: column;
+    margin-top: 5px;
+    
+
+}
 
 .links-hero-1,
 .links-hero-2,
 .links-hero-3,
-.links-hero-4 {}
+.links-hero-4 {
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
 
-.links-hero-1:hover,
-.links-hero-2:hover,
-.links-hero-3:hover,
-.links-hero-4:hover {}
 
 /* .....................................................HERO SCROLL DOWN INSTRUCTIONS */
 
 .hero-ml-instructions {}
 
-.scroll-down-instruction {}
+.scroll-down-instruction {
+  margin-bottom: 20px;
+  font-size: 15px;
+}
 
 
 /* SECTION LEGAL NOTICES............................................................................................................................................. */
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
 
-.our-story {}
+.our-story {
+  padding: 20px 10px;
+}
 
-.our-story h2 {}
+.our-story h2 {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 0;
+  font-size: 35px;
+
+}
 
 .our-story h3 {}
 
-.our-story a {}
+.our-story a {
+  font-size: 14px;
+}
 
 .our-story a:hover {}
 
-.our-story p {}
+.our-story p {
+  text-align: start;
+  width: 100%;
+  font-size: 14px;
+}
 
-.our-story p strong {}
+.our-story p strong {
 
-.our-story p em {}
+}
+
+.our-story p em {
+  font-size: 14px;
+}
 
 .our-story p br {}
 
-.our-story .note {}
+.our-story .note {
+    font-size: 14px;
+}
 
 .our-story .note strong {}
 
 .our-story ul {}
 
-.our-story ul li {}
+.our-story ul li {
+  font-size: 14px;
+}
 
 .our-story ul li::before {}
 
@@ -1142,84 +1138,135 @@ main {
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
 
-.back-to-top-container {}
 
-.back-to-top-container.visible {}
 
-.back-to-top {}
+  /* BOUTON RETOUR EN HAUT */
+  .back-to-top-container {
+    bottom: 20px;
+    right: 15px;
+  }
 
-.back-to-top:hover {}
+  .back-to-top {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
 
-.back-to-top-text {}
+  .back-to-top-text {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
 
 /* FOOTER............................................................................................................................................................ */
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
 
-.footer-site {}
+/* FOOTER ..........................................................................................................................*/
 
-/* FOOTER LEFT CONTAINER......................................................... */
-/* .............................................................................. */
+.footer-site {
+  flex-direction: column;
+  padding: 30px 20px 20px 20px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative; /* AJOUT - pour le positionnement du logo */
+}
 
-.footer-left {}
+.footer-left {
+  align-items: center;
+  width: 100%;
+  z-index: 2; /* AJOUT - au-dessus du logo */
+  position: relative; /* AJOUT */
+}
 
-/* ..............................................................FOOTER LEFT LOGO */
-
-.footer-left-title {}
-
-/* ..........................................................................X&3K */
-
-.footer-left-title-1 {}
-
-.footer-left-title-1 strong {}
-
-/* .......................................................................LEQUIPE */
-
-.footer-left-title-2 {}
-
-/* FOOTER CENTER CONTAINER....................................................... */
-/* .............................................................................. */
-
-.footer-center {
+.footer-left-title-1 {
+  font-size: 50px;
+    margin-top: 20px;
 
 }
 
-/* ............................................................FOOTER CENTER LOGO */
+.footer-left-title-1 strong {
+  font-size: 35px;
+}
 
-.logo-footer {}
+.footer-left-title-2 {
+  font-size: 40px;
+  position: absolute;
+  top: 4%;
+  left: 34%;
+}
 
-/* ............................................................FOOTER CENTER PARA */
+.footer-center {
+  gap: 20px;
+  width: 100%;
+  z-index: 2; /* AJOUT - au-dessus du logo */
+  position: relative; /* AJOUT */
+}
 
-.fc-para {}
+.logo-footer {
+  height: 400px;
+  width: 400px;
+  position: absolute; /* AJOUT - précisez bien */
+  top: 15%;
+  left: 50%; /* AJOUT - centre horizontalement */
+  transform: translateX(-50%); /* AJOUT - centre horizontalement */
+  opacity: 0.1;
+  z-index: 1; /* AJOUT - EN ARRIÈRE-PLAN */
+  pointer-events: none; /* AJOUT CRITIQUE - rend le logo non-cliquable */
+}
 
-.fc-para strong {}
+.fc-para {
+  font-size: 14px;
+  line-height: 1.8em;
+  width: 90%;
+  text-align: center;
+}
 
-/* .......................................................FOOTER CENTER COPYRIGHT */
+.fc-copyright {
+  font-size: 9px;
+  padding: 0px 30px;
+  text-align: center;
+  font-style: italic;
+  position: inherit;
+  margin-bottom: 10px;
+  line-height: 1.8em;
+}
 
-.fc-copyright {}
+.footer-right {
+  gap: 5px;
+  width: 100%;
+  z-index: 2; /* AJOUT - au-dessus du logo */
+  position: relative; /* AJOUT */
+}
 
-.fc-copyright em {}
+.footer-right-title {
+  font-size: 25px;
+}
 
-/* FOOTER CENTER CONTAINER....................................................... */
-/* .............................................................................. */
+.footer-link-list {
+  gap: 0px;
+  display: flex;
+  flex-direction: column; /* AJOUT - empile verticalement */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
-.footer-right {}
+.footer-link-list li {
+  padding: 10px 0px;
+  width: 100%;
+}
 
-/* ............................................................FOOTER RIGHT TITLE */
-
-.footer-right-title {}
-
-.footer-right-title::first-letter {}
-
-/* ............................................................FOOTER RIGHT LINKS */
-
-.footer-link-list {}
-
-.footer-link-list li {}
-
-.footer-link-list li a {}
-
-.footer-link-list li a:hover {}
+.footer-link-list li a {
+  font-size: 17px;
+  letter-spacing: 2px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
