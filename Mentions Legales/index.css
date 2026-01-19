@@ -36,8 +36,8 @@ main {
 /* FONT AWESOME...................................................................................................................... */
 
 @font-face {
-  font-family: 'Font Awesome 6 Free';
-  src: url('../webfonts/fa-solid-900.woff2') format('woff2');
+  font-family: "Font Awesome 6 Free";
+  src: url("../webfonts/fa-solid-900.woff2") format("woff2");
   font-weight: 900;
   font-display: swap;
 }
@@ -45,38 +45,38 @@ main {
 /* GOOGLE FONTS...................................................................................................................... */
 
 @font-face {
-  font-family: 'Lato';
-  src: url('../webfonts/lato-v25-latin-regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-
-@font-face {
-  font-family: 'Passion One';
-  src: url('../webfonts/passion-one-v20-latin-regular.woff2') format('woff2');
+  font-family: "Lato";
+  src: url("../webfonts/lato-v25-latin-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Permanent Marker';
-  src: url('../webfonts/permanent-marker-v16-latin-regular.woff2') format('woff2');
+  font-family: "Passion One";
+  src: url("../webfonts/passion-one-v20-latin-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Rubik Spray Paint';
-  src: url('../webfonts/rubik-spray-paint-v1-latin-regular.woff2') format('woff2');
+  font-family: "Permanent Marker";
+  src: url("../webfonts/permanent-marker-v16-latin-regular.woff2")
+    format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Rubik Spray Paint";
+  src: url("../webfonts/rubik-spray-paint-v1-latin-regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 /*  HEADER / BARRE NAVIGATION........................................................................................................................................ */
 /* .................................................................................................................................................................. */
@@ -276,12 +276,16 @@ main {
   font-size: 100px;
   font-family: "Permanent Marker", sans-serif;
   color: white;
-  text-shadow: 0px 0px 20px black, 0px 0px 5px black;
+  text-shadow:
+    0px 0px 20px black,
+    0px 0px 5px black;
   animation: fadeInOnly 1s ease-out forwards;
   animation-delay: 0s; /* X&3K apparaît après "l'équipe" (3s) */
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  transition:
+    opacity 0.8s ease-in-out,
+    transform 0.8s ease-in-out;
 }
 
 .hero-ml-para {
@@ -296,7 +300,9 @@ main {
   animation-delay: 0.5s; /* X&3K apparaît après "l'équipe" (3s) */
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  transition:
+    opacity 0.8s ease-in-out,
+    transform 0.8s ease-in-out;
 }
 
 .links-hero {
@@ -309,7 +315,9 @@ main {
   animation-delay: 1.3s; /* X&3K apparaît après "l'équipe" (3s) */
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  transition:
+    opacity 0.8s ease-in-out,
+    transform 0.8s ease-in-out;
 }
 
 .links-hero-1,
@@ -322,7 +330,7 @@ main {
   font-size: 25px;
   font-weight: bold;
   font-family: "Passion One", sans-serif;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border-radius: 10px;
   text-shadow: 0px 0px 2px black;
 }
@@ -331,9 +339,7 @@ main {
 .links-hero-2:hover,
 .links-hero-3:hover,
 .links-hero-4:hover {
-  box-shadow: 0px 0px 10px 0px rgb(111, 93, 0);
   color: rgb(235, 196, 0);
-  background-color: #6f5d00;
   transition: 0.2s all ease-in-out;
 }
 
@@ -358,7 +364,8 @@ main {
   text-shadow: 0px 0px 2px black;
   animation: clignoter 4.5s ease-in-out 2s infinite;
   opacity: 0;
-  animation: fadeInOnly 1s ease-out 1.5s forwards,
+  animation:
+    fadeInOnly 1s ease-out 1.5s forwards,
     clignoter 3s ease-in-out 3s infinite;
 }
 
@@ -547,7 +554,9 @@ main {
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .back-to-top-container.visible {
@@ -568,7 +577,9 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, background-color 0.3s ease,
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
     box-shadow 0.3s ease;
 }
 
@@ -592,8 +603,6 @@ main {
 /* FOOTER............................................................................................................................................................ */
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
-
-
 
 .footer-site {
   width: 100%;
@@ -799,7 +808,7 @@ main {
     display: none;
   }
 
-    .hamburger-btn {
+  .hamburger-btn {
     display: none;
   }
 
@@ -825,10 +834,6 @@ main {
   }
 }
 
-
-
-
-
 /*  RESPONSIVE MOBILE (480 PX)....................................................................................................................................... */
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
@@ -838,14 +843,10 @@ main {
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
 
-
-
-
 @media (max-width: 480px) {
-
-/* REGLAGES GLOBAUX.................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
+  /* REGLAGES GLOBAUX.................................................................................................................................................. */
+  /* .................................................................................................................................................................. */
+  /* .................................................................................................................................................................. */
 
   * {
     margin: 0;
@@ -870,12 +871,11 @@ main {
   }
 
   #teamSponsors,
-#ourStory,
-#teamMembers,
-#teamGallery {
-  scroll-margin-top: 80px;
-}
-
+  #ourStory,
+  #teamMembers,
+  #teamGallery {
+    scroll-margin-top: 80px;
+  }
 
   /* HEADER............................................................................................................................................................ */
   /* .................................................................................................................................................................. */
@@ -998,7 +998,9 @@ main {
     opacity: 0;
     visibility: hidden;
     z-index: 9999;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
+    transition:
+      opacity 0.4s ease,
+      visibility 0.4s ease;
   }
 
   .nav-overlay.active {
@@ -1006,139 +1008,142 @@ main {
     visibility: visible;
   }
 
+  /* SECTION HERO...................................................................................................................................................... */
+  /* .................................................................................................................................................................. */
+  /* .................................................................................................................................................................. */
 
-/* SECTION HERO...................................................................................................................................................... */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
+  .hero-ml {
+    padding-top: 100px;
+    height: 80vh;
+  }
 
-.hero-ml {
-  padding-top: 100px;
-  height: 80vh;
-}
+  /* ..........................................................................HERO H1 */
 
-/* ..........................................................................HERO H1 */
+  .hero-ml h1 {
+    font-size: 50px;
+    text-shadow: 0px 0px 5px #ebc400;
+  }
 
-.hero-ml h1 {
-  font-size: 50px;
-  text-shadow: 0px 0px 5px #ebc400;
-}
+  /* ........................................................................HERO PARA */
 
-/* ........................................................................HERO PARA */
-
-.hero-ml-para {
-  width: 90%;
-  font-size: 14px;
-}
-
-/* .......................................................................HERO LIENS */
-
-.links-hero {
-  gap: 10px;
-  flex-direction: column;
-    margin-top: 5px;
-    
-
-}
-
-.links-hero-1,
-.links-hero-2,
-.links-hero-3,
-.links-hero-4 {
-  font-size: 20px;
-  text-align: center;
-  padding: 5px;
-  text-transform: uppercase;
-  font-weight: normal;
-  letter-spacing: 2px;
-}
-
-
-/* .....................................................HERO SCROLL DOWN INSTRUCTIONS */
-
-.hero-ml-instructions {}
-
-.scroll-down-instruction {
-  margin-bottom: 20px;
-  font-size: 15px;
-}
-
-
-/* SECTION LEGAL NOTICES............................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
-
-.our-story {
-  padding: 20px 10px;
-}
-
-.our-story h2 {
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  padding: 0;
-  font-size: 35px;
-
-}
-
-.our-story h3 {}
-
-.our-story a {
-  font-size: 14px;
-}
-
-.our-story a:hover {}
-
-.our-story p {
-  text-align: start;
-  width: 100%;
-  font-size: 14px;
-}
-
-.our-story p strong {
-
-}
-
-.our-story p em {
-  font-size: 14px;
-}
-
-.our-story p br {}
-
-.our-story .note {
+  .hero-ml-para {
+    width: 90%;
     font-size: 14px;
-}
+  }
 
-.our-story .note strong {}
+  /* .......................................................................HERO LIENS */
 
-.our-story ul {}
+  .links-hero {
+    gap: 10px;
+    flex-direction: column;
+    margin-top: 5px;
+  }
 
-.our-story ul li {
-  font-size: 14px;
-}
+  .links-hero-1,
+  .links-hero-2,
+  .links-hero-3,
+  .links-hero-4 {
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 2px;
+  }
 
-.our-story ul li::before {}
+  /* .....................................................HERO SCROLL DOWN INSTRUCTIONS */
 
-.our-story ul li strong {}
+  .hero-ml-instructions {
+  }
 
-.our-story ul li a {}
+  .scroll-down-instruction {
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
 
-.our-story ul li a:hover {}
+  /* SECTION LEGAL NOTICES............................................................................................................................................. */
+  /* .................................................................................................................................................................. */
+  /* .................................................................................................................................................................. */
 
-/* ANIMATIONS........................................................................................................................................................ */
+  .our-story {
+    padding: 20px 10px;
+  }
 
-.our-story p.visible {}
+  .our-story h2 {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 0;
+    font-size: 35px;
+  }
 
-.our-story .note.visible {}
+  .our-story h3 {
+  }
 
-.our-story ul.visible {}
+  .our-story a {
+    font-size: 14px;
+  }
 
+  .our-story a:hover {
+  }
 
-/* BOUTON RETOUR EN HAUT............................................................................................................................................. */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
+  .our-story p {
+    text-align: start;
+    width: 100%;
+    font-size: 14px;
+  }
 
+  .our-story p strong {
+  }
 
+  .our-story p em {
+    font-size: 14px;
+  }
+
+  .our-story p br {
+  }
+
+  .our-story .note {
+    font-size: 14px;
+  }
+
+  .our-story .note strong {
+  }
+
+  .our-story ul {
+  }
+
+  .our-story ul li {
+    font-size: 14px;
+  }
+
+  .our-story ul li::before {
+  }
+
+  .our-story ul li strong {
+  }
+
+  .our-story ul li a {
+  }
+
+  .our-story ul li a:hover {
+  }
+
+  /* ANIMATIONS........................................................................................................................................................ */
+
+  .our-story p.visible {
+  }
+
+  .our-story .note.visible {
+  }
+
+  .our-story ul.visible {
+  }
+
+  /* BOUTON RETOUR EN HAUT............................................................................................................................................. */
+  /* .................................................................................................................................................................. */
+  /* .................................................................................................................................................................. */
 
   /* BOUTON RETOUR EN HAUT */
   .back-to-top-container {
@@ -1157,117 +1162,113 @@ main {
     padding: 5px 10px;
   }
 
-/* FOOTER............................................................................................................................................................ */
-/* .................................................................................................................................................................. */
-/* .................................................................................................................................................................. */
+  /* FOOTER............................................................................................................................................................ */
+  /* .................................................................................................................................................................. */
+  /* .................................................................................................................................................................. */
 
-/* FOOTER ..........................................................................................................................*/
+  /* FOOTER ..........................................................................................................................*/
 
-.footer-site {
-  flex-direction: column;
-  padding: 30px 20px 20px 20px;
-  gap: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative; /* AJOUT - pour le positionnement du logo */
-}
+  .footer-site {
+    flex-direction: column;
+    padding: 30px 20px 20px 20px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative; /* AJOUT - pour le positionnement du logo */
+  }
 
-.footer-left {
-  align-items: center;
-  width: 100%;
-  z-index: 2; /* AJOUT - au-dessus du logo */
-  position: relative; /* AJOUT */
-}
+  .footer-left {
+    align-items: center;
+    width: 100%;
+    z-index: 2; /* AJOUT - au-dessus du logo */
+    position: relative; /* AJOUT */
+  }
 
-.footer-left-title-1 {
-  font-size: 50px;
+  .footer-left-title-1 {
+    font-size: 50px;
     margin-top: 20px;
+  }
 
-}
+  .footer-left-title-1 strong {
+    font-size: 35px;
+  }
 
-.footer-left-title-1 strong {
-  font-size: 35px;
-}
+  .footer-left-title-2 {
+    font-size: 40px;
+    position: absolute;
+    top: 4%;
+    left: 34%;
+  }
 
-.footer-left-title-2 {
-  font-size: 40px;
-  position: absolute;
-  top: 4%;
-  left: 34%;
-}
+  .footer-center {
+    gap: 20px;
+    width: 100%;
+    z-index: 2; /* AJOUT - au-dessus du logo */
+    position: relative; /* AJOUT */
+  }
 
-.footer-center {
-  gap: 20px;
-  width: 100%;
-  z-index: 2; /* AJOUT - au-dessus du logo */
-  position: relative; /* AJOUT */
-}
+  .logo-footer {
+    height: 400px;
+    width: 400px;
+    position: absolute; /* AJOUT - précisez bien */
+    top: 15%;
+    left: 50%; /* AJOUT - centre horizontalement */
+    transform: translateX(-50%); /* AJOUT - centre horizontalement */
+    opacity: 0.1;
+    z-index: 1; /* AJOUT - EN ARRIÈRE-PLAN */
+    pointer-events: none; /* AJOUT CRITIQUE - rend le logo non-cliquable */
+  }
 
-.logo-footer {
-  height: 400px;
-  width: 400px;
-  position: absolute; /* AJOUT - précisez bien */
-  top: 15%;
-  left: 50%; /* AJOUT - centre horizontalement */
-  transform: translateX(-50%); /* AJOUT - centre horizontalement */
-  opacity: 0.1;
-  z-index: 1; /* AJOUT - EN ARRIÈRE-PLAN */
-  pointer-events: none; /* AJOUT CRITIQUE - rend le logo non-cliquable */
-}
+  .fc-para {
+    font-size: 14px;
+    line-height: 1.8em;
+    width: 90%;
+    text-align: center;
+  }
 
-.fc-para {
-  font-size: 14px;
-  line-height: 1.8em;
-  width: 90%;
-  text-align: center;
-}
+  .fc-copyright {
+    font-size: 9px;
+    padding: 0px 30px;
+    text-align: center;
+    font-style: italic;
+    position: inherit;
+    margin-bottom: 10px;
+    line-height: 1.8em;
+  }
 
-.fc-copyright {
-  font-size: 9px;
-  padding: 0px 30px;
-  text-align: center;
-  font-style: italic;
-  position: inherit;
-  margin-bottom: 10px;
-  line-height: 1.8em;
-}
+  .footer-right {
+    gap: 5px;
+    width: 100%;
+    z-index: 2; /* AJOUT - au-dessus du logo */
+    position: relative; /* AJOUT */
+  }
 
-.footer-right {
-  gap: 5px;
-  width: 100%;
-  z-index: 2; /* AJOUT - au-dessus du logo */
-  position: relative; /* AJOUT */
-}
+  .footer-right-title {
+    font-size: 25px;
+  }
 
-.footer-right-title {
-  font-size: 25px;
-}
+  .footer-link-list {
+    gap: 0px;
+    display: flex;
+    flex-direction: column; /* AJOUT - empile verticalement */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
 
-.footer-link-list {
-  gap: 0px;
-  display: flex;
-  flex-direction: column; /* AJOUT - empile verticalement */
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
+  .footer-link-list li {
+    padding: 10px 0px;
+    width: 100%;
+  }
 
-.footer-link-list li {
-  padding: 10px 0px;
-  width: 100%;
-}
-
-.footer-link-list li a {
-  font-size: 17px;
-  letter-spacing: 2px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
+  .footer-link-list li a {
+    font-size: 17px;
+    letter-spacing: 2px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
