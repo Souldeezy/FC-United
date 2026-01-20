@@ -35,12 +35,11 @@ main {
   scroll-margin-top: 100px;
 }
 
-
 /* FONT AWESOME...................................................................................................................... */
 
 @font-face {
-  font-family: 'Font Awesome 6 Free';
-  src: url('../webfonts/fa-solid-900.woff2') format('woff2');
+  font-family: "Font Awesome 6 Free";
+  src: url("../webfonts/fa-solid-900.woff2") format("woff2");
   font-weight: 900;
   font-display: swap;
 }
@@ -48,33 +47,34 @@ main {
 /* GOOGLE FONTS...................................................................................................................... */
 
 @font-face {
-  font-family: 'Lato';
-  src: url('../webfonts/lato-v25-latin-regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-
-@font-face {
-  font-family: 'Passion One';
-  src: url('../webfonts/passion-one-v20-latin-regular.woff2') format('woff2');
+  font-family: "Lato";
+  src: url("../webfonts/lato-v25-latin-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Permanent Marker';
-  src: url('../webfonts/permanent-marker-v16-latin-regular.woff2') format('woff2');
+  font-family: "Passion One";
+  src: url("../webfonts/passion-one-v20-latin-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Rubik Spray Paint';
-  src: url('../webfonts/rubik-spray-paint-v1-latin-regular.woff2') format('woff2');
+  font-family: "Permanent Marker";
+  src: url("../webfonts/permanent-marker-v16-latin-regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik Spray Paint";
+  src: url("../webfonts/rubik-spray-paint-v1-latin-regular.woff2")
+    format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -99,19 +99,17 @@ main {
   border-bottom: 2px solid rgb(111, 93, 0);
   z-index: 9999;
   opacity: 0;
-  transform: translateY(
-    -20px
-  ); /* Légèrement vers le haut pour l'effet "Down" */
+  transform: translateY(-20px);
   transition:
     opacity 0.8s ease-out,
     transform 0.8s ease-out;
-  pointer-events: none; /* Empêche de cliquer tant qu'elle est invisible */
+  pointer-events: none;
 }
 
 .barre-nav.visible {
   opacity: 1;
   transform: translateY(0);
-  pointer-events: auto; /* Réactive les clics */
+  pointer-events: auto;
 }
 
 /* LOGO HEADER GAUCHE............................................................ */
@@ -278,7 +276,7 @@ main {
   position: relative;
 }
 
-/* HERO H1....................................................................... */
+/* HERO H1......................................................................... */
 
 .hero-h1 {
   font-size: 170px;
@@ -436,7 +434,8 @@ main {
   margin-bottom: 50px;
 }
 
-/* CAROUSEL CONTAINER */
+/* CAROUSEL CONTAINER .....................................................*/
+
 .story-carousel {
   position: relative;
   width: 100%;
@@ -456,7 +455,8 @@ main {
   transform: translateY(0);
 }
 
-/* CONTAINER POUR FLÈCHE + TEXTE */
+/* CONTAINER POUR FLÈCHE + TEXTE ...........................................*/
+
 .carousel-arrow-container {
   display: flex;
   flex-direction: column;
@@ -515,7 +515,8 @@ main {
     visibility 0s;
 }
 
-/* STYLES POUR TOUS LES SLIDES (pas seulement .active) */
+/* STYLES POUR TOUS LES SLIDES (pas seulement .active)..................... */
+
 .story-slide strong {
   color: #ebc400;
 }
@@ -541,7 +542,8 @@ main {
   color: rgb(0, 106, 255);
 }
 
-/* FLÈCHES DU CAROUSEL */
+/* FLÈCHES DU CAROUSEL...................................................... */
+
 .carousel-arrow {
   width: 50px;
   height: 50px;
@@ -572,7 +574,8 @@ main {
   transform: scale(0.95);
 }
 
-/* INDICATEURS */
+/* INDICATEURS ...............................................................*/
+
 .carousel-indicators {
   display: flex;
   gap: 15px;
@@ -689,7 +692,7 @@ main {
   color: rgb(235, 196, 0);
 }
 
-/* PLAYER GRID (VIGNETTES JOUEURS)................................................. */
+/* PLAYER GRID (VIGNETTES JOUEURS).................................................... */
 
 .players-grid {
   display: grid;
@@ -713,8 +716,8 @@ main {
   overflow: hidden;
   cursor: pointer;
   transition:
-  transform 0.3s ease,
-  box-shadow 0.3s ease;
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .img-player-mini:hover {
@@ -986,7 +989,7 @@ main {
   background-color: rgb(255, 50, 50);
 }
 
-/* CONTAINER PLAYER LINE............................................................................................................................................. */
+/* CONTAINER PLAYER LINE........................................ */
 
 .player-line {
   display: flex;
@@ -1008,7 +1011,6 @@ main {
   overflow: hidden;
 }
 
-/* État activé : cadre et background apparaissent */
 .player-line.is-revealed {
   border-color: #ebc400;
   background: rgba(0, 0, 0, 0.668);
@@ -1786,6 +1788,8 @@ main {
   font-style: italic;
 }
 
+/* IMAGES SPONSORS ........................................ */
+
 .img-pronk {
   height: 110px;
   width: 210px;
@@ -1945,7 +1949,8 @@ main {
   opacity: 1;
 }
 
-/* CAROUSEL ARROWS */
+/* CAROUSEL ARROWS.............................................. */
+
 .carousel-arrow-container {
   display: flex;
   flex-direction: column;
@@ -1994,7 +1999,8 @@ main {
   padding: 5px 20px;
 }
 
-/* POPUP GALLERY */
+/* POPUP GALLERY................................................. */
+
 .popup-gallery-overlay {
   position: fixed;
   top: 0;
@@ -2308,6 +2314,7 @@ main {
 /* .................................................................................................................................................................. */
 
 /* ÉTATS INITIAUX - Cacher tous les éléments avant animation */
+
 .player-line .pl-left-1,
 .player-line .pl-left-2,
 .player-line .pl-left-3,
@@ -2364,16 +2371,19 @@ main {
 }
 
 /* IMPORTANT : Les infos (Year, Height, Weight) sont VISIBLES dès le départ */
+
 .player-line .plbr-infos {
   opacity: 1;
 }
 
 /* IMPORTANT : playerTitle-2 est VISIBLE dès le départ */
+
 .player-line .playerTitle-2 {
   opacity: 1;
 }
 
 /* playerTitle-3 reste caché au début */
+
 .player-line .playerTitle-3 {
   opacity: 0;
 }
@@ -2383,6 +2393,7 @@ main {
 }
 
 /* CLASSES D'ANIMATION ACTIVÉES */
+
 .player-line.animate .pl-left-1,
 .player-line.animate .pl-left-2,
 .player-line.animate .pl-left-3,
@@ -2565,7 +2576,7 @@ main {
   }
 }
 
-/* HEARTBEAT........................................................... */
+/* HEARTBEAT 2......................................................... */
 
 @keyframes heartbeat2 {
   0%,
@@ -2746,12 +2757,15 @@ main {
 /*  RESPONSIVE DESIGN................................................................................................................................................ */
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
+
+/* STYLE NON APPLIQUES AU DESKTOP !!!! ...................................... */
+
 @media (min-width: 481px) {
   .gallery-instructions {
     display: none;
   }
 
-    .hamburger-btn {
+  .hamburger-btn {
     display: none;
   }
 
@@ -2776,6 +2790,7 @@ main {
     flex-direction: row;
   }
 }
+
 /*  RESPONSIVE MOBILE (480 PX)....................................................................................................................................... */
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
@@ -2815,12 +2830,12 @@ main {
     flex: 1;
   }
 
-#teamSponsors,
-#ourStory,
-#teamMembers,
-#teamGallery {
-  scroll-margin-top: 80px;
-}
+  #teamSponsors,
+  #ourStory,
+  #teamMembers,
+  #teamGallery {
+    scroll-margin-top: 80px;
+  }
 
   /* HEADER............................................................................................................................................................ */
   /* .................................................................................................................................................................. */
@@ -2840,7 +2855,8 @@ main {
     z-index: 10001;
   }
 
-  /* BOUTON HAMBURGER */
+  /* BOUTON HAMBURGER...................................................... */
+
   .hamburger-btn {
     display: flex;
     flex-direction: column;
@@ -2861,7 +2877,8 @@ main {
     transition: all 0.3s ease;
   }
 
-  /* ANIMATION HAMBURGER → X */
+  /* ANIMATION HAMBURGER............................................ → X */
+
   .hamburger-btn.active .hamburger-line:nth-child(1) {
     transform: translateY(10.5px) rotate(45deg);
   }
@@ -2874,7 +2891,8 @@ main {
     transform: translateY(-10.5px) rotate(-45deg);
   }
 
-  /* MENU MOBILE (caché par défaut) */
+  /* MENU MOBILE (caché par défaut) .....................................*/
+
   .nav-menu {
     position: fixed;
     top: 0;
@@ -2916,7 +2934,8 @@ main {
     padding: 12px 0;
   }
 
-  /* CACHE LES ICÔNES SUR MOBILE */
+  /* CACHE LES ICÔNES SUR MOBILE.................................. */
+
   .logo-story-1,
   .logo-story-2,
   .logo-story-3,
@@ -2924,7 +2943,8 @@ main {
     display: none;
   }
 
-  /* BOUTON CTA MOBILE */
+  /* BOUTON CTA MOBILE............................................. */
+
   .cta-header {
     font-size: 14px;
     padding: 10px 20px;
@@ -2932,7 +2952,8 @@ main {
     border: 2px solid #6f5d00;
   }
 
-  /* OVERLAY (fond sombre) */
+  /* OVERLAY (fond sombre) .........................................*/
+
   .nav-overlay {
     position: fixed;
     top: 0;
@@ -2943,16 +2964,19 @@ main {
     opacity: 0;
     visibility: hidden;
     z-index: 9999;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
+    transition:
+      opacity 0.4s ease,
+      visibility 0.4s ease;
   }
 
   .nav-overlay.active {
     opacity: 1;
     visibility: visible;
   }
-  /* HERO SITE......................................................................................................................................................... */
-  /* .................................................................................................................................................................. */
-  /* .................................................................................................................................................................. */
+
+  /* HERO SITE....................................................................................................................................................... */
+  /* ................................................................................................................................................................ */
+  /* ................................................................................................................................................................ */
 
   .hero-site {
     min-height: 100vh;
@@ -3039,9 +3063,9 @@ main {
     font-size: 15px;
   }
 
-  /*  SECTION BANNIERE OUR STORY (TEXTE)............................................................................................................................... */
-  /* .................................................................................................................................................................. */
-  /* .................................................................................................................................................................. */
+  /*  SECTION BANNIERE OUR STORY (TEXTE)............................................................................................................................. */
+  /* ................................................................................................................................................................ */
+  /* ................................................................................................................................................................ */
 
   .our-story {
     padding: 50px 10px;
@@ -3054,8 +3078,8 @@ main {
     margin-bottom: 40px;
   }
 
+  /* CAROUSEL STORY................................................ */
 
-  /* CAROUSEL STORY */
   .story-carousel {
     flex-direction: column;
     gap: 20px;
@@ -3093,7 +3117,7 @@ main {
     height: 10px;
   }
 
-  /*  SECTION X TEAM (EQUIPE ET STATS)................................................................................................................................. */
+  /*  SECTION X TEAM (EQUIPE ET STATS)............................... */
 
   .x-team {
     padding: 20px;
@@ -3127,81 +3151,79 @@ main {
     font-size: 22px;
     display: flex;
     justify-content: center;
-
   }
 
+  /* VIGNETTE JOEURS DISPLAY.............................. */
 
-
-   #reserve-team {
+  #reserve-team {
     margin: 0px;
     color: white;
-
   }
 
   #joueur3 {
-  background-position-x: 6px;
-  background-position-y: 1px;
-  background-size: 90%;
-  background-color: white;  
-}
+    background-position-x: 6px;
+    background-position-y: 1px;
+    background-size: 90%;
+    background-color: white;
+  }
 
   #joueur4 {
-  background-position-x: 6px;
-  background-position-y: -1px;
-  background-size: 90%;
-  background-color: white;  
-}
+    background-position-x: 6px;
+    background-position-y: -1px;
+    background-size: 90%;
+    background-color: white;
+  }
 
   #joueur6 {
-  background-position-x: 6px;
-  background-position-y: -1px;
-  background-size: 90%;
-  background-color: white;  
-}
+    background-position-x: 6px;
+    background-position-y: -1px;
+    background-size: 90%;
+    background-color: white;
+  }
 
   #joueur7 {
-  background-position-x: 1px;
-  background-position-y: 2px;
-  background-size: 99%;
-  background-color: white;  
-}
+    background-position-x: 1px;
+    background-position-y: 2px;
+    background-size: 99%;
+    background-color: white;
+  }
 
   #joueur9 {
-  background-position-x: 1px;
-  background-position-y: -2px;
-  background-size: 99%;
-  background-color: white;  
-}
+    background-position-x: 1px;
+    background-position-y: -2px;
+    background-size: 99%;
+    background-color: white;
+  }
 
   #joueur10 {
-  background-position-x: 1px;
-  background-position-y: -2px;
-  background-size: 99%;
-  background-color: white;  
-}
+    background-position-x: 1px;
+    background-position-y: -2px;
+    background-size: 99%;
+    background-color: white;
+  }
 
   #joueur11 {
-  background-position-x: -1px;
-  background-position-y: 2px;
-  background-size: 100%;
-  background-color: white;  
-}
+    background-position-x: -1px;
+    background-position-y: 2px;
+    background-size: 100%;
+    background-color: white;
+  }
 
   #joueur12 {
-  background-position-x: 15px;
-  background-position-y: 2px;
-  background-size: 68%;
-  background-color: white;  
-}
+    background-position-x: 15px;
+    background-position-y: 2px;
+    background-size: 68%;
+    background-color: white;
+  }
 
   #joueur13 {
-  background-position-x: 7px;
-  background-position-y: -2px;
-  background-size: 88%;
-  background-color: white;  
-}
+    background-position-x: 7px;
+    background-position-y: -2px;
+    background-size: 88%;
+    background-color: white;
+  }
 
-  /* PLAYER GRID (VIGNETTES JOUEURS) */
+  /* PLAYER GRID (VIGNETTES JOUEURS)......................... */
 
   .players-grid {
     display: grid;
@@ -3224,18 +3246,15 @@ main {
     padding: 8px 16px;
   }
 
-  /* POP UP */
+  /* POP UP............................................... */
+
   .popup-overlay {
     background-color: rgba(0, 0, 0, 0.95);
   }
 
-/* ========================================= */
-/* RESPONSIVE PLAYER POPUP - MOBILE 480px */
-/* ========================================= */
+  /* POPUP CONTAINER...................................... */
+  /* ..................................................... */
 
-
-  
-  /* POPUP CONTAINER */
   .popup-container {
     top: 55%;
     width: 95%;
@@ -3243,7 +3262,8 @@ main {
     padding: 0px 0px;
   }
 
-  /* BOUTON FERMER */
+  /* BOUTON FERMER .........................................*/
+
   .close-popup {
     top: 10px;
     right: 10px;
@@ -3254,7 +3274,8 @@ main {
     z-index: 10001;
   }
 
-  /* PLAYER LINE - CONTAINER PRINCIPAL */
+  /* PLAYER LINE - CONTAINER PRINCIPAL...................... */
+
   .player-line {
     flex-direction: column;
     height: auto;
@@ -3268,12 +3289,23 @@ main {
     height: 100%;
   }
 
+  /* PHOTO JOUEURS POP UP STATS.......................... */
 
-
-  /* ========== PHOTO JOUEUR EN HAUT - PLEINE LARGEUR ========== */
-  .pl-left-1, .pl-left-2, .pl-left-3, .pl-left-4, .pl-left-5,
-  .pl-left-6, .pl-left-7, .pl-left-8, .pl-left-9, .pl-left-10,
-  .pl-left-11, .pl-left-12, .pl-left-13, .pl-left-14, .pl-left-15 {
+  .pl-left-1,
+  .pl-left-2,
+  .pl-left-3,
+  .pl-left-4,
+  .pl-left-5,
+  .pl-left-6,
+  .pl-left-7,
+  .pl-left-8,
+  .pl-left-9,
+  .pl-left-10,
+  .pl-left-11,
+  .pl-left-12,
+  .pl-left-13,
+  .pl-left-14,
+  .pl-left-15 {
     width: 100%;
     height: 180px;
     background-position: right;
@@ -3304,7 +3336,8 @@ main {
     background-size: 34%;
   }
 
-  /* ========== STATS EN BAS - PLEINE LARGEUR ========== */
+  /* STATS EN BAS ................................................ */
+
   .pl-right {
     width: 100%;
     height: auto;
@@ -3312,7 +3345,8 @@ main {
     padding: 15px 0px;
   }
 
-  /* ===== TOP SECTION (NUMERO, NOM, NATIONALITE, POSITIONS) ===== */
+  /* TOP SECTION (NUMERO, NOM, NATIONALITE, POSITIONS).............*/
+
   .plr-top {
     height: auto;
     padding: 0px;
@@ -3321,7 +3355,8 @@ main {
     align-items: center;
   }
 
-  /* NUMERO MAILLOT - En haut à gauche */
+  /* NUMERO MAILLOT - En haut à gauche............................ */
+
   .playerNumero {
     height: 120px;
     width: 120px;
@@ -3342,9 +3377,10 @@ main {
     width: 18px;
   }
 
-  /* NOM JOUEUR - Centré */
+  /* NOM JOUEUR - Centré.................................................... */
+
   .playerName {
-    margin:  0px 10px;
+    margin: 0px 10px;
     flex-direction: row;
     gap: 10px;
     align-items: center;
@@ -3353,7 +3389,6 @@ main {
     position: absolute;
     bottom: 160px;
     left: 20px;
-
   }
 
   .ply-surname,
@@ -3369,7 +3404,8 @@ main {
     font-size: 27px;
   }
 
-  /* CAPTAIN BADGE - Sous le nom */
+  /* CAPTAIN BADGE - Sous le nom ..............................*/
+
   .logo-captain {
     font-size: 15px;
     padding: 13px;
@@ -3388,22 +3424,33 @@ main {
     box-shadow: none;
   }
 
-  /* DRAPEAUX NATIONALITÉ - Centrés */
+  /* DRAPEAUX NATIONALITÉ - Centrés................................. */
+
   .origins {
     gap: 10px;
     justify-content: center;
     flex-direction: row;
   }
 
-  .nat-morocco, .nat-france, .nat-cameroon, .nat-ukraine,
-  .nat-peru, .nat-brazil, .nat-netherlands, .nat-tunisia,
-  .nat-greece, .nat-serbia, .nat-germany, .nat-argentina,
+  .nat-morocco,
+  .nat-france,
+  .nat-cameroon,
+  .nat-ukraine,
+  .nat-peru,
+  .nat-brazil,
+  .nat-netherlands,
+  .nat-tunisia,
+  .nat-greece,
+  .nat-serbia,
+  .nat-germany,
+  .nat-argentina,
   .nat-vietnam {
     height: 35px;
     width: 35px;
   }
 
-  /* POSITIONS - Centrées */
+  /* POSITIONS JOUEUR............................................... */
+
   .player-position {
     gap: 12px;
     justify-content: center;
@@ -3424,7 +3471,8 @@ main {
     padding: 10px;
   }
 
-  /* ===== BOTTOM SECTION (STATS) ===== */
+  /* BOTTOM SECTION (STATS)............................................*/
+
   .plr-bottom {
     flex-direction: column;
     padding: 10px;
@@ -3432,7 +3480,8 @@ main {
     gap: 15px;
   }
 
-  /* MENSURATIONS */
+  /* MENSURATIONS..................................................... */
+
   .plrb-left {
     width: 100%;
     padding: 10px 20px;
@@ -3458,10 +3507,10 @@ main {
     padding: 0;
     text-align: right;
     letter-spacing: 3px;
-
   }
 
-  /* SOCIAL GATHERING */
+  /* SOCIAL GATHERING........................................... */
+
   .plrb-right {
     width: 100%;
     border-radius: 8px;
@@ -3519,13 +3568,13 @@ main {
     font-size: 13px;
   }
 
-  /* OVERLAY */
+  /* OVERLAY.............................................*/
+
   .popup-overlay {
     height: 100vh;
   }
 
-
-  /* SECTION SPONSORS */
+  /* SECTION SPONSORS................................... */
 
   .sponsors-paragraph {
     font-size: 16px;
@@ -3549,148 +3598,153 @@ main {
     transform: scale(0.7);
   }
 
-  
-/* GALLERIE PHOTOS */
-.gallery {
-  padding: 40px 20px 40px 20px;
-}
+  /* GALLERIE PHOTOS .....................................*/
 
-.gallery-carousel-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
+  .gallery {
+    padding: 40px 20px 40px 20px;
+  }
 
-.gallery-carousel-content {
-  width: 100%;
-  order: 1;
-  position: relative; /* AJOUT */
-  min-height: 500px; /* AJOUT - fixe la hauteur minimum */
-}
+  .gallery-carousel-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 
-.gallery-instructions {
-  color: white;
-  font-family: "Lato", sans-serif;
-  font-size: 13px;
-  font-style: italic;
-  text-shadow: 0px 0px 5px rgba(235, 196, 0, 0.562);
-  animation-duration: 5s;
-  animation-name: clignoter;
-  animation-iteration-count: infinite;
-  transition: none;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  font-weight: bold;
-  margin-bottom: 30px;  
-}
+  .gallery-carousel-content {
+    width: 100%;
+    order: 1;
+    position: relative;
+    min-height: 500px;
+  }
 
-/* Les deux flèches côte à côte */
-.gallery .carousel-arrow-container:nth-child(1) {
-  display: none;
-}
+  .gallery-instructions {
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+    font-style: italic;
+    text-shadow: 0px 0px 5px rgba(235, 196, 0, 0.562);
+    animation-duration: 5s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
 
-.gallery .carousel-arrow-container:nth-child(3) {
-  display: none;
-}
+  /* Les deux flèches côte à côte.................... */
 
-.gallery-slide {
-  gap: 15px;
-  display: none; /* AJOUT - cache par défaut */
-  flex-wrap: wrap; /* AJOUT */
-  justify-content: center; /* AJOUT */
-  position: absolute; /* AJOUT - position absolue pour superposer */
-  top: 0; /* AJOUT */
-  left: 0; /* AJOUT */
-  width: 100%; /* AJOUT */
-  opacity: 0; /* AJOUT - invisible par défaut */
-  transition: opacity 0.4s ease; /* AJOUT - transition douce */
-}
+  .gallery .carousel-arrow-container:nth-child(1) {
+    display: none;
+  }
 
-.gallery-slide.active {
-  display: flex; /* AJOUT - affiche seulement la slide active */
-  position: relative; /* AJOUT - la slide active est en position normale */
-  opacity: 1; /* AJOUT - visible */
-}
+  .gallery .carousel-arrow-container:nth-child(3) {
+    display: none;
+  }
 
-.photo-gallery {
-  width: 100%;
-  max-width: 350px;
-  height: 220px; /* HAUTEUR FIXE - c'est bon */
-  flex-shrink: 0; /* AJOUT - empêche le rétrécissement */
-}
+  .gallery-slide {
+    gap: 15px;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
 
-.photo-gallery img {
-  height: 170px; /* HAUTEUR FIXE - c'est bon */
-  object-fit: cover; /* AJOUT - assure que l'image remplit bien l'espace */
-}
+  .gallery-slide.active {
+    display: flex;
+    position: relative;
+    opacity: 1;
+  }
 
-.photo-gallery figcaption {
-  height: 50px; /* HAUTEUR FIXE - c'est bon */
-  font-size: 11px;
-  opacity: 1;
-}
+  .photo-gallery {
+    width: 100%;
+    max-width: 350px;
+    height: 220px;
+    flex-shrink: 0;
+  }
 
-/* INDICATORS GALLERY */
-.carousel-indicators-gallery {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  order: 3;
-  margin-top: 20px;
-}
+  .photo-gallery img {
+    height: 170px;
+    object-fit: cover;
+  }
 
-.indicator-gallery {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(235, 196, 0, 0.3);
-  border: 2px solid #ebc400;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
+  .photo-gallery figcaption {
+    height: 50px;
+    font-size: 11px;
+    opacity: 1;
+  }
 
-.indicator-gallery:hover {
-  transform: scale(1.2);
-}
+  /* INDICATORS GALLERY...................................... */
 
-.indicator-gallery.active {
-  background-color: #ebc400;
-  box-shadow: 0px 0px 10px #ebc400;
-}
+  .carousel-indicators-gallery {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    order: 3;
+    margin-top: 20px;
+  }
 
-.gallery .carousel-indicators-gallery:nth-child(1) {
-  margin-top: -15px;
-  padding: 20px 0px;
-  margin-bottom: 25px;
-}
+  .indicator-gallery {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(235, 196, 0, 0.3);
+    border: 2px solid #ebc400;
+    border-radius: 50%;
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      transform 0.3s ease;
+  }
 
-/* POPUP GALLERY */
-.popup-gallery-container {
-  width: calc(100% - 40px);
-  height: calc(100% - 100px);
-}
+  .indicator-gallery:hover {
+    transform: scale(1.2);
+  }
 
-.popup-gallery-image {
-  max-height: calc(100% - 100px);
-}
+  .indicator-gallery.active {
+    background-color: #ebc400;
+    box-shadow: 0px 0px 10px #ebc400;
+  }
 
-.popup-gallery-caption {
-  font-size: 14px;
-  margin-top: 15px;
-}
+  .gallery .carousel-indicators-gallery:nth-child(1) {
+    margin-top: -15px;
+    padding: 20px 0px;
+    margin-bottom: 25px;
+  }
 
-.close-popup-gallery {
-  top: 10px;
-  right: 10px;
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-}
+  /* POPUP GALLERY...................................... */
 
+  .popup-gallery-container {
+    width: calc(100% - 40px);
+    height: calc(100% - 100px);
+  }
 
-  /* BOUTON RETOUR EN HAUT */
+  .popup-gallery-image {
+    max-height: calc(100% - 100px);
+  }
+
+  .popup-gallery-caption {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .close-popup-gallery {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  /* BOUTON RETOUR EN HAUT................................. */
+
   .back-to-top-container {
     bottom: 20px;
     right: 15px;
@@ -3707,112 +3761,109 @@ main {
     padding: 5px 10px;
   }
 
-/* FOOTER ..........................................................................................................................*/
+  /* FOOTER ..........................................................................................................................*/
 
-.footer-site {
-  flex-direction: column;
-  padding: 30px 20px 20px 20px;
-  gap: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative; /* AJOUT - pour le positionnement du logo */
-}
+  .footer-site {
+    flex-direction: column;
+    padding: 30px 20px 20px 20px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
 
-.footer-left {
-  align-items: center;
-  width: 100%;
-  z-index: 2; /* AJOUT - au-dessus du logo */
-  position: relative; /* AJOUT */
-}
+  .footer-left {
+    align-items: center;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+  }
 
-.footer-left-title-1 {
-  font-size: 50px;
+  .footer-left-title-1 {
+    font-size: 50px;
     margin-top: 20px;
+  }
 
-}
+  .footer-left-title-1 strong {
+    font-size: 35px;
+  }
 
-.footer-left-title-1 strong {
-  font-size: 35px;
-}
+  .footer-left-title-2 {
+    font-size: 40px;
+    position: absolute;
+    top: 4%;
+    left: 34%;
+  }
 
-.footer-left-title-2 {
-  font-size: 40px;
-  position: absolute;
-  top: 4%;
-  left: 34%;
-}
+  .footer-center {
+    gap: 20px;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+  }
 
-.footer-center {
-  gap: 20px;
-  width: 100%;
-  z-index: 2; /* AJOUT - au-dessus du logo */
-  position: relative; /* AJOUT */
-}
+  .logo-footer {
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.1;
+    z-index: 1;
+    pointer-events: none;
+  }
 
-.logo-footer {
-  height: 400px;
-  width: 400px;
-  position: absolute; /* AJOUT - précisez bien */
-  top: 15%;
-  left: 50%; /* AJOUT - centre horizontalement */
-  transform: translateX(-50%); /* AJOUT - centre horizontalement */
-  opacity: 0.1;
-  z-index: 1; /* AJOUT - EN ARRIÈRE-PLAN */
-  pointer-events: none; /* AJOUT CRITIQUE - rend le logo non-cliquable */
-}
+  .fc-para {
+    font-size: 14px;
+    line-height: 1.8em;
+    width: 90%;
+    text-align: center;
+  }
 
-.fc-para {
-  font-size: 14px;
-  line-height: 1.8em;
-  width: 90%;
-  text-align: center;
-}
+  .fc-copyright {
+    font-size: 9px;
+    padding: 0px 30px;
+    text-align: center;
+    font-style: italic;
+    position: inherit;
+    margin-bottom: 10px;
+    line-height: 1.8em;
+  }
 
-.fc-copyright {
-  font-size: 9px;
-  padding: 0px 30px;
-  text-align: center;
-  font-style: italic;
-  position: inherit;
-  margin-bottom: 10px;
-  line-height: 1.8em;
-}
+  .footer-right {
+    gap: 5px;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+  }
 
-.footer-right {
-  gap: 5px;
-  width: 100%;
-  z-index: 2; /* AJOUT - au-dessus du logo */
-  position: relative; /* AJOUT */
-}
+  .footer-right-title {
+    font-size: 25px;
+  }
 
-.footer-right-title {
-  font-size: 25px;
-}
+  .footer-link-list {
+    gap: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
 
-.footer-link-list {
-  gap: 0px;
-  display: flex;
-  flex-direction: column; /* AJOUT - empile verticalement */
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
+  .footer-link-list li {
+    padding: 10px 0px;
+    width: 100%;
+  }
 
-.footer-link-list li {
-  padding: 10px 0px;
-  width: 100%;
-}
-
-.footer-link-list li a {
-  font-size: 17px;
-  letter-spacing: 2px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
+  .footer-link-list li a {
+    font-size: 17px;
+    letter-spacing: 2px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

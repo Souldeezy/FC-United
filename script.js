@@ -1,3 +1,7 @@
+// X TEAM PLAYER LINE..................................................................................................................................................//
+//.....................................................................................................................................................................//
+//.....................................................................................................................................................................//
+
 document.addEventListener('DOMContentLoaded', function() {
     const playerMiniImages = document.querySelectorAll('.img-player-mini');
     const popupOverlay = document.querySelector('.popup-overlay');
@@ -119,7 +123,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// APPARITION BARRE NAVIGATION
+// APPARITION BARRE NAVIGATION.........................................................................................................................................//
+//.....................................................................................................................................................................//
+//.....................................................................................................................................................................//
+
 document.addEventListener('DOMContentLoaded', function() {
     const navBar = document.querySelector('.barre-nav');
     
@@ -130,7 +137,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// POPUP GALLERY
+// POP UP GALLERY......................................................................................................................................................//
+//.....................................................................................................................................................................//
+//.....................................................................................................................................................................//
+
 document.addEventListener('DOMContentLoaded', function() {
     const galleryImages = document.querySelectorAll('.photo-gallery');
     const popupOverlay = document.querySelector('.popup-gallery-overlay');
@@ -176,7 +186,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// BOUTON BACK TO TOP
+// BOUTON BACK TO TOP..................................................................................................................................................//
+//.....................................................................................................................................................................//
+//.....................................................................................................................................................................//
+
 document.addEventListener('DOMContentLoaded', function() {
     const backToTopContainer = document.querySelector('.back-to-top-container');
     const backToTopButton = document.querySelector('.back-to-top');
@@ -199,7 +212,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// CAROUSEL OUR STORY AVEC SWIPE
+// CAROUSEL OUR STORY + SWIPE..........................................................................................................................................//
+//.....................................................................................................................................................................//
+//.....................................................................................................................................................................//
+
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('#ourStory .story-slide');
     const arrowLeft = document.querySelector('.carousel-arrow-left[data-carousel="story"]');
@@ -239,7 +255,8 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // GESTION DU SWIPE TACTILE
+        // GESTION DU SWIPE TACTILE..........................................................//
+
         if (carouselContent) {
             let touchStartX = 0;
             let touchEndX = 0;
@@ -271,7 +288,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// CAROUSEL GALLERY AVEC SWIPE (3 SLIDES DE 6 PHOTOS)
+// CAROUSEL GALLERY 3 SLIDES X 6PHOTOS.................................................................................................................................//
+//.....................................................................................................................................................................//
+//.....................................................................................................................................................................//
+
 document.addEventListener('DOMContentLoaded', function() {
     const gallerySlides = document.querySelectorAll('.gallery-slide');
     const arrowLeft = document.querySelector('.carousel-arrow-left[data-carousel="gallery"]');
@@ -311,7 +331,8 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // GESTION DU SWIPE TACTILE
+        // GESTION DU SWIPE TACTILE..................................................//
+
         if (carouselContent) {
             let touchStartX = 0;
             let touchEndX = 0;
@@ -343,7 +364,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// ANIMATION AU SCROLL - STORY CAROUSEL + SPONSORS
+// ANIMATION SPONSORS..................................................................................................................................................//
+//.....................................................................................................................................................................//
+//.....................................................................................................................................................................//
+
 document.addEventListener('DOMContentLoaded', function() {
     const storyCarousel = document.querySelector('#ourStory .story-carousel');
     const carouselIndicators = document.querySelector('.carousel-indicators[data-carousel="story"]');
@@ -366,7 +390,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (sponsorsContainer) observer.observe(sponsorsContainer);
 });
 
-// MENU HAMBURGER MOBILE
+// MENU HAMBURGER MOBILE...............................................................................................................................................//
+//.....................................................................................................................................................................//
+//.....................................................................................................................................................................//
+
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger-btn');
     const navMenu = document.querySelector('.nav-menu');

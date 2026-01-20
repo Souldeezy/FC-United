@@ -26,6 +26,8 @@ main {
   flex: 1;
 }
 
+/* SCROLL ANCRE CATEGORIES....................................................... */
+
 #LegalNotices,
 #privacyPolicy,
 #cookiesPolicy,
@@ -97,19 +99,17 @@ main {
   border-bottom: 2px solid rgb(111, 93, 0);
   z-index: 9999;
   opacity: 0;
-  transform: translateY(
-    -20px
-  ); /* Légèrement vers le haut pour l'effet "Down" */
+  transform: translateY(-20px);
   transition:
     opacity 0.8s ease-out,
     transform 0.8s ease-out;
-  pointer-events: none; /* Empêche de cliquer tant qu'elle est invisible */
+  pointer-events: none;
 }
 
 .barre-nav.visible {
   opacity: 1;
   transform: translateY(0);
-  pointer-events: auto; /* Réactive les clics */
+  pointer-events: auto;
 }
 
 /* LOGO HEADER GAUCHE............................................................ */
@@ -280,7 +280,7 @@ main {
     0px 0px 20px black,
     0px 0px 5px black;
   animation: fadeInOnly 1s ease-out forwards;
-  animation-delay: 0s; /* X&3K apparaît après "l'équipe" (3s) */
+  animation-delay: 0s;
   opacity: 0;
   transform: translateY(20px);
   transition:
@@ -297,7 +297,7 @@ main {
   width: 50%;
   text-align: center;
   animation: fadeInOnly 1s ease-out forwards;
-  animation-delay: 0.5s; /* X&3K apparaît après "l'équipe" (3s) */
+  animation-delay: 0.5s;
   opacity: 0;
   transform: translateY(20px);
   transition:
@@ -312,7 +312,7 @@ main {
   gap: 40px;
   margin-top: 40px;
   animation: fadeInOnly 1s ease-out forwards;
-  animation-delay: 1.3s; /* X&3K apparaît après "l'équipe" (3s) */
+  animation-delay: 1.3s;
   opacity: 0;
   transform: translateY(20px);
   transition:
@@ -455,7 +455,8 @@ main {
   line-height: 2em;
 }
 
-/* CLASSE NOTE - Pour les encadrés importants */
+/* CLASSE NOTE......................................................... */
+
 .our-story .note {
   width: calc(100% - 40px);
   background-color: rgba(235, 196, 0, 0.1);
@@ -478,7 +479,8 @@ main {
   font-weight: bold;
 }
 
-/* LISTES */
+/* LISTES................................................. */
+
 .our-story ul {
   width: calc(100% - 40px);
   display: flex;
@@ -524,6 +526,7 @@ main {
 }
 
 /* ANIMATIONS (si vous voulez les garder) */
+
 .our-story p.visible {
   opacity: 1;
   transform: translateX(0);
@@ -540,9 +543,9 @@ main {
 }
 
 /* BOUTON RETOUR EN HAUT ................................................................. */
+/* ....................................................................................... */
+/* ....................................................................................... */
 
-/* BOUTON RETOUR EN HAUT */
-/* BOUTON RETOUR EN HAUT - CONTAINER */
 .back-to-top-container {
   position: fixed;
   bottom: 30px;
@@ -760,10 +763,6 @@ main {
   transition: 0.1s all ease-in-out;
 }
 
-/* ANIMATIONS PAGE MENTIONS LEGALES.................................................................................................. */
-/* .................................................................................................................................. */
-/* .................................................................................................................................. */
-
 /* KEYFRAMES PAGE MENTIONS LEGALES................................................................................................... */
 /* .................................................................................................................................. */
 /* .................................................................................................................................. */
@@ -857,7 +856,7 @@ main {
   html,
   body {
     width: 100%;
-    overflow-x: hidden; /* Empêche le scroll horizontal */
+    overflow-x: hidden;
   }
 
   body {
@@ -895,7 +894,8 @@ main {
     z-index: 10001;
   }
 
-  /* BOUTON HAMBURGER */
+  /* BOUTON HAMBURGER....................................................... */
+
   .hamburger-btn {
     display: flex;
     flex-direction: column;
@@ -916,7 +916,8 @@ main {
     transition: all 0.3s ease;
   }
 
-  /* ANIMATION HAMBURGER → X */
+  /* ANIMATION HAMBURGER → X .................................................*/
+
   .hamburger-btn.active .hamburger-line:nth-child(1) {
     transform: translateY(10.5px) rotate(45deg);
   }
@@ -929,7 +930,8 @@ main {
     transform: translateY(-10.5px) rotate(-45deg);
   }
 
-  /* MENU MOBILE (caché par défaut) */
+  /* MENU MOBILE (caché par défaut).......................................... */
+
   .nav-menu {
     position: fixed;
     top: 0;
@@ -952,7 +954,8 @@ main {
     right: 0;
   }
 
-  /* LIENS MENU MOBILE */
+  /* LIENS MENU MOBILE................................................ */
+
   .links-header {
     flex-direction: column;
     gap: 20px;
@@ -971,7 +974,8 @@ main {
     padding: 12px 0;
   }
 
-  /* CACHE LES ICÔNES SUR MOBILE */
+  /* CACHE LES ICÔNES SUR MOBILE................................... */
+
   .logo-story-1,
   .logo-story-2,
   .logo-story-3,
@@ -979,7 +983,8 @@ main {
     display: none;
   }
 
-  /* BOUTON CTA MOBILE */
+  /* BOUTON CTA MOBILE .............................................*/
+
   .cta-header {
     font-size: 14px;
     padding: 10px 20px;
@@ -987,7 +992,8 @@ main {
     border: 2px solid #6f5d00;
   }
 
-  /* OVERLAY (fond sombre) */
+  /* OVERLAY (fond sombre) .........................................*/
+
   .nav-overlay {
     position: fixed;
     top: 0;
@@ -1053,9 +1059,6 @@ main {
 
   /* .....................................................HERO SCROLL DOWN INSTRUCTIONS */
 
-  .hero-ml-instructions {
-  }
-
   .scroll-down-instruction {
     margin-bottom: 20px;
     font-size: 15px;
@@ -1078,14 +1081,8 @@ main {
     font-size: 35px;
   }
 
-  .our-story h3 {
-  }
-
   .our-story a {
     font-size: 14px;
-  }
-
-  .our-story a:hover {
   }
 
   .our-story p {
@@ -1094,58 +1091,22 @@ main {
     font-size: 14px;
   }
 
-  .our-story p strong {
-  }
-
   .our-story p em {
     font-size: 14px;
-  }
-
-  .our-story p br {
   }
 
   .our-story .note {
     font-size: 14px;
   }
 
-  .our-story .note strong {
-  }
-
-  .our-story ul {
-  }
-
   .our-story ul li {
     font-size: 14px;
   }
 
-  .our-story ul li::before {
-  }
+  /* BOUTON RETOUR EN HAUT........................................................................................................................................... */
+  /* ................................................................................................................................................................ */
+  /* ................................................................................................................................................................ */
 
-  .our-story ul li strong {
-  }
-
-  .our-story ul li a {
-  }
-
-  .our-story ul li a:hover {
-  }
-
-  /* ANIMATIONS........................................................................................................................................................ */
-
-  .our-story p.visible {
-  }
-
-  .our-story .note.visible {
-  }
-
-  .our-story ul.visible {
-  }
-
-  /* BOUTON RETOUR EN HAUT............................................................................................................................................. */
-  /* .................................................................................................................................................................. */
-  /* .................................................................................................................................................................. */
-
-  /* BOUTON RETOUR EN HAUT */
   .back-to-top-container {
     bottom: 20px;
     right: 15px;
@@ -1162,11 +1123,9 @@ main {
     padding: 5px 10px;
   }
 
-  /* FOOTER............................................................................................................................................................ */
-  /* .................................................................................................................................................................. */
-  /* .................................................................................................................................................................. */
-
-  /* FOOTER ..........................................................................................................................*/
+  /* FOOTER.......................................................................................................................................................... */
+  /* ................................................................................................................................................................ */
+  /* ................................................................................................................................................................ */
 
   .footer-site {
     flex-direction: column;
@@ -1176,14 +1135,14 @@ main {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    position: relative; /* AJOUT - pour le positionnement du logo */
+    position: relative;
   }
 
   .footer-left {
     align-items: center;
     width: 100%;
-    z-index: 2; /* AJOUT - au-dessus du logo */
-    position: relative; /* AJOUT */
+    z-index: 2;
+    position: relative;
   }
 
   .footer-left-title-1 {
@@ -1205,20 +1164,20 @@ main {
   .footer-center {
     gap: 20px;
     width: 100%;
-    z-index: 2; /* AJOUT - au-dessus du logo */
-    position: relative; /* AJOUT */
+    z-index: 2;
+    position: relative;
   }
 
   .logo-footer {
     height: 400px;
     width: 400px;
-    position: absolute; /* AJOUT - précisez bien */
+    position: absolute;
     top: 15%;
-    left: 50%; /* AJOUT - centre horizontalement */
-    transform: translateX(-50%); /* AJOUT - centre horizontalement */
+    left: 50%;
+    transform: translateX(-50%);
     opacity: 0.1;
-    z-index: 1; /* AJOUT - EN ARRIÈRE-PLAN */
-    pointer-events: none; /* AJOUT CRITIQUE - rend le logo non-cliquable */
+    z-index: 1;
+    pointer-events: none;
   }
 
   .fc-para {
@@ -1241,8 +1200,8 @@ main {
   .footer-right {
     gap: 5px;
     width: 100%;
-    z-index: 2; /* AJOUT - au-dessus du logo */
-    position: relative; /* AJOUT */
+    z-index: 2;
+    position: relative;
   }
 
   .footer-right-title {
@@ -1252,7 +1211,7 @@ main {
   .footer-link-list {
     gap: 0px;
     display: flex;
-    flex-direction: column; /* AJOUT - empile verticalement */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
