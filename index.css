@@ -85,32 +85,58 @@ main {
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
 
+.header-site {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 .barre-nav {
   height: 120px;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 200px;
   padding: 0px 50px;
-  background-color: #0b0b0b;
+
+  background-color: rgba(11, 11, 11, 0.95);
+  backdrop-filter: blur(6px);
   border-bottom: 2px solid rgb(111, 93, 0);
+
   z-index: 9999;
+
   opacity: 0;
   transform: translateY(-20px);
+  pointer-events: none;
+
   transition:
     opacity 0.8s ease-out,
-    transform 0.8s ease-out;
-  pointer-events: none;
+    transform 0.8s ease-out,
+    background-color 0.35s ease,
+    backdrop-filter 0.35s ease;
 }
 
 .barre-nav.visible {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+.barre-nav.is-scrolling-down {
+  background-color: rgba(11, 11, 11, 0.65);
+  backdrop-filter: blur(3px);
+}
+
+.barre-nav.is-scrolling-up {
+  background-color: rgba(11, 11, 11, 0.95);
+  backdrop-filter: blur(6px);
 }
 
 /* LOGO HEADER GAUCHE............................................................ */
@@ -125,6 +151,21 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Scroll DOWN → logo discret */
+.barre-nav.is-scrolling-down .logo-header {
+  opacity: 0;
+  transform: translateY(-5px);
+}
+
+/* Scroll UP → logo visible */
+.barre-nav.is-scrolling-up .logo-header {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* LIENS HEADER CENTRE........................................................... */
@@ -272,7 +313,8 @@ main {
   background-image: image-set(
     url("./PICS/teamgroup4.webp") type("image/webp"),
     url("./PICS/teamgroup4.jpg") type("image/jpeg")
-  );  background-position: center;
+  );
+  background-position: center;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.367);
   background-blend-mode: darken;
@@ -990,6 +1032,7 @@ main {
   transform: scale(1.15) rotate(90deg);
   background-color: rgb(255, 50, 50);
 }
+
 
 /* CONTAINER PLAYER LINE........................................ */
 
@@ -2527,8 +2570,6 @@ main {
   }
 }
 
-
-
 /* FADE IN BOTTOM...................................................... */
 
 @keyframes fadeInBottom {
@@ -2668,7 +2709,6 @@ main {
   }
 }
 
-
 /* HEARTBEAT PLAYER TITLE SPECIAL */
 
 @keyframes heartbeat3 {
@@ -2722,6 +2762,14 @@ main {
   }
 }
 
+  .mobile-contact-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+    z-index: 9999;
+    display: none;
+  }
+
 /*  RESPONSIVE MOBILE (480 PX)....................................................................................................................................... */
 /* .................................................................................................................................................................. */
 /* .................................................................................................................................................................. */
@@ -2749,6 +2797,7 @@ main {
   body {
     width: 100%;
     overflow-x: hidden; /* Empêche le scroll horizontal */
+
   }
 
   body {
@@ -2768,9 +2817,30 @@ main {
     scroll-margin-top: 80px;
   }
 
-  /* HEADER............................................................................................................................................................ */
-  /* .................................................................................................................................................................. */
-  /* .................................................................................................................................................................. */
+    .mobile-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+    .cta-header.mobile-contact-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: black;
+    color: #ebc400;
+    border-radius: 5px;
+  }
+
+    button:active,
+  a:active {
+    opacity: 0.85;
+  }
+
+
+
+  /* HEADER.......................................................................................................................................................... */
+  /* ................................................................................................................................................................ */
+  /* ................................................................................................................................................................ */
 
   /* .............................................................BARRE NAV */
 
@@ -2862,7 +2932,7 @@ main {
   .links-header li a {
     font-size: 22px;
     display: block;
-    padding: 12px 0;
+    padding: 14px 0;
   }
 
   /* CACHE LES ICÔNES SUR MOBILE.................................. */
@@ -2908,6 +2978,7 @@ main {
   /* HERO SITE....................................................................................................................................................... */
   /* ................................................................................................................................................................ */
   /* ................................................................................................................................................................ */
+
 
   .hero-site {
     min-height: 100vh;
