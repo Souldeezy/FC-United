@@ -403,17 +403,18 @@ main {
   bottom: 2%;
   left: 40%;
 }
-
+/* GERER LE LIEN AU CNTRE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* HERO RESEAUX..................................................................... */
 
 .heroCtaReseaux-1 {
   display: flex;
-  position: absolute;
   bottom: 0;
   left: 0;
   padding: 20px 50px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
   gap: 10px;
   border-radius: 10px;
   margin: 10px;
@@ -422,21 +423,9 @@ main {
   animation-delay: 3s;
 }
 
-.heroCtaReseaux-2 {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 10px;
-  padding: 20px 50px;
-  border-radius: 10px;
-  opacity: 0;
-  animation: fadeInRight 1s ease-out forwards;
-  animation-delay: 3s;
-}
 
-.heroCtaReseaux-1 a,
-.heroCtaReseaux-2 a {
+
+.heroCtaReseaux-1 a {
   text-decoration: none;
   color: rgb(234, 234, 234);
   font-family: "Passion One", sans-serif;
