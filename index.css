@@ -2837,30 +2837,8 @@ main {
     scroll-margin-top: 80px;
   }
 
-    .mobile-contact-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
 
-    .cta-header.mobile-contact-btn {
-    padding: 5px 10px;
-    font-size: 14px;
-    background-color: black;
-    color: #ebc400;
-    border-radius: 5px;
-  }
 
-  .cta-header.mobile-contact-btn:hover {
-    text-decoration: none;
-    background-color: #ebc400;
-    color: black;
-  }
-
-    button:active,
-  a:active {
-    opacity: 0.85;
-  }
 
 
 
