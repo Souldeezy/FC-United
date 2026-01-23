@@ -19,7 +19,6 @@ body {
   display: flex;
   flex-direction: column;
   background-color: black;
-  min-height: 100vh;
 }
 
 main {
@@ -315,6 +314,7 @@ main {
 
 .hero-site {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -733,7 +733,7 @@ main {
   justify-content: center;
   align-items: center;
   padding: 30px 0;
-    width: 100%;
+  width: 100%;
   max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
@@ -956,7 +956,8 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  height: 150%;
+  height: 100vh;
+  height: 100dvh;
   background-color: rgba(0, 0, 0, 0.85);
   z-index: 998;
   opacity: 0;
@@ -2821,8 +2822,6 @@ main {
     scroll-margin-top: 80px;
   }
 
-
-
   /* HEADER.......................................................................................................................................................... */
   /* ................................................................................................................................................................ */
   /* ................................................................................................................................................................ */
@@ -2948,7 +2947,8 @@ main {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+      min-height: 100vh;   /* fallback */
+  min-height: 100dvh;
     background-color: rgba(0, 0, 0, 0.7);
     opacity: 0;
     visibility: hidden;
@@ -2969,6 +2969,7 @@ main {
 
   .hero-site {
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3042,7 +3043,6 @@ main {
   .story-carousel {
     flex-direction: column;
     gap: 20px;
-
   }
 
   .carousel-arrow-container {
@@ -3193,11 +3193,11 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-     width: 100%;
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  overscroll-behavior-x: contain;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
   }
 
   .img-player-mini {
@@ -3215,6 +3215,8 @@ main {
 
   .popup-overlay {
     background-color: rgba(0, 0, 0, 0.95);
+    min-height: 100vh;
+    min-height: 100dvh;
   }
 
   /* POPUP CONTAINER...................................... */
@@ -3541,11 +3543,6 @@ main {
     font-size: 13px;
   }
 
-  /* OVERLAY.............................................*/
-
-  .popup-overlay {
-    height: 100vh;
-  }
 
   /* SECTION SPONSORS................................... */
 
@@ -3723,6 +3720,8 @@ main {
   .back-to-top-container {
     bottom: 20px;
     right: 15px;
+    z-index: 998;
+
   }
 
   .back-to-top {
