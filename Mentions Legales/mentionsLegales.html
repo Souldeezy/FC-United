@@ -66,12 +66,12 @@
   <!-- .............................................................................................................................................................. -->
   <!-- .............................................................................................................................................................. -->
 
-  <header class="header-site">
 
+  <header class="header-site">
     <nav class="barre-nav">
       <div class="logo-header"></div>
 
-      <!-- BOUTON HAMBURGER (MOBILE).........................................................-->
+      <!-- BOUTON HAMBURGER (visible uniquement sur mobile) -->
 
       <button class="hamburger-btn" aria-label="Toggle menu">
         <span class="hamburger-line"></span>
@@ -79,37 +79,46 @@
         <span class="hamburger-line"></span>
       </button>
 
-      <!-- MENU HAMBURGER (MOBILE)..........................................................-->
+      <!-- MENU (caché sur mobile, visible sur desktop) -->
 
       <div class="nav-menu">
         <ul class="links-header">
           <li>
             <div class="logo-story-1"></div>
-            <a href="../index.html#ourStory">Story</a>
+            <a href="#ourStory">Story</a>
           </li>
           <li>
             <div class="logo-story-2"></div>
-            <a href="../index.html#teamMembers">Team Members</a>
+            <a href="#teamMembers">Team Members</a>
           </li>
           <li>
             <div class="logo-story-3"></div>
-            <a href="../index.html#teamSponsors">Sponsors</a>
+            <a href="#teamSponsors">Sponsors</a>
           </li>
           <li>
             <div class="logo-story-4"></div>
-            <a href="../index.html#teamGallery">Gallery</a>
+            <a href="#teamGallery">Gallery</a>
           </li>
         </ul>
-        <a href="https://footy.netlify.app/clubhouse" class="cta-header" target="_blank" rel="noopener">
-          More stats on Footy App
-        </a>
+        <div class="liens-nav-header">
+          <a href="https://footy.netlify.app/results" class="cta-header" target="_blank" rel="noopener">
+            Results
+          </a>
+          <a href="https://footy.netlify.app/fixtures" class="cta-header" target="_blank" rel="noopener">
+            Fixtures
+          </a>
+          <a href="https://footy.netlify.app/standings" class="cta-header" target="_blank" rel="noopener">
+            Tables
+          </a>
+        </div>
+
+
       </div>
 
-      <!-- OVERLAY (fond sombre quand menu ouvert) ..........................................-->
+      <!-- OVERLAY (fond sombre quand menu ouvert) -->
 
       <div class="nav-overlay"></div>
     </nav>
-
   </header>
 
   <!-- MAIN SITE.................................................................................................................................................. -->

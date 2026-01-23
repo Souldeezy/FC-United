@@ -10,8 +10,8 @@
 
 html,
 body {
-  width: 100%;
-  overflow-x: hidden; /* Empêche le scroll horizontal */
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -136,12 +136,10 @@ main {
   justify-content: center;
 }
 
-
 /* Scroll DOWN → logo discret */
 .barre-nav.is-scrolling-down .logo-header {
   opacity: 0;
   transform: translateY(-5px);
-
 }
 
 /* Scroll UP → logo visible */
@@ -149,7 +147,6 @@ main {
   opacity: 1;
   transform: translateY(0);
   transition: 0.3s ease-in-out;
-
 }
 
 /* LIENS HEADER CENTRE........................................................... */
@@ -261,9 +258,14 @@ main {
 
 /* BOUTON CTA DROITE................................................................ */
 
+.liens-nav-header {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
 .cta-header {
   background-color: transparent;
-  padding: 10px 20px;
+  padding: 5px;
   font-size: 18px;
   border-radius: 10px;
   color: white;
@@ -271,12 +273,15 @@ main {
   transition: all 0.2s ease-in-out;
   font-family: "Passion One", sans-serif;
   text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .cta-header:hover {
-  box-shadow: 0px 0px 10px 0px rgb(111, 93, 0);
   color: rgb(235, 196, 0);
-  background-color: #6f5d00;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
 }
 
 /*  SECTION HERO MENTIONS LEGALES............................................................................................................................... */
@@ -881,13 +886,14 @@ main {
 
   html,
   body {
-    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
   }
 
   body {
     display: flex;
     flex-direction: column;
+    touch-action: pan-y;
   }
 
   main {
@@ -1011,11 +1017,15 @@ main {
 
   /* BOUTON CTA MOBILE .............................................*/
 
+  .liens-nav-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .cta-header {
     font-size: 14px;
     padding: 10px 20px;
     text-align: center;
-    border: 2px solid #6f5d00;
   }
 
   /* OVERLAY (fond sombre) .........................................*/

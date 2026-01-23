@@ -11,8 +11,8 @@
 
 html,
 body {
-  width: 100%;
-  overflow-x: hidden; /* Empêche le scroll horizontal */
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -102,8 +102,8 @@ main {
 
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 200px;
+  justify-content: space-between;
+  gap: 20px;
   padding: 0px 50px;
 
   background-color: rgba(11, 11, 11, 0.95);
@@ -175,7 +175,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 80px;
   list-style: none;
   padding: 0px 50px;
 }
@@ -278,10 +278,11 @@ main {
 }
 
 /* BOUTON CTA DROITE................................................................ */
+
 .liens-nav-header {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  gap: 25px;
+  align-items: center;
 }
 .cta-header {
   background-color: transparent;
@@ -293,8 +294,8 @@ main {
   transition: all 0.2s ease-in-out;
   font-family: "Passion One", sans-serif;
   text-decoration: none;
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .cta-header:hover {
@@ -728,11 +729,15 @@ main {
 .players-grid {
   display: grid;
   gap: 50px;
-  max-width: 1400px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 30px 0;
+    width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
 }
 
 .img-player-mini {
@@ -2789,17 +2794,19 @@ main {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 
   html,
   body {
-    width: 100%;
-    overflow-x: hidden; /* Empêche le scroll horizontal */
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   body {
     display: flex;
     flex-direction: column;
+    touch-action: pan-y;
   }
 
   main {
@@ -2813,6 +2820,8 @@ main {
   #teamGallery {
     scroll-margin-top: 80px;
   }
+
+
 
   /* HEADER.......................................................................................................................................................... */
   /* ................................................................................................................................................................ */
@@ -2921,6 +2930,10 @@ main {
   }
 
   /* BOUTON CTA MOBILE............................................. */
+  .liens-nav-header {
+    flex-direction: column;
+    gap: 10px;
+  }
 
   .cta-header {
     font-size: 14px;
@@ -2968,6 +2981,12 @@ main {
     background-size: cover;
   }
 
+  /* HERO SITE IMAGE............................................................. */
+
+  .hero-site img {
+    object-position: 50% top; /* ou center 30% */
+  }
+
   /* HERO H1.................................................................X&3K */
 
   .hero-h1 {
@@ -3000,6 +3019,7 @@ main {
 
   .lienReseaux-hero {
     margin-left: 0px;
+    font-size: 10px;
   }
 
   /*  SECTION BANNIERE OUR STORY (TEXTE)............................................................................................................................. */
@@ -3022,8 +3042,6 @@ main {
   .story-carousel {
     flex-direction: column;
     gap: 20px;
-    touch-action: pan-y;
-      overscroll-behavior-x: contain;
 
   }
 
@@ -3175,6 +3193,11 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+     width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
   }
 
   .img-player-mini {
@@ -3278,7 +3301,10 @@ main {
     background-size: 34%;
   }
 
-  .pl-left-1, .pl-left-2, .pl-left-8, .pl-left-14 {
+  .pl-left-1,
+  .pl-left-2,
+  .pl-left-8,
+  .pl-left-14 {
     bottom: 0;
     background-position-y: 30px;
   }
@@ -3557,9 +3583,7 @@ main {
     align-items: center;
     gap: 20px;
     touch-action: pan-y;
-      overscroll-behavior-x: contain;
-
-
+    overscroll-behavior-x: contain;
   }
 
   .gallery-carousel-content {
