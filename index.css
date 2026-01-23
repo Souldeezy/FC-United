@@ -410,7 +410,7 @@ main {
   text-decoration: none;
   color: #ebc400;
   font-family: "Lato", sans-serif;
-  font-size: 13px;
+  font-size: 17px;
   font-weight: bold;
   margin-top: 10px;
   animation: fadeIn 0.5s ease-out forwards;
@@ -420,11 +420,15 @@ main {
   transition:
     opacity 0.8s ease-in-out,
     transform 0.8s ease-in-out;
-  background-color: rgba(0, 0, 0, 0.655);
   padding: 8px 15px;
   border-radius: 25px;
-  box-shadow: 0px 0px 10px 0px #ebc400;
-  margin-left: 250px;
+  margin-left: 550px;
+  margin-top: -20px;
+}
+
+.lienReseaux-hero:hover {
+  transition: 0.2s ease-in-out;
+  color: orangered;
 }
 
 /*  SECTION BANNIERE OUR STORY (TEXTE)............................................................................................................................... */
@@ -2987,7 +2991,11 @@ main {
   /* HERO SITE IMAGE............................................................. */
 
   .hero-site img {
-    object-position: 50% top; /* ou center 30% */
+      object-fit: 50%;   /* 👈 dézoome */
+
+    object-position: center bottom; /* ou center 30% */
+    height: 100%;
+    width: 100%;
   }
 
   /* HERO H1.................................................................X&3K */
@@ -3022,7 +3030,9 @@ main {
 
   .lienReseaux-hero {
     margin-left: 0px;
+    margin-top: 0px;
     font-size: 10px;
+    font-size: 13px;
   }
 
   /*  SECTION BANNIERE OUR STORY (TEXTE)............................................................................................................................. */
