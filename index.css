@@ -173,10 +173,9 @@ main {
 .links-header {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 80px;
   list-style: none;
-  padding: 0px 50px;
+  margin-right: 100px;
 }
 
 .links-header li {
@@ -2901,10 +2900,13 @@ main {
   }
 
   /* LIENS MENU MOBILE */
+
   .links-header {
     flex-direction: column;
     gap: 20px;
     width: 100%;
+    margin-right: 0px;
+
   }
 
   .links-header li {

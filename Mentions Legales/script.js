@@ -82,21 +82,21 @@ document.addEventListener('DOMContentLoaded', function() {
 //.....................................................................................................................................................................//
 //.....................................................................................................................................................................//
 
-let lastScrollY = window.scrollY;
 const navBar = document.querySelector('.barre-nav');
+if (navBar) {
+    let lastScrollY = window.scrollY;
 
-window.addEventListener('scroll', () => {
-  const currentScroll = window.scrollY;
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.scrollY;
 
-  if (currentScroll > lastScrollY && currentScroll > 100) {
-    // SCROLL DOWN
-    navBar.classList.add('is-scrolling-down');
-    navBar.classList.remove('is-scrolling-up');
-  } else {
-    // SCROLL UP
-    navBar.classList.add('is-scrolling-up');
-    navBar.classList.remove('is-scrolling-down');
-  }
+        if (currentScroll > lastScrollY && currentScroll > 100) {
+            navBar.classList.add('is-scrolling-down');
+            navBar.classList.remove('is-scrolling-up');
+        } else {
+            navBar.classList.add('is-scrolling-up');
+            navBar.classList.remove('is-scrolling-down');
+        }
 
-  lastScrollY = currentScroll;
-});
+        lastScrollY = currentScroll;
+    });
+}
