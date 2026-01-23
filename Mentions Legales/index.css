@@ -1086,7 +1086,7 @@ main {
   /* .....................................................HERO SCROLL DOWN INSTRUCTIONS */
 
   .scroll-down-instruction {
-    margin-bottom: 8px;
+    margin-bottom: 2px;
     font-size: 13px;
     bottom: 5%;
   }
