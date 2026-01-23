@@ -77,3 +77,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// HEADER SCROLL EFFECT (SEMI TRANSPARENT DOWN / NORMAL UP)............................................................................................................//
+//.....................................................................................................................................................................//
+//.....................................................................................................................................................................//
+
+let lastScrollY = window.scrollY;
+const navBar = document.querySelector('.barre-nav');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > lastScrollY && currentScroll > 100) {
+    // SCROLL DOWN
+    navBar.classList.add('is-scrolling-down');
+    navBar.classList.remove('is-scrolling-up');
+  } else {
+    // SCROLL UP
+    navBar.classList.add('is-scrolling-up');
+    navBar.classList.remove('is-scrolling-down');
+  }
+
+  lastScrollY = currentScroll;
+});
