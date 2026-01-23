@@ -328,7 +328,6 @@ main {
   z-index: 1;
 }
 
-
 .hero-site img {
   position: absolute;
   inset: 0;
@@ -416,20 +415,17 @@ main {
   margin-top: 10px;
   animation: fadeIn 0.5s ease-out forwards;
   animation-delay: 2.5s;
-    opacity: 0;
+  opacity: 0;
   transform: translateY(20px);
   transition:
     opacity 0.8s ease-in-out,
     transform 0.8s ease-in-out;
-    background-color: rgba(0, 0, 0, 0.655);
-    padding: 8px 15px;
-    border-radius: 25px;
-    box-shadow: 0px 0px 10px 0px #ebc400;
-    margin-left: 250px;
+  background-color: rgba(0, 0, 0, 0.655);
+  padding: 8px 15px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px 0px #ebc400;
+  margin-left: 250px;
 }
-
-
-
 
 /*  SECTION BANNIERE OUR STORY (TEXTE)............................................................................................................................... */
 /* .................................................................................................................................................................. */
@@ -1022,7 +1018,6 @@ main {
   transform: scale(1.15) rotate(90deg);
   background-color: rgb(255, 50, 50);
 }
-
 
 /* CONTAINER PLAYER LINE........................................ */
 
@@ -1677,7 +1672,6 @@ main {
   background-size: cover;
   background-image: url(.//SVG/ukraine.svg);
   z-index: 999999;
-
 }
 
 /* ...................................................(PERU) */
@@ -1699,6 +1693,7 @@ main {
   background-position: center;
   background-size: cover;
   background-image: url(.//SVG/brazil.svg);
+  z-index: 999999;
 }
 
 /* ............................................(NETHERLANDS) */
@@ -1709,6 +1704,7 @@ main {
   background-position: center;
   background-size: cover;
   background-image: url(.//SVG/netherlands.svg);
+  z-index: 999999;
 }
 
 /* ................................................(TUNISIA) */
@@ -1719,6 +1715,7 @@ main {
   background-position: center;
   background-size: cover;
   background-image: url(.//SVG/tunisia.svg);
+  z-index: 999999;
 }
 
 /* ................................................(GREECE) */
@@ -1729,6 +1726,7 @@ main {
   background-position: center;
   background-size: cover;
   background-image: url(.//SVG/greece.svg);
+  z-index: 999999;
 }
 
 /* ................................................(SERBIA) */
@@ -1739,6 +1737,7 @@ main {
   background-position: center;
   background-size: cover;
   background-image: url(.//SVG/serbia.svg);
+  z-index: 999999;
 }
 
 /* ..............................................(GERMANY) */
@@ -1749,6 +1748,7 @@ main {
   background-position: center;
   background-size: cover;
   background-image: url(.//SVG/germany.svg);
+  z-index: 999999;
 }
 
 /* .............................................(ARGENTINA) */
@@ -1759,6 +1759,7 @@ main {
   background-position: center;
   background-size: cover;
   background-image: url(.//SVG/argentina.svg);
+  z-index: 999999;
 }
 
 /* ...............................................(VIETNAM) */
@@ -1769,6 +1770,7 @@ main {
   background-position: center;
   background-size: cover;
   background-image: url(.//SVG/vietnam.svg);
+  z-index: 999999;
 }
 
 /* SPONSORS.......................................................................................................................................................... */
@@ -2758,13 +2760,13 @@ main {
   }
 }
 
-  .mobile-contact-btn {
-    position: fixed;
-    bottom: 20px;
-    left: 10px;
-    z-index: 9999;
-    display: none;
-  }
+.mobile-contact-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 10px;
+  z-index: 9999;
+  display: none;
+}
 
 /*  RESPONSIVE MOBILE (480 PX)....................................................................................................................................... */
 /* .................................................................................................................................................................. */
@@ -2793,7 +2795,6 @@ main {
   body {
     width: 100%;
     overflow-x: hidden; /* Empêche le scroll horizontal */
-
   }
 
   body {
@@ -2812,11 +2813,6 @@ main {
   #teamGallery {
     scroll-margin-top: 80px;
   }
-
-
-
-
-
 
   /* HEADER.......................................................................................................................................................... */
   /* ................................................................................................................................................................ */
@@ -2932,8 +2928,6 @@ main {
     text-align: center;
   }
 
-
-
   /* OVERLAY (fond sombre) .........................................*/
 
   .nav-overlay {
@@ -2959,7 +2953,6 @@ main {
   /* HERO SITE....................................................................................................................................................... */
   /* ................................................................................................................................................................ */
   /* ................................................................................................................................................................ */
-
 
   .hero-site {
     min-height: 100vh;
@@ -3005,9 +2998,9 @@ main {
 
   /* ................................................................HERO RESEAUX */
 
-.lienReseaux-hero {
-      margin-left: 0px;
-}
+  .lienReseaux-hero {
+    margin-left: 0px;
+  }
 
   /*  SECTION BANNIERE OUR STORY (TEXTE)............................................................................................................................. */
   /* ................................................................................................................................................................ */
@@ -3280,6 +3273,11 @@ main {
 
   .pl-left-13 {
     background-size: 34%;
+  }
+
+  .pl-left-1, .pl-left-2, .pl-left-8, .pl-left-14 {
+    bottom: 0;
+    background-position-y: 5px;
   }
 
   /* STATS EN BAS ................................................ */
@@ -3821,4 +3819,3 @@ main {
     padding: 120px 20px 40px;
   }
 }
-
