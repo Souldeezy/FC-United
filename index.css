@@ -3022,6 +3022,8 @@ main {
   .story-carousel {
     flex-direction: column;
     gap: 20px;
+    touch-action: pan-y;
+
   }
 
   .carousel-arrow-container {
@@ -3553,6 +3555,8 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    touch-action: pan-y;
+
   }
 
   .gallery-carousel-content {
