@@ -1643,6 +1643,7 @@ main {
   background-position: center;
   background-size: cover;
   background-image: url(.//SVG/morocco.svg);
+  z-index: 999999;
 }
 
 /* .................................................(FRANCE) */
@@ -1653,6 +1654,7 @@ main {
   background-position: center;
   background-size: cover;
   background-image: url(.//SVG/france.svg);
+  z-index: 999999;
 }
 
 /* ..............................................(CAMEROON) */
@@ -1663,6 +1665,7 @@ main {
   background-position: center;
   background-size: cover;
   background-image: url(.//SVG/cameroon.svg);
+  z-index: 999999;
 }
 
 /* ................................................(UKRAINE) */
@@ -1673,6 +1676,8 @@ main {
   background-position: center;
   background-size: cover;
   background-image: url(.//SVG/ukraine.svg);
+  z-index: 999999;
+
 }
 
 /* ...................................................(PERU) */
@@ -1683,6 +1688,7 @@ main {
   background-position: center;
   background-size: cover;
   background-image: url(.//SVG/peru.svg);
+  z-index: 999999;
 }
 
 /* .................................................(BRAZIL) */
@@ -3000,7 +3006,7 @@ main {
   /* ................................................................HERO RESEAUX */
 
 .lienReseaux-hero {
-      margin-left: 70px;
+      margin-left: 0px;
 }
 
   /*  SECTION BANNIERE OUR STORY (TEXTE)............................................................................................................................. */
