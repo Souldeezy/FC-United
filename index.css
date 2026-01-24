@@ -335,7 +335,7 @@ main {
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  object-position: center -5%;
+  object-position: center 0%;
 }
 
 /* HERO H1......................................................................... */
